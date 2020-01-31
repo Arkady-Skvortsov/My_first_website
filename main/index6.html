@@ -1,0 +1,2200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Музыка</title>
+	<meta charset="utf-8" />
+  <!-- For tablets and phone -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+  <!-- CSS -->
+  <style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Lakki+Reddy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+
+body {
+  height: 10300px;
+  background-color: black;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+} /* Для scrollbar */
+
+header {
+  height: 100px;
+  width: 100%;
+  z-index: 3;
+    left: 0px;
+    top: 0;
+  background-color: black;
+    transition: 900ms ease;
+    position: fixed;
+}
+
+/* @keyframes gradient-color {
+  0% {
+       border-bottom: 5px solid rgba(225, 0, 0, 0.6);
+  }
+
+  50% {
+       border-bottom: 5px solid rgba(255, 0, 0, 0.8);
+  }
+
+  100% {
+       border-bottom: 5px solid rgba(255, 0, 0, 1);
+  }
+} */
+
+header .menu {
+  height: 50px;
+  width: 50px;
+  border: 2px solid red;
+    margin-left: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+header .menu span {
+  height: 7px;
+  width: 40px;
+  font-size: 25px;
+  margin-left: 5px;
+  background-color: white;
+  margin-top: 7px;
+  position: relative;
+  display: block;
+  transition: 900ms ease;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+header .menu span:hover {
+  background-color: red;
+}
+
+header .menu .b1.rot_1 {
+  transform: rotate(-45deg);
+  top: 15px;
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -mozila-transform: rotate(-45deg);
+  border-radius: 15px;
+}
+
+header .menu .b2.rot_2 {
+  display: none;
+}
+
+header .menu .b3.rot_3 {
+  transform: rotate(45deg);
+  top: 1px;
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -mozila-transform: rotate(45deg);
+  border-radius: 15px;
+}
+
+header .logotype {
+  height: 90px;
+  width: 400px;
+  position: absolute;
+  cursor: pointer;
+  margin-top: -77.5px;
+    margin-left: 600px;
+    background-image: url('images/RDR2_screen_308.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.punkt {
+  height: 690px;
+  width: 600px;
+  position: fixed;
+  z-index: 3;
+    background-color: black;
+    opacity: .9;
+    margin-top: 91.5px;
+    margin-left: -650px;
+    border-right: 1px solid red;
+    transition: 700ms ease;
+    -o-transition: 700ms ease;
+    -mozila-transition: 700ms ease;
+    -webkit-transition: 700ms ease;
+}
+
+.punkt.show {
+  margin-left: -8px;
+}
+
+.punkt .elements {
+  position: relative;
+  height: 60px;
+  width: 600px;
+  list-style-type: none;
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+.punkt .elements .c {
+  font-size: 50px;
+  position: absolute;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 20px;
+    border-radius: 0;
+    display: none;
+    animation: cross 5s linear infinite;
+    transition: 800ms ease;
+    -o-transition: 800ms ease;
+    -mozila-transition: 800ms ease;
+    -webkit-transition: 800ms ease;
+} 
+
+@keyframes cross {
+  0% {
+    -mozila-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+      transform: rotate(90deg);
+      color: rgba(255, 1, 8, .6);
+    }
+
+  50% {
+       color: rgba(255, 1, 8, .8);
+  }
+ 
+  100% {
+      transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -mozila-transform: rotate(180deg);
+      color: red;
+  } /* Animation for the cross, when they display eqvals = block */
+}
+
+.punkt .elements a {
+  font-size: 45px;
+  font-family: 'Russo One', sans-serif;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-left: 80px;
+  margin-top: 1px;
+    cursor: pointer;
+    position: absolute;
+    transition: 700ms ease;
+    -o-transition: 700ms ease;
+    -mozila-transition: 700ms ease;
+    -webkit-transition: 700ms ease;
+}
+
+
+.punkt #author {
+  font-size: 15px;
+  font-family: 'Comfortaa', cursive;
+  margin-left: 20px;
+  list-style-type: none;
+  color: purple;
+  font-weight: bold;
+  margin-top: 90px;
+}
+
+.punkt #author a {
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Comfortaa', cursive;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+.punkt #author a:hover {
+  text-decoration: underline;
+}
+
+.Main-block {
+  height: 1020px;
+  width: 100%;
+  margin-top: 90px;
+  position: absolute;
+  cursor: pointer;
+  margin-left: -8px;
+  background-image: url('images/RDR2_screen_135.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.Main-block .about_music {
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  margin-top: 950px;
+  margin-left: 0;
+  background-color: black;
+  border-bottom: 1px solid red;
+}
+
+.Main-block .about_music span {
+  font-size: 50px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 600px;
+}
+
+.Main-block .about_music hr {
+  height: 5px;
+  width: 950px;
+  border: 0;
+  margin-left: 300px;
+  background-color: white;
+  position: absolute;
+  margin-top: 150px;
+  font-weight: bold;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+.Main-block .about_music hr:hover {
+  transform: translateY(5px);
+}
+
+.Main-block .sound-block {
+  height: 50px;
+  width: 950px;
+  display: inline;
+  position: absolute;
+  margin-top: 1130px;
+  margin-left: 300px;
+}
+
+.Main-block .sound-block a {
+  text-decoration: none;
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  margin-top: 15px;
+  margin-left: 10px;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+.Main-block .sound-block a:hover {
+  text-shadow: 0 0 30px red;
+  text-decoration: underline;
+}
+
+.sound-b {
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  margin-left: -8px;
+  margin-top: 1400px;
+  display: inline;
+}
+
+.sound-b span {
+  font-size: 25px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-left: 25px;
+  margin-top: 40px;
+}
+
+.about_music {
+  height: 1100px;
+  width: 100%;
+  position: absolute;
+  margin-left: -8px;
+  margin-top: 1750px;
+}
+
+.about_music #sounds {
+  font-size: 50px;
+  font-family: 'Lakki Reddy', cursive;
+  font-weight: bold;
+  color: white;
+  margin-top: 50px;
+  margin-left: 480px;
+}
+
+.about_music hr {
+  height: 5px;
+  width: 950px;
+  position: absolute;
+  border: 0;
+  background-color: white;
+  margin-top: -30px;
+  margin-left: 310px;
+}
+
+.about_music .m_img {
+  height: 850px;
+  width: 950px;
+  position: absolute;
+  margin-left: 310px;
+  margin-top: 75px;
+  cursor: pointer;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+.about_music .m_img img {
+  width: 950px;
+  height: 850px;
+}
+
+.about_music .m_img:hover {
+  box-shadow: 0 0 20px red;
+}
+
+.about_music .opisanie {
+  height: 400px;
+  width: 950px;
+  position: absolute;
+  margin-left: -755px;
+  margin-top: 1090px;
+  display: inline;
+}
+
+.about_music .opisanie span {
+  font-size: 25px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 45px;
+    word-spacing: .5em;
+}
+
+.A {
+  height: 1100px;
+  width: 100%;
+  position: absolute;
+  margin-left: -8px;
+  margin-top: 3750px;
+}
+
+.A #authors {
+  font-size: 50px;
+  font-family: 'Lakki Reddy', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 680px;
+}
+
+.A hr {
+  height: 5px;
+  width: 600px;
+  border: 0;
+  background-color: white;
+  position: absolute;
+  margin-top: 58px;
+  margin-left: 455px;
+}
+
+.A .Woody_jackson {
+  height: 400px;
+  width: 100%;
+  margin-left: 0px;
+  position: absolute;
+  margin-top: 110px;
+}
+
+.A .Woody_jackson .woody {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  cursor: pointer;
+  left: 30px;
+  top: 0;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+    background-size: cover;
+    background-position: top;
+    background-image: url('images/RDR2_screen_136.jpg');
+}
+
+.A .Woody_jackson .woody .w-block {
+  position: absolute;
+  width: 400px;
+  height: 0px;
+  cursor: pointer;
+  background-color: white;
+  opacity: .6;
+  top: 0;
+  left: 0;
+}
+
+.A .Woody_jackson .woody .w-block span {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  text-shadow: 0 0 15px black;
+  position: absolute;
+  margin-top: -39px; /* 185px */
+  left: 65px;
+}
+
+.A-1 {
+   animation: anm1 1.5s linear 1;
+} 
+
+@keyframes anm1 {
+  0% {
+      height: 0px; 
+  }
+
+  25% {
+    height: 100px;
+  }
+
+  50% {
+    height: 200px;
+  }
+
+  75% {
+    height: 300px;
+  }
+
+  100% {
+    height: 400px;
+  }
+}
+
+.A-2 { 
+   animation: anm2 1.5s linear 1;
+}
+
+@keyframes anm2 {
+    0% {
+      margin-top: 10px;
+    }
+
+  25% {
+    margin-top: 39.25px;
+  }
+
+  50% {
+    margin-top: 90.50px;
+  }
+
+  75% {
+    margin-top: 137.75px;
+  }
+
+  100% {
+    margin-top: 185px;
+  }
+}
+
+.A .Woody_jackson .woody_information {
+  width: 1100px;
+  height: 400px;
+  border: 2px solid white;
+  position: relative;
+  float: right;
+  margin-right: 5px;
+  top: 0;
+}
+
+.A .Woody_jackson .woody_information .wood-text {
+  height: 200px;
+  top: 0;
+  width: 1100px;
+  left: 0;
+}
+
+.A .Woody_jackson .woody_information .wood-text span {
+  font-size: 35px;
+  font-family: 'Lakki Reddy', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 10px;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+.A .Woody_jackson .woody_information .wood-text span:hover {
+  text-shadow: 0 0 20px white;
+}
+
+.A .Woody_jackson .woody_information .wood-text p {
+  font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 350px;
+  display: inline;
+}
+
+.A .Woody_jackson .woody_information .projects-w {
+  height: 200px;
+  width: 1100px;
+  position: absolute;
+  margin-top: 0px;
+  left: 0;
+ }
+
+ .A .Woody_jackson .woody_information .projects-w span {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 10px;
+ }
+
+.A .Woody_jackson .woody_information .c {
+  position: relative;
+  display: inline-block;
+  margin-top: 96px;
+  height: 100px;
+  width: 300px;
+  margin-left: 50px;
+  cursor: pointer;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+.A .Woody_jackson .woody_information .c img {
+  max-height: 100px;
+  min-width: 300px;
+}
+
+.A .Woody_jackson .woody_information .c:hover {
+  transform: translateY(2px);
+  box-shadow: 0 0 10px red;
+}
+
+.Blocks {
+  display: none;
+}
+
+.Blocks.sh {
+  display: block;
+}
+
+.A .Daniel_lanua {
+  height: 400px;
+  width: 100%;
+  position: absolute;
+  margin-left: -8px;
+  margin-top: 620px;
+}
+
+.A .Daniel_lanua .daniel {
+  position: relative;
+  height: 400px;
+    width: 400px;
+    float: right;
+    right: 30px;
+    top: 0;
+    cursor: pointer;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    background-image: url('images/RDR2_screen_137.jpg');
+    background-position: center;
+    background-size: cover;
+}
+
+.A .Daniel_lanua .daniel .w-block {
+  height: 0;
+  width: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  background-color: white;
+  opacity: .6;
+}
+
+.A .Daniel_lanua .daniel .w-block span {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  text-shadow: 0 0 15px black;
+  position: absolute;
+  margin-top: -39px; /* 185px */
+  left: 62px;
+}
+
+.A .Daniel_lanua .daniel_information {
+  height: 400px;
+  width: 1100px;
+  position: absolute;
+  margin-left: 12px;
+  border: 2px solid white;
+}
+
+.A .Daniel_lanua .daniel_information .daniel_txt {
+  height: 200px;
+  width: 1100px;
+  top: 0;
+  left: 0;
+}
+
+.A .Daniel_lanua .daniel_information .daniel_txt span {
+  font-size: 35px;
+  font-family: 'Lakki Reddy', cursive;
+  position: absolute;
+  font-weight: bold;
+  color: white;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+.A .Daniel_lanua .daniel_information .daniel_txt p {
+  font-size: 20px;
+  position: absolute;
+  display: inline;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  top: -3px;
+  margin-left: 430px;
+}
+
+.A .Daniel_lanua .daniel_information .projects-d {
+  height: 200px;
+  width: 1100px;
+  position: absolute;
+  margin-top: 0px;
+  left: 0;
+}
+
+.A .Daniel_lanua .daniel_information .projects-d span {
+  font-size: 31px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+.A .Daniel_lanua .daniel_information .projects-d .rdr2 {
+  height: 100px;
+  width: 400px;
+  position: absolute;
+  text-align: center;
+  margin-top: 93px;
+  margin-left: 350px;
+  cursor: pointer;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+}
+
+.A .Daniel_lanua .daniel_information .projects-d .rdr2 img {
+  height: 100px;
+  width: 400px;
+}
+
+.A .Daniel_lanua .daniel_information .projects-d .rdr2:hover {
+  box-shadow: 0 0 20px red;
+  transform: translateY(5px);
+}
+
+.Sound-list {
+  position: absolute;
+  height: 4350px;
+  width: 100%;
+  margin-left: -8px;
+    margin-top: 5150px;
+}
+
+.Sound-list #sound-list {
+  font-size: 45px;
+  font-family: 'Lakki Reddy', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 0px;
+  margin-left: 600px;
+}
+
+.Sound-list hr {
+  height: 5px;
+  width: 900px;
+  position: absolute;
+  margin-top: 58px;
+  margin-left: 310px;
+  background-color: white;
+  border: 0;
+}
+
+.Sound-list span {
+  font-size: 25px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 125px;
+  margin-left: 400px;
+}
+
+.Sound-list .SOUND {
+  height: 4300px;
+  width: 900px;
+  position: absolute;
+  margin-left: 310px;
+  margin-top: 220px;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+.Sound-list .SOUND .sound-block {
+  height: 100px;
+  width: 900px;
+  position: relative;
+  margin-left: 0;
+  margin-top: 80px; 
+  border: 1px solid white;
+  display: inline-block;
+}
+
+.Sound-list .SOUND .sound-block .img-screen {
+  height: 100px;
+  width: 250px;
+  border-right: 1px solid white;
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  background-position: center;
+  background-size: cover;
+}
+
+.Sound-list .SOUND .sound-block .out {
+  background-image: url('images/RDR2_screen_143.jpg');
+}
+
+.Sound-list .SOUND .sound-block .pur {
+  background-image: url('images/RDR2_screen_148.jpg');
+}
+
+.Sound-list .SOUND .sound-block .train {
+  background-image: url('images/RDR2_screen_150.jpg');
+}
+
+.Sound-list .SOUND .sound-block .true_l {
+  background-image: url('images/RDR2_screen_149.jpg');
+}
+
+.Sound-list .SOUND .sound-block .first_shall {
+  background-image: url('images/RDR2_screen_151.jpg');
+}
+
+.Sound-list .SOUND .sound-block .joys_t {
+  background-image: url('images/RDR2_screen_141.jpg');
+}
+
+.Sound-list .SOUND .sound-block .last_boy {
+  background-image: url('images/RDR2_screen_152.jpg');
+}
+
+.Sound-list .SOUND .sound-block .build_h {
+  background-image: url('images/RDR2_screen_153.jpg');
+}
+
+.Sound-list .SOUND .sound-block .f_joy {
+  background-image: url('images/RDR2_screen_154.jpg');
+}
+
+.Sound-list .SOUND .sound-block .fire_y {
+  background-image: url('images/RDR2_screen_155.jpg');
+}
+
+.Sound-list .SOUND .sound-block .w_hight {
+  background-image: url('images/RDR2_screen_138.jpg');
+}
+
+.Sound-list .SOUND .sound-block .w_low {
+  background-image: url('images/RDR2_screen_138.jpg');
+}
+
+.Sound-list .SOUND .sound-block .social_c {
+  background-image: url('images/RDR2_screen_156.jpg');
+}
+
+.Sound-list .SOUND .sound-block .sadie_w {
+    background-image: url('images/RDR2_screen_157.jpg');
+}
+
+.Sound-list .SOUND .sound-block .s_shootout {
+  background-image: url('images/RDR2_screen_158.jpg');
+}
+
+.Sound-list .SOUND .sound-block .fort_w {
+  background-image: url('images/RDR2_screen_159.jpg');
+}
+
+.Sound-list .SOUND .sound-block .bank_r {
+  background-image: url('images/RDR2_screen_160.jpg');
+}
+
+.Sound-list .SOUND .sound-block .a_bronte {
+  background-image: url('images/RDR2_screen_161.jpg');
+}
+
+.Sound-list .SOUND .sound-block .the_d {
+  background-image: url('images/RDR2_screen_162.jpg');
+}
+
+.Sound-list .SOUND .sound-block .b-manor {
+  background-image: url('images/RDR2_screen_139.jpg');
+}
+
+.Sound-list .SOUND .sound-block .f_and {
+  background-image: url('images/RDR2_screen_163.jpg');
+}
+
+.Sound-list .SOUND .sound-block .urban {
+  background-image: url('images/RDR2_screen_164.jpg');
+}
+
+.Sound-list .SOUND .sound-block .a_venom {
+  background-image: url('images/RDR2_screen_165.jpg');
+}
+
+.Sound-list .SOUND .sound-block .sound-screen {
+  height: 100px;
+  width: 650px;
+  position: absolute;
+  margin-left: 250px;
+  top: -100px;
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .music_name {
+  font-size: 15px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  position: absolute;
+  color: white;
+  top: -20px;
+  left: -220px;
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .polosa {
+  width: 500px;
+  height: 5px;
+  position: absolute;
+  margin-left: 75px;
+  margin-top: 145px;
+  background-color: white;
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .Bug1 {
+  left: -700px;
+  margin-top: -85px;
+  position: absolute;
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .Bug2 {
+  position: relative;
+  bottom: 5px;
+  left: -700px;
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .Bug3 {
+  position: absolute;
+  left: -710px;
+  margin-top: -85px;
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .Bug4 {
+  position: absolute;
+  bottom: 5px;
+  left: -710px;
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .polosa .btn {
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  left: 0px;
+  top: -2.5px;
+  z-index: 1;
+  cursor: pointer;
+  background-color: white;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .polosa .btn:active {
+  transform: scale(.9);
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .polosa .linia {
+  height: 5px;
+  width: 5px;
+  position: absolute;
+  left: 0px;
+  cursor: pointer;
+  background-color: orange;
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .buttons {
+  height: 45px;
+  width: 650px;
+  position: absolute;
+  margin-left: 75px;
+  margin-top: 180px;
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .buttons button {
+  height: 40px;
+  width: 40px;
+  border: 0;
+  cursor: pointer;
+  border-radius: 20px;
+  background-color: orange; 
+  position: relative;
+  display: inline-block;
+  margin-top: -23px;
+  margin-left: 100px;
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .buttons .prev {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  border-radius: 15px;
+    margin-top: -15px;
+    margin-left: 180px;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .buttons .prev:hover {
+  transform: translateX(-10px);
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .buttons .prev .far {
+    font-size: 30px;
+    position: absolute;
+    margin-top: 2.5px;
+    margin-left: 2.5px;
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .buttons .play {
+  position: absolute;
+  margin-top: -20px;
+  margin-left: 225px;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .buttons .play:hover {
+  transform: scale(.8);
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .buttons .play .fas {
+  font-size: 25px;
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .buttons .play audio {
+  display: none;
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .buttons .next {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  border-radius: 15px;
+  position: absolute;
+  margin-top: -15px;
+  margin-left: 280px;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .buttons .next:hover {
+  transform: translateX(10px);
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .buttons .vol {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  border-radius: 15px;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  border: 0;
+  position: relative;
+  float: right;
+  margin-right: 80px;
+  margin-top: -13px;
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .buttons .vol:hover {
+  transform: scale(.8);
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .buttons .vol .v {
+  font-size: 20px;
+  position: absolute;
+    margin-top: -9.5px;
+    margin-left: -10.5px;
+}
+
+.Sound-list .SOUND .sound-block .sound-screen .buttons .vol .Pause {
+  font-size: 20px;
+  position: absolute;
+  margin-top: -9.5px;
+  margin-left: -10.5px;
+}
+
+.end-music-page {
+  height: 100px;
+  width: 900px;
+  position: absolute;
+  margin-left: 310px;
+  margin-top: 9800px;
+  display: inline;
+}
+
+.end-music-page span {
+  font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  padding-left: 20px;
+}
+
+.strelochka_6 {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  border-radius: 5px;
+  z-index: 1;
+  display: none;
+  cursor: pointer;
+  background-color: white;
+  margin-left: 95%;
+  margin-top: 640px;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  display: none;
+}
+
+.strelochka_6.Show6 {
+  display: block;
+}
+
+.strelochka_6 .str6 {
+  font-size: 55px;
+  font-weight: bold;
+  position: absolute;
+  margin-left: 8px;
+  margin-top: -2px;
+  color: black;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+.strelochka_6 .str6:hover {
+  transform: translateY(5px);
+}
+
+.Close2 {
+  display: none;
+}
+
+body .main_w2 {
+  margin-top: -10px;
+  height: 800px;
+  width: 100%;
+  position: fixed;
+  margin-left: -8px;
+  z-index: 4;
+  background-color: black;
+  opacity: .99;
+}
+
+
+body .main_w2 .second_w2 {
+  max-height: 600px;
+  max-width: 1000px;
+  position: absolute;
+  cursor: pointer;
+  margin-top: 140px;
+  opacity: 1;
+  margin-left: 345px;
+  border: 3px solid white;
+}
+
+body .main_w2 .second_w2 .name_border2 {
+  height: 50px;
+  width: 889px;
+  background-color: black;
+  position: absolute;
+  margin-top: -50px;
+}
+
+body .main_w2 .second_w2 .name_border2 .name_img2 {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  position: absolute;
+  margin-top: 10px;
+  transform: translateX(345px);
+}
+
+body .main_w2 .second_w2 img {
+  max-height: 500px;
+    max-width: 900px;
+}
+
+body .main_w2 .second_w2 .official_ost {
+  max-height: 500px;
+  min-width: 890px;
+}
+
+body .main_w2 .second_w2 .gtaV {
+  max-height: 500px;
+  min-width: 900px;
+}
+
+body .main_w2 .button_close2 {
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  z-index: 4;
+  cursor: pointer;
+  border-radius: 35px;
+  position: relative;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+    float: right;
+    margin-right: 290px;
+    margin-top: 85px;
+}
+
+body .main_w2 .button_close2:hover {
+  background-color: white;
+}
+
+body .main_w2 .button_close2 .crs2 {
+  position: absolute;
+  font-size: 45px;
+  color: white;
+  font-weight: bold;
+  margin-top: 2.5px;
+  margin-left: 9.5px;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+body .main_w2 .button_close2 .crs2:hover {
+  color: black;
+}
+
+footer {
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  margin-left: -8px;
+  margin-top: 10000px;
+  border-top: 3px solid red;
+  background-image: url('PNG/RDR2_FOOTER_BACKGROUND.png');
+  background-size: cover;
+  background-position: bottom;
+}
+
+footer .Red_dead {
+  height: 50px;
+  width: 350px;
+  background-color: black;
+  border: 3px solid red;
+  position: absolute;
+  margin-top: -35px;
+  margin-left: 610px;
+}
+
+footer .Red_dead span {
+  font-size: 30px;
+  font-family: 'Bree Serif', serif;
+  color: white;
+  font-weight: bold;
+  transform: translateY(2.5px);
+  position: absolute;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+footer #lozyng {
+  font-size: 75px;
+  font-family: 'Bree Serif', serif;
+  font-weight: bold;
+  position: absolute;
+  cursor: pointer;
+  color: red;
+  margin-top: 50px;
+    margin-left: 470px;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+footer #lozyng:hover {
+  text-shadow: 0 0 25px red;
+}
+
+footer #linia_RDR2 {
+  height: 5px;
+  width: 700px;
+  position: absolute;
+  border-radius: 10px;
+  margin-left: 440px;
+  margin-top: 175px;
+  border: 0;
+  background-color: rgba(217, 30, 24, .7);
+}
+
+footer .container {
+  height: 80px;
+  width: 600px;
+  display: inline;
+  position: absolute;
+  margin-top: 195px;
+  margin-left: 500px;
+}
+
+footer .container a .sticker {
+    font-size: 40px;
+    cursor: pointer;
+    margin-left: 60px;
+    margin-top: 20px;
+    color: rgba(255, 5, 1, .7);
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+footer .container a .sticker:hover {
+  color: red;
+}
+
+footer #adres {
+  font-size: 10px;
+  font-family: 'Comfortaa', cursive;
+  color: white;
+  font-weight: bold;
+  margin-top: 280px;
+  position: absolute;
+  margin-left: 520px;
+}
+
+footer address {
+  font-size: 12px;
+  font-family: 'Comfortaa', cursive;
+  color: white;
+  font-weight: bold;
+    position: absolute;
+    margin-top: 280px;
+    margin-left: 775px;
+}
+  </style>
+</head>
+<body>
+    <header>
+	    <div class="menu">
+		    <span class="b1"></span>
+		    <span class="b2"></span>
+		    <span class="b3"></span>
+		</div>
+        
+        <div class="logotype" title="Red dead Redemption II">
+    	
+        </div>
+    </header>
+    
+    <!-- Menu -->
+    <ul class="punkt">
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index.html">На главную</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index2.html">Об игре</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index3.html">Сюжет</a></li> 
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index4.html">Открытый мир</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index5.html">Оружее</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index6.html">Саундтрек</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index7.html">Мультиплеер</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="https://ru.socialclub.rockstargames.com/" target="_blank">Social Club</a></li>
+        <li id="author">Автор вдохновлялся этим сайтом - <a href="https://www.rockstargames.com/reddeadredemption2/" id="silka" target="_blank">Red Dead Redemption II</a></li>
+	</ul>
+
+  <div class="strelochka_6">
+     <i class="fas fa-angle-up str6"></i>
+  </div>
+
+	<div class="Main-block" title="Официальный саундтрек">
+		  <div class="about_music">
+         <span>Саундтреки</span>
+         <hr />
+      </div> 
+      <div class="sound-block"> 
+         <a href="#sounds">Как создавали саундтреки |</a><a href="#authors">Авторы |</a><a href="#sound-list">Саундтрек-лист</a>  
+      </div>
+	</div>
+
+  <div class="sound-b">
+      <span>Саундтрек является очень важной частью игры, особенно RDR2, где не обходимо передать в аудио-формате весь дикий запад.... Особенно важно, чтобы саундтрек был уместный, брутальный(В зависимости от ситуации).. Чтобы муражки на коже вскакивали и вызывали бурную волну эмоций..Далее будет показана часть саундтреков из игры, чтобы вы их прослушали</span>
+  </div>
+
+  <div class="about_music">
+      <span id="sounds">О создании Саундтреков</span>
+      <hr />
+
+      <div class="m_img Image_up">
+          <img src="images/RDR2_screen_144.jpg" class="official_ost" alt="official ost" title="Официальный саундтрек">
+      </div>
+      
+      <div class="opisanie"> 
+          <span>Вуди Джексон в недавнем своем интервью рассказал, как создавал саундтрек к игре. Оказывается, чтобы погрузиться в атмосферу постоянных перестрелок, композитор ходил в тир и стрелял там из оружия. В качестве оружия он использовал реплики винтовок и револьверов 19 века. На стрельбище он слушал различные вариации мелодий, пока в итоге не сделал то, что сделал — официальный саундтрек к Red Dead Redemption 2. По его словам, такой метод помог ему больше погрузиться в атмосферу вестернов и понять, какой в результате должна получиться музыка.Чтобы саундтрек был еще более аутентичным, композитор купил музыкальные инструменты, используемые группой The Wrecking Crew. Вуди Джексон разделил внутриигровую музыку на три части — интерактивную (когда музыка меняется в зависимости от действий игрока), окружение (песни у костра и т.д.) и повествование (специальная музыка для сюжетных миссий).</span>
+      </div>
+  </div>
+
+  <div class="A">
+      <span id="authors">Авторы</span>
+      <hr />
+
+      <div class="Woody_jackson db">
+          <div class="woody wt" title="Вуди Джексон">
+             <div class="w-block">
+                 <span class="w_t">Вуди Джексон</span>
+             </div>
+          </div>
+          <div class="woody_information Blocks">
+              <div class="wood-text">
+                 <span>Биография Вуди - </span>
+                 
+                 <p>Вудро Вильсон Джексон III, известный как Вуди Джексон, - американский композитор, продюсер и сессионный музыкант. 49 лет, родился 10 июня в 1970 году. Джексон известен своими играми в Red Dead Redemption, Grand Theft Auto V и Red Dead Redemption 2. Он работал в голливудской студии записи Vox, которую он обогнал в 2009 году. В 2018 году был награжден премией The Game Awards за лучший саундтрек года(RDR2)</p>
+              </div>
+              <div class="projects-w">
+                  <span>Проекты Rockstar в которых принимал участие Вуди -</span>
+
+                  <div class="RDR c Image_up"> 
+                      <img src="images/RDR2_screen_147.jpg" alt="RDR" title="Red Dead Redemption" />
+                  </div>
+                  <div class="GTAV c Image_up">
+                      <img src="images/RDR2_screen_145.jpg" alt="GTAV" class="gtaV" title="Grand Theft Auto V" />      
+                  </div>
+                  <div class="RDR2 c Image_up">
+                      <img src="images/RDR2_screen_146.jpg" alt="RDR2" title="Red Dead Redemption II" />
+                  </div>
+              </div>
+          </div>      
+      </div>
+      <div class="Daniel_lanua db">
+          <div class="daniel wt" title="Даниель Лануа">
+              <div class="w-block">
+                  <span class="w_t">Даниэль Лануа</span>
+              </div>
+          </div>
+           <div class="daniel_information Blocks">
+              <div class="daniel_txt">
+                 <span>Биография Даниэля - </span>
+                 
+                 <p>Даниэль Лануа - канадский музыкальный продюсер, автор и исполнитель песен.67 лет, родился 19 сентября в 1951 году.Выпустил несколько своих альбомов и продюсировал альбомы большого количества артистов, включая Боба Дилана, The Parachute Club, U2, Брайана Ино, Питера Гэбриэла, Робби Робертсона, Эммилу Харрис, братьев Невилл, Криса Уитли, Рона Сексмита и Nash the Slash.</p>
+              </div>
+              <div class="projects-d">
+                  <span>Проекты Rockstar в которых принимал участие Даниэль -</span>
+
+                  <div class="rdr2 Image_up">
+                      <img src="images/RDR2_screen_146.jpg" alt="RDR2" title="Red Dead Redemption II" />
+                  </div>
+              </div>
+          </div>      
+      </div>
+  </div>
+
+  <div class="Sound-list">
+      <span id="sound-list">Саундтрек лист</span>
+      <hr />
+
+      <span>В этом разделе представлено 23 саундтрека из игры</span>
+
+      <div class="SOUND">
+          <div class="sound-block">
+              <div class="img-screen out">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">Outlaws from the west</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                         <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play fir">
+                         <i class="fas fa-play"></i>
+                         <audio src="SoundTracks/Outlaws_From_The_West.mp3"></audio>
+                      </button>
+                      <button class="next">
+                         <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                         <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="sound-block">
+              <div class="img-screen pur">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">Pursued by a memory</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                         <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                         <i class="fas fa-play"></i>
+                         <audio src="SoundTracks/Pursued_by_a_Memory.mp3"></audio>
+                      </button>
+                      <button class="next">
+                         <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                         <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="sound-block">
+              <div class="img-screen train">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">Train heist(caching)</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                         <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                         <i class="fas fa-play"></i>
+                         <audio src="SoundTracks/Train Heist_(Catching Train).mp3"></audio>
+                      </button>
+                      <button class="next">
+                         <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                         <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="sound-block">
+              <div class="img-screen true_l">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">True love</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                         <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                         <i class="fas fa-play"></i>
+                         <audio src="SoundTracks/True_Love.mp3"></audio>
+                      </button>
+                      <button class="next">
+                         <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                         <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="sound-block">
+              <div class="img-screen first_shall">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">The first shall be last</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                         <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                         <i class="fas fa-play"></i>
+                         <audio src="SoundTracks/The_First_Shall_Be_Last_Theme.mp3"></audio>
+                      </button>
+                      <button class="next">
+                         <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                         <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div> 
+          <div class="sound-block">
+              <div class="img-screen joys_t">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">The fine joys of tobacco</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                         <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                         <i class="fas fa-play"></i>
+                         <audio src="SoundTracks/The_Fine_Joys_Of_Tobacco.mp3"></audio>
+                      </button>
+                      <button class="next">
+                         <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                         <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="sound-block">
+              <div class="img-screen last_boy">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">My last son</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                         <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                         <i class="fas fa-play"></i>
+                         <audio src="SoundTracks/My_Last_Son.mp3"></audio>
+                      </button>
+                      <button class="next">
+                         <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                         <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="sound-block">
+              <div class="img-screen build_h">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">House building</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                         <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                         <i class="fas fa-play"></i>
+                         <audio src="SoundTracks/House_Building.mp3"></audio>
+                      </button>
+                      <button class="next">
+                         <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                         <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="sound-block">
+              <div class="img-screen f_joy">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">Fleeting joy battle</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                         <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                         <i class="fas fa-play"></i>
+                         <audio src="SoundTracks/Fleeting_Joy_Battle_Theme.mp3"></audio>
+                      </button>
+                      <button class="next">
+                         <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                         <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="sound-block">
+              <div class="img-screen fire_y">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">See the fire in you'r eyes</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                         <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                         <i class="fas fa-play"></i>
+                         <audio src="SoundTracks/See_The_Fire_In_Your_Eyes.mp3"></audio>
+                      </button>
+                      <button class="next">
+                         <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                         <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="sound-block">
+              <div class="img-screen w_hight">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">That's the way it is(Hight honor)</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                         <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                         <i class="fas fa-play"></i>
+                         <audio src="SoundTracks/Thats_The_Way_It_Is(hight honor).mp3"></audio>
+                      </button>
+                      <button class="next">
+                         <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                         <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="sound-block">
+              <div class="img-screen w_low">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">That's the way it is(Low honor)</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                         <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                         <i class="fas fa-play"></i>
+                         <audio src="SoundTracks/Thats_The_Way_it_Is (Low Honor).mp3"></audio>
+                      </button>
+                      <button class="next">
+                         <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                         <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="sound-block">
+              <div class="img-screen social_c">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">Paying a social call</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                         <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                         <i class="fas fa-play"></i>
+                         <audio src="SoundTracks/Paying A Social Call.mp3"></audio>
+                      </button>
+                      <button class="next">
+                         <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                         <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="sound-block">
+              <div class="img-screen sadie_w">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">Sadie Adler widow</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                         <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                         <i class="fas fa-play"></i>
+                         <audio src="SoundTracks/Sadie_Adler_Widow.mp3"></audio>
+                      </button>
+                      <button class="next">
+                         <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                         <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="sound-block">
+              <div class="img-screen s_shootout">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">Saint Denis shootout</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                         <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                         <i class="fas fa-play"></i>
+                         <audio src="SoundTracks/Saint_Denis_Shootout_Theme.mp3"></audio>
+                      </button>
+                      <button class="next">
+                         <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                         <i class="fas fa-volume-up v"></i>
+                      </button> 
+                  </div>
+              </div>
+          </div>
+          <div class="sound-block">
+              <div class="img-screen fort_w">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">Fort Wallace</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                         <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                         <i class="fas fa-play"></i>
+                         <audio src="SoundTracks/Fort_Wallace_Theme.mp3"></audio>
+                      </button>
+                      <button class="next">
+                         <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                         <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="sound-block">
+              <div class="img-screen bank_r">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">Bank robbery</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                         <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                         <i class="fas fa-play"></i>
+                         <audio src="SoundTracks/Bank_Robbery_Theme.mp3"></audio>
+                      </button>
+                      <button class="next">
+                         <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                         <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div> 
+          <div class="sound-block">
+              <div class="img-screen a_bronte">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">Angelo Bronte</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                         <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                         <i class="fas fa-play"></i>
+                         <audio src="SoundTracks/Angelo_Bronte_Theme.mp3"></audio>
+                      </button>
+                      <button class="next">
+                         <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                         <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="sound-block">
+              <div class="img-screen the_d">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">The Disaster</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                         <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                         <i class="fas fa-play"></i>
+                         <audio src="SoundTracks/The_Disaster.mp3"></audio>
+                      </button>
+                      <button class="next">
+                         <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                         <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="sound-block">
+              <div class="img-screen b-manor">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">Braithwaite manor battle</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                         <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                         <i class="fas fa-play"></i>
+                         <audio src="SoundTracks/Braithwaite_Manor_Battle.mp3"></audio>
+                      </button>
+                      <button class="next">
+                         <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                         <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="sound-block">
+              <div class="img-screen f_and">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">Fatherhood and other dreams</span>
+
+                  <div class="polosa">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons">
+                      <button class="prev">
+                          <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                          <i class="fas fa-play"></i>
+                          <audio src="SoundTracks/Fatherhood_And_Other_Dreams.mp3"></audio>
+                      </button>
+                      <button class="next">
+                          <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                          <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="sound-block">
+              <div class="img-screen urban">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">Urban plesures<span>
+
+                  <div class="polosa Bug1">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons Bug2">
+                      <button class="prev">
+                          <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                          <i class="fas fa-play"></i>
+                          <audio src="SoundTracks/Urban_Pleasures.mp3"></audio>
+                      </button>
+                      <button class="next">
+                          <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                          <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="sound-block">
+              <div class="img-screen a_venom">
+                  
+              </div>
+              <div class="sound-screen">
+                  <span class="music_name">American venom<span>
+
+                  <div class="polosa Bug3">
+                      <div class="linia"></div>
+                      <div class="btn"></div>
+                  </div>
+
+                  <div class="buttons Bug4">
+                      <button class="prev">
+                          <i class="fas fa-step-backward"></i>
+                      </button>
+                      <button class="play">
+                          <i class="fas fa-play"></i>
+                          <audio src="SoundTracks/American_Venom.mp3"></audio>
+                      </button>
+                      <button class="next">
+                          <i class="fas fa-step-forward"></i>
+                      </button>
+                      <button class="vol">
+                        <i class="fas fa-volume-up v"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="end-music-page">
+      <span>Надеемся, что вам понравилась выше указанная музыка, но в игре больше 50-ти саундтреков(Не считая санудтреков к побочным миссиям, открытого мира и музыка розыска)... </span>
+  </div>
+
+  <footer>
+    <div class="Red_dead">
+      <span>Red Dead Redemption II</span>
+    </div>
+        
+    <span id="lozyng" title="Лозунг Red Dead Redemption II">outlaws for the live</span>
+        
+    <hr id="linia_RDR2" />
+
+    <div class="container">
+      <a href="https://www.youtube.com/user/RockstarGames" title="Youtube" target="_blank"><i class="fab fa-youtube sticker"></i></a>
+
+      <a href="https://twitter.com/rockstargames" title="Twitter" target="_blank"><i class="fab fa-twitter sticker"></i></a>
+        
+      <a href="https://www.facebook.com/pages/category/Video-Game/Rockstargames-498603576885163/" title="Facebook" target="_blank"><i class="fab fa-facebook-f sticker"></i></a>
+        
+      <a href="https://www.instagram.com/rockstargames/?hl=ru" title="Instagram"  target="_blank" /><i class="fab fa-instagram sticker"></i></a>
+           
+      <a href="https://www.twitch.tv/rockstargames" title="Twitch" target="_blank"><i class="fab fa-twitch sticker"></i></a>
+    </div>
+        
+    <!-- Возможно я удалю эти (2) блока с сошиал клабом и рокстаром, т.к 1) Выглядит как калл 2)Что будет при адаптивной версте? Да хрен его знает(Удалил) -->
+
+    <span id="adres">Главный офис Rockstar находится по адресу - </span><address>RockStar, 4 622, Broadway, New York, NY</address>
+  </footer> 
+
+	<script src="JS/index6.js"></script>
+</body>
+</html>

@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Оружие</title>
+	<meta charset="utf-8" />
+	<!-- For tablets and phone -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+    <!-- CSS -->
+    <style type="text/css">
+    	@import url('https://fonts.googleapis.com/css?family=Lakki+Reddy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+
+body {
+	height: 8750px;
+	background-color: black;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+} /* Для scrollbar */
+
+header {
+	height: 100px;
+	width: 100%;
+	z-index: 3;
+    left: 0px;
+    top: 0;
+	background-color: black;
+    transition: 900ms ease;
+    position: fixed;
+}
+
+/* @keyframes gradient-color {
+	0% {
+       border-bottom: 5px solid rgba(225, 0, 0, 0.6);
+	}
+
+	50% {
+       border-bottom: 5px solid rgba(255, 0, 0, 0.8);
+	}
+
+	100% {
+       border-bottom: 5px solid rgba(255, 0, 0, 1);
+	}
+} */
+
+header .menu {
+	height: 50px;
+	width: 50px;
+	border: 2px solid red;
+    margin-left: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+header .menu span {
+	height: 7px;
+	width: 40px;
+	font-size: 25px;
+	margin-left: 5px;
+	background-color: white;
+	margin-top: 7px;
+	position: relative;
+	display: block;
+	transition: 900ms ease;
+	transition: 900ms ease;
+	-o-transition: 900ms ease;
+	-mozila-transition: 900ms ease;
+	-webkit-transition: 900ms ease;
+}
+
+header .menu span:hover {
+	background-color: red;
+}
+
+header .menu .b1.rot_1 {
+	transform: rotate(-45deg);
+	top: 15px;
+	-o-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-mozila-transform: rotate(-45deg);
+	border-radius: 15px;
+}
+
+header .menu .b2.rot_2 {
+	display: none;
+}
+
+header .menu .b3.rot_3 {
+	transform: rotate(45deg);
+	top: 1px;
+	-o-transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-mozila-transform: rotate(45deg);
+	border-radius: 15px;
+}
+
+header .logotype {
+	height: 90px;
+	width: 400px;
+	position: absolute;
+	cursor: pointer;
+	margin-top: -77.5px;
+    margin-left: 600px;
+    background-image: url('images/RDR2_screen_308.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.punkt {
+	height: 690px;
+	width: 600px;
+	position: fixed;
+	z-index: 3;
+    background-color: black;
+    opacity: .9;
+    margin-top: 91.5px;
+    margin-left: -650px;
+    border-right: 1px solid red;
+    transition: 700ms ease;
+    -o-transition: 700ms ease;
+    -mozila-transition: 700ms ease;
+    -webkit-transition: 700ms ease;
+}
+
+.punkt.show {
+	margin-left: -8px;
+}
+
+.punkt .elements {
+	position: relative;
+	height: 60px;
+	width: 600px;
+	list-style-type: none;
+	margin-left: 0;
+	margin-top: 10px;
+}
+
+.punkt .elements .c {
+	font-size: 50px;
+	position: absolute;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 20px;
+    border-radius: 0;
+    display: none;
+    animation: cross 5s linear infinite;
+    transition: 800ms ease;
+    -o-transition: 800ms ease;
+    -mozila-transition: 800ms ease;
+    -webkit-transition: 800ms ease;
+} 
+
+@keyframes cross {
+	0% {
+	  -mozila-transform: rotate(90deg);
+	  -webkit-transform: rotate(90deg);
+	  -o-transform: rotate(90deg);
+      transform: rotate(90deg);
+      color: rgba(255, 1, 8, .6);
+    }
+
+	50% {
+       color: rgba(255, 1, 8, .8);
+	}
+ 
+	100% {
+      transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -mozila-transform: rotate(180deg);
+      color: red;
+	} /* Animation for the cross, when they display eqvals = block */
+}
+
+.punkt .elements a {
+	font-size: 45px;
+	font-family: 'Russo One', sans-serif;
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+	margin-left: 80px;
+	margin-top: 1px;
+    cursor: pointer;
+    position: absolute;
+    transition: 700ms ease;
+    -o-transition: 700ms ease;
+    -mozila-transition: 700ms ease;
+    -webkit-transition: 700ms ease;
+}
+
+
+.punkt #author {
+	font-size: 15px;
+	font-family: 'Comfortaa', cursive;
+	margin-left: 20px;
+	list-style-type: none;
+	color: purple;
+	font-weight: bold;
+	margin-top: 90px;
+}
+
+.punkt #author a {
+	text-decoration: none;
+	font-size: 15px;
+	color: white;
+	font-weight: bold;
+	font-family: 'Comfortaa', cursive;
+	transition: 900ms ease;
+	-o-transition: 900ms ease;
+	-mozila-transition: 900ms ease;
+	-webkit-transition: 900ms ease;
+}
+
+.punkt #author a:hover {
+	text-decoration: underline;
+}
+
+.Main_block_3 {
+	position: absolute;
+	margin-top: 100px;
+	margin-left: -8px;
+	height: 1020px;
+	width: 100%;
+	cursor: pointer;
+	background-position: center;
+    background-size: cover;
+    background-image: url('images/RDR2_screen_65.jpg');
+}
+
+.Main_block_3 .about_weapon {
+	height: 300px;
+	width: 100%;
+	position: absolute;
+	background-color: black;
+	border-bottom: 1px solid red;
+	margin-top: 950px;
+	margin-left: 0px;
+}
+
+.Main_block_3 .about_weapon span {
+	font-size: 50px;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	color: white;
+	position: absolute;
+	margin-top: 100px;
+	margin-left: 700px;
+}
+
+.Main_block_3 .about_weapon hr {
+	height: 5px;
+	width: 950px;
+	border: 0;
+	margin-left: 300px;
+	background-color: white;
+	position: absolute;
+	margin-top: 150px;
+	font-weight: bold;
+	transition: 900ms ease;
+	-o-transition: 900ms ease;
+	-mozila-transition: 900ms ease;
+	-webkit-transition: 900ms ease;
+}
+
+.Main_block_3 .weapon-block {
+	height: 150px;
+	width: 950px;
+	position: absolute;
+	margin-top: 1130px;
+	margin-left: 300px;
+	display: inline;
+}
+
+.Main_block_3 .weapon-block a {
+	text-decoration: none;
+	position: relative;
+	font-size: 20px;
+	color: white;
+	margin-left: 100px;
+	margin-top: 10px;
+	display: inline;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	transition: 900ms ease;
+	-o-transition: 900ms ease;
+	-webkit-transition: 900ms ease;
+	-mozila-transition: 900ms ease;
+}
+
+.Main_block_3 .weapon-block a:hover {
+	text-decoration: underline;
+}
+
+.Opisanie_weapon {
+   height: 100px;
+   width: 100%;
+   position: absolute;
+   margin-left: -8px;
+   margin-top: 1380px;
+}
+
+.Opisanie_weapon span {
+	font-size: 25px;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	color: white;
+	position: absolute;
+	margin-top: 10px;
+	margin-left: 15px;
+	display: inline;
+}
+
+.Special {
+	height: 4000px;
+	width: 100%;
+	position: absolute;
+	margin-left: -8px;
+	margin-top: 1600px;
+}
+
+.Special #special {
+	font-size: 45px;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	position: absolute;
+	margin-top: 50px;
+	margin-left: 550px;
+	color: white;
+	transition: 900ms ease;
+	-o-transition: 900ms ease;
+	-webkit-transition: 900ms ease;
+	-mozila-transition: 900ms ease;
+}
+
+.Special #special:hover {
+	text-shadow: 0 0 20px white;
+}
+
+.Special hr {
+	height: 5px;
+	width: 900px;
+	margin-left: 350px;
+	margin-top: 105px;
+	background-color: white;
+	border: 0;
+}
+
+.Special .Special_container {
+    height: 1700px;
+    width: 100%;
+    position: absolute;
+    margin-left: -8px;
+    margin-top: 20px;
+}
+
+.Special .Special_container #clean {
+	font-size: 40px;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	position: absolute;
+    margin-top: 45px;
+    margin-left: 600px;
+    color: white;
+}
+
+.Special .Special_container .Clean_b {
+	position: relative;
+	margin-top: 150px;
+	height: 400px;
+	width: 700px;
+	display: inline-block;
+	cursor: pointer;
+	transition: 600ms ease;
+	-o-transition: 600ms ease;
+	-webkit-transition: 600ms ease;
+	-mozila-transition: 600ms ease;
+    margin-left: 65px;
+}
+
+.Special .Special_container .Clean_b img {
+	height: 400px;
+	min-width: 700px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.Special .Special_container .Clean_b:hover {
+	transform: translateY(15px);
+}
+
+.Special .Special_container .Clean_b .text-contain {
+	height: 240px;
+	width: 700px;
+	position: absolute;
+	margin-left: 0;
+	margin-top: 400px;
+	background-color: black;
+}
+
+.Special .Special_container .Clean_b .text-contain span {
+	font-size: 15px;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	color: white;
+	position: absolute;
+	margin-top: 5px;
+	margin-left: 5px;
+	display: inline;
+}
+
+.Special .Modification {
+	height: 1450px;
+	width: 100%;
+	position: absolute;
+	margin-left: -8px;
+	margin-top: 1350px;
+}
+
+.Special .Modification #modif {
+	font-size: 40px;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	position: absolute;
+    margin-top: 45px;
+    margin-left: 550px;
+    color: white;
+}
+
+.Special .Modification .Modif_b {
+	position: relative;
+	margin-top: 150px;
+	height: 400px;
+	width: 700px;
+	display: inline-block;
+	cursor: pointer;
+	transition: 600ms ease;
+	-o-transition: 600ms ease;
+	-webkit-transition: 600ms ease;
+	-mozila-transition: 600ms ease;
+    margin-left: 65px;
+}
+
+.Special .Modification .Modif_b img {
+	height: 400px;
+	width: 700px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.Special .Modification .Modif_b:hover {
+	transform: translateY(15px);
+}
+
+.Special .Modification .Modif_b .txt-c {
+	height: 240px;
+	width: 700px;
+	position: absolute;
+	margin-left: 0;
+	margin-top: 400px;
+	background-color: black;
+}
+
+.Special .Modification .Modif_b .txt-c span {
+	font-size: 15px;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	color: white;
+	position: absolute;
+	margin-top: 5px;
+	margin-left: 5px;
+	display: inline;
+}
+
+.Special .Modification .l {
+	margin-left: 450px;
+}
+
+/* 5600 */
+
+.Dead_eye {
+	height: 1600px;
+    width: 100%;
+    position: absolute;
+    margin-top: 4450px;
+    margin-left: -8px;
+}
+
+.Dead_eye #dead_eye {
+	font-size: 40px;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	position: absolute;
+    margin-top: 45px;
+    margin-left: 550px;
+    color: white;
+}
+
+.Dead_eye .Eye_container {
+	height: 1500px;
+	width: 100%;
+	position: absolute;
+	margin-left: -8px;
+	margin-top: 70px;
+}
+
+.Dead_eye .Eye_container .dead_b {
+    position: relative;
+	margin-top: 150px;
+	height: 400px;
+	width: 700px;
+	display: inline-block;
+	cursor: pointer;
+	transition: 600ms ease;
+	-o-transition: 600ms ease;
+	-webkit-transition: 600ms ease;
+	-mozila-transition: 600ms ease;
+    margin-left: 65px;
+}
+
+.Dead_eye .Eye_container .dead_b img {
+	height: 400px;
+	min-width: 700px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.Dead_eye .Eye_container .dead_b:hover {
+	transform: translateY(15px);
+}
+
+.Dead_eye .Eye_container .dead_b .T_blocks {
+	height: 220px;
+	width: 700px;
+	position: absolute;
+	margin-left: 0;
+	margin-top: 400px;
+}
+
+.Dead_eye .Eye_container .dead_b .T_blocks span {
+	font-size: 15px;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	color: white;
+	position: absolute;
+	margin-top: 5px;
+	margin-left: 5px;
+	display: inline;
+}
+
+.Dead_eye .Eye_container .l2 {
+	margin-left: 450px;
+}
+
+.Shooting {
+	height: 2950px;
+	width: 100%;
+	position: absolute;
+    margin-top: 6000px;
+    margin-left: -8px;
+}
+
+.Shooting #Shooting {
+	font-size: 45px;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	color: white;
+	position: absolute;
+	margin-left: 680px;
+	margin-top: 50px;
+}
+
+.Shooting .Shooted_block {
+    height: 1800px;
+    width: 700px;
+    position: absolute;
+    margin-top: 120px;
+    margin-left: 450px;
+}
+
+.Shooting .Shooted_block .gif_block {
+	height: 400px;
+	width: 700px;
+	display: block;
+	cursor: pointer;
+	position: relative;
+	margin-top: 120px;
+	margin-left: 0;
+	background-position: center;
+	background-size: cover;
+}
+
+.Shooting .Shooted_block .rifle {
+	background-image: url("giff's/rifle_shooting.gif");
+}
+
+.Shooting .Shooted_block .repeater {
+	background-image: url("giff's/carabine_shooting.gif");
+}
+
+.Shooting .Shooted_block .reload {
+	background-image: url("giff's/revolver_reload.gif");
+}
+
+.Shooting .Shooted_block .shotgun {
+	background-image: url("giff's/shotgun_shooting.gif");
+}
+
+.Shooting .Shooted_block .gif_block .gif_txt {
+	height: 200px;
+	width: 700px;
+	position: absolute;
+	margin-top: 400px;
+	margin-left: 0;
+}
+
+.Shooting .Shooted_block .gif_block .gif_txt span {
+	font-size: 15px;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	position: absolute;
+	color: white;
+	display: inline;
+	margin-top: 5px;
+	margin-left: 5px; 
+}
+
+.Blagodary {
+	height: 100px;
+	width: 100%;
+	position: absolute;
+	margin-left: -8px;
+	margin-top: 8370px;
+}
+
+.Blagodary span {
+	font-size: 20px;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	color: white;
+	position: absolute;
+	margin-top: 5px;
+	margin-left: 60px;
+	display: inline;
+}
+
+footer {
+	height: 300px;
+	width: 100%;
+	position: absolute;
+	cursor: pointer;
+	z-index: 2;
+	margin-left: -8px;
+	margin-top: 8650px;
+	border-top: 3px solid red;
+	background-image: url('PNG/RDR2_FOOTER_BACKGROUND.png');
+	background-size: cover;
+	background-position: bottom;
+}
+
+footer .Red_dead {
+	height: 50px;
+	width: 350px;
+	background-color: black;
+	border: 3px solid red;
+	position: absolute;
+	margin-top: -35px;
+	margin-left: 610px;
+}
+
+footer .Red_dead span {
+	font-size: 30px;
+	font-family: 'Bree Serif', serif;
+	color: white;
+	font-weight: bold;
+	transform: translateY(2.5px);
+	position: absolute;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+footer #lozyng {
+	font-size: 75px;
+	font-family: 'Bree Serif', serif;
+	font-weight: bold;
+	position: absolute;
+	cursor: pointer;
+	color: red;
+	margin-top: 50px;
+    margin-left: 470px;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+footer #lozyng:hover {
+	text-shadow: 0 0 25px red;
+}
+
+footer #linia_RDR2 {
+	height: 5px;
+	width: 700px;
+	position: absolute;
+	border-radius: 10px;
+	margin-left: 440px;
+	margin-top: 175px;
+	border: 0;
+	background-color: rgba(217, 30, 24, .7);
+}
+
+footer .container {
+	height: 80px;
+	width: 600px;
+	display: inline;
+	position: absolute;
+	margin-top: 195px;
+	margin-left: 500px;
+}
+
+footer .container a .sticker {
+    font-size: 40px;
+    cursor: pointer;
+    margin-left: 60px;
+    margin-top: 20px;
+    color: rgba(255, 5, 1, .7);
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+footer .container a .sticker:hover {
+	color: red;
+}
+
+footer #adres {
+	font-size: 10px;
+	font-family: 'Comfortaa', cursive;
+	color: white;
+	font-weight: bold;
+	margin-top: 280px;
+	position: absolute;
+	margin-left: 520px;
+}
+
+footer address {
+	font-size: 12px;
+	font-family: 'Comfortaa', cursive;
+	color: white;
+	font-weight: bold;
+    position: absolute;
+    margin-top: 280px;
+    margin-left: 775px;
+}
+
+
+.strelochka_5 {
+	height: 50px;
+	width: 50px;
+	position: fixed;
+	cursor: pointer;
+	border-radius: 5px;
+	background-color: white;
+	margin-left: 95%;
+	margin-top: 680px;
+	transition: 900ms ease;
+	-o-transition: 900ms ease;
+	-mozila-transition: 900ms ease;
+	-webkit-transition: 900ms ease;
+	z-index: 3;
+	display: none;
+}
+
+.strelochka_5.Show5 {
+	display: block;
+}
+
+.strelochka_5 .str5 {
+	font-size: 55px;
+	font-weight: bold;
+	position: absolute;
+	margin-left: 8px;
+	margin-top: -2px;
+	color: black;
+	transition: 900ms ease;
+	-o-transition: 900ms ease;
+	-mozila-transition: 900ms ease;
+	-webkit-transition: 900ms ease;
+}
+
+.strelochka_5 .str5:hover {
+	transform: translateY(5px);
+}
+
+.Main_w {
+	margin-top: -10px;
+	height: 800px;
+	width: 100%;
+	position: fixed;
+	margin-left: -8px;
+	z-index: 3;
+	background-color: black;
+	opacity: .99;
+}
+
+.Main_w .M_block {
+	max-height: 600px;
+	max-width: 1000px;
+	position: absolute;
+	cursor: pointer;
+	margin-top: 140px;
+	margin-left: 345px;
+	border: 3px solid white;
+}
+
+.Main_w .M_block .alt_b {
+	height: 50px;
+	width: 900px;
+	background-color: black;
+	position: relative;
+	margin-top: 450px;
+	z-index: 4;
+}
+
+.Main_w .M_block .alt_b .alt_span {
+	font-size: 35px;
+	font-family: 'Comfortaa', cursive;
+	font-weight: bold;
+	color: white;
+	transition: 900ms ease;
+	-o-transition: 900ms ease;
+	-mozila-transition: 900ms ease;
+	-webkit-transition: 900ms ease;
+	position: absolute;
+	margin-top: 10px;
+	transform: translateX(315px);
+}
+
+.Main_w .M_block img {
+	max-height: 500px;
+	max-width: 900px;
+	position: absolute;
+    top: 0;
+	left: 0;
+    width: 900px;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.Main_w .btn_close {
+	height: 50px;
+	width: 50px;
+	background-color: black;
+	z-index: 4;
+	cursor: pointer;
+	border-radius: 35px;
+	position: relative;
+	transition: 900ms ease;
+	-o-transition: 900ms ease;
+	-mozila-transition: 900ms ease;
+	-webkit-transition: 900ms ease;
+    float: right;
+    margin-right: 290px;
+    margin-top: 85px;
+}
+
+.Main_w .btn_close:hover {
+	background-color: white;
+}
+
+.Main_w .btn_close .Circle {
+	position: absolute;
+	font-size: 45px;
+	color: white;
+	font-weight: bold;
+	margin-top: 2.5px;
+	margin-left: 9.5px;
+	transition: 900ms ease;
+	-o-transition: 900ms ease;
+	-mozila-transition: 900ms ease;
+	-webkit-transition: 900ms ease;
+}
+
+.Main_w .btn_close .Circle:hover {
+	color: black;
+}
+    </style>
+</head>
+<body>
+    <header>
+	    <div class="menu">
+		    <span class="b1"></span>
+		    <span class="b2"></span>
+		    <span class="b3"></span>
+		</div>
+        
+        <div class="logotype" title="Red dead Redemption II">
+    	
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <ul class="punkt">
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index.html">На главную</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index2.html">Об игре</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index3.html">Сюжет</a></li> 
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index4.html">Открытый мир</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index5.html">Оружее</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index6.html">Саундтрек</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index7.html">Мультиплеер</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="https://ru.socialclub.rockstargames.com/" target="_blank">Social Club</a></li>
+        <li id="author">Автор вдохновлялся этим сайтом - <a href="https://www.rockstargames.com/reddeadredemption2/" id="silka" target="_blank">Red Dead Redemption II</a></li>
+	</ul>
+
+	<div class="Main_block_3" title="Оружие">
+		<div class="about_weapon">
+           <span>Оружие</span>
+           <hr />
+        </div> 
+        <div class="weapon-block"> 
+            <a href="#special">Особенности оружия |</a><a href="#dead_eye">Мертвый глаз |</a><a href="#Shooting">Стрельба</a>
+        </div>
+	</div>	
+
+	<div class="Opisanie_weapon">
+		<span>А тут уже пойдет речь об оружие... Про эту часть нельзя забывать, так как она тоже не мало важная.. Говорить мы будет об: особенностях оружия, видах и способности - мертвый глаз... Которая может не раз спасти вам жизнь в бою... Ну, либо помешать, т.к может кончиться быстрее</span>
+	</div>
+
+	<div class="Special">
+		<span id="special">Особенности оружия</span>
+		<hr />
+
+        <div class="Special_container">
+            	<span id="clean">1. Чистка оружия</span>
+			    <div class="Clean_b Get_b">
+			    	<img src="images/RDR2_screen_267.jpg" alt="Ужасный вид" />
+				    <div class="text-contain">
+				        <span>Если долго не обращать внимание на своё оружие, то оно может испортиться, в плане грязи и пыли, которые будут на нем висеть... Его характеристики начнут ухудшаться, вместе с его состоянием....  И нет, оно не сломается, как в том же Fallout New Vegas... Оно будет: трелять косо, будет большой разброс и тд..</span>
+				    </div>
+			    </div>
+			    <div class="Clean_b Get_b">
+			    	<img src="images/RDR2_screen_268.jpg" alt="Чистка оружия" />
+				    <div class="text-contain">
+				        <span>Придется чистить своё оружие, если вы хотите выходить из перестрелок живым, а не полумертвым... Для этого вам нужна тряпочка и оружейное масло, которое можно купить по 5$ в оружейном магазине или найти(Чаще всего у банды Ларами)</span>
+			        </div>
+			    </div>
+		    	<div class="Clean_b Get_b">
+		    		<img src="images/RDR2_screen_269.jpg" alt="Чистка в магазине" />
+				    <div class="text-contain">
+					    <span>Так же, если у вас нет оруженийного масла и мало денег(Что достаточно вероятно), то сдайти оружие к оружейнику на чистку(Цена за чистку варируется от степени порчи оружия)... Но обычно это от 0.1$ и выше</span>
+				    </div>
+			    </div>
+			    <div class="Clean_b Get_b">
+			    	<img src="images/RDR2_screen_270.jpg" alt="Чистка с помощью воды" />
+				    <div class="text-contain">
+					    <span>Когда персонаж заходит в воду на 70 - 75%, то его оружие моментально очищается, что позваляет вам сэкономить не только деньги, но и оружейное масло</span>
+				    </div>
+			    </div>
+		</div>
+
+		<div class="Modification">
+			<span id="modif">2. Модификация оружия</span>
+
+			<div class="Modif_b Get_b">
+				<img src="images/RDR2_screen_271.jpg" alt="Модификация оружия" />
+				<div class="txt-c">
+				    <span>Прийдя к оружейнику, вы сможите кастомизировать своё оружие, причем ни как-то поверхностно, как это обычно бывает... А в рамках той эпохи, в которой существует герой... Что я имею ввиду? Длинна ствола, надрез ствола, прицел и т.д...</span>
+			   </div>
+			</div>
+			<div class="Modif_b Get_b">
+				<img src="images/RDR2_screen_97.jpg" alt="Прекрасный вид" />
+				<div class="txt-c">
+				    <span>Ах да, забыл упомянуть, вы так же можете выбирать для своего оружия: узор на металле, цвет металла, рисунок на рукояти(револьвер), прекладе(винтовка)... Вы даже можете надевать чехол на оружие</span>
+			    </div>
+			</div>
+			<div class="Modif_b l Get_b">
+				<img src="images/RDR2_screen_272.jpg" alt="Редкое оружие" />
+				<div class="txt-c">
+				    <span>Все, что описанно до этого блока касается только обычных стволов, а редких нет... Да, да вы не то что не сможете улучшить редкое оружие, так ещё приукрасить его тоже не получиться.. Такие вот дела... Но не расстраиваетесь, все равно на редком оружие бывает красивый узор!</span>
+			    </div>
+			</div>
+		</div>
+	</div>
+
+	<div class="Dead_eye">
+		<span id="dead_eye">Система мертвый глаз</span>
+
+		<div class="Eye_container">
+			<div class="dead_b Get_b">
+				<img src="images/RDR2_screen_275.jpg" alt="Возможность" />
+				<div class="T_blocks">
+					<span>В игре пресудствует одновременно любопытная и полезная особенность под названием "Мертвый глаз"... Она открывается в самом начале игры и позваляет вам помечать цели..</span>
+				</div>
+			</div>
+			<div class="dead_b Get_b">
+				<img src="images/RDR2_screen_273.jpg" alt="Наведение" />
+				<div class="T_blocks">
+					<span>Просто наводитесь на цель и точки автоматически ставяться в наведенную область</span>
+				</div>
+			</div>
+			<div class="dead_b l2 Get_b">
+				<img src="images/RDR2_screen_274.jpg" alt="Прогресс способности">
+				<div class="T_blocks">
+					<span>Чтобы прокачать "Мертвый глаз", нам нужно постоянно им пользоваться и так он прокачается... Или есть один маст-хев способ, но для этого нужна специальная настойка, которая и повышает уровень мертвого злаща</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="Shooting">
+		<span id="Shooting">Стрельба</span>
+
+		<div class="Shooted_block">
+			<div class="gif_block rifle">
+				<div class="gif_txt">
+					<span>Болтовая винтовка одновременно нужное и не заменимое оружие в бою.. Так ещё и высокоточное ко всему выше перечисленному</span>
+				</div>
+			</div>
+			<div class="gif_block repeater">
+				<div class="gif_txt">
+					<span>Карабин является чуть ли не верным вашим "товарищем", быстрая стрельба и хорошая точно стрельбы от бедра</span>
+				</div>
+			</div>
+			<div class="gif_block reload">
+				<div class="gif_txt">
+					<span>В игре так же реалистично выполнена перезарядка с любого оружия... Но с револьвера это выглядит брутально</span>
+				</div>
+			</div>
+			<div class="gif_block shotgun">
+				<div class="gif_txt">
+					<span>Дробовик всегда выручит вас на ближней-средней дистанции, особенно если речь идет о магазине в размере 6 штук и если это автоматический дробовик(В зависимости от дробовика)</span>
+				</div>
+			</div>
+		</div>
+	</div> 
+
+	<div class="Blagodary">
+		<span>Надеюсь, что вам понравилась рубрика про оружие и вы узнали для себя что-то новое... Уверен, что вышеописанная информация пригодится вам на просторах открытого мира Red Dead Redemption II... Приятного время припроваждения))</span>
+	</div>
+
+
+    <div class="strelochka_5"><i class="fas fa-angle-up str5"></i></div>
+
+	<footer>
+      <div class="Red_dead">
+        <span>Red Dead Redemption II</span>
+      </div>
+        
+      <span id="lozyng" title="Лозунг Red Dead Redemption II">outlaws for the live</span>
+        
+      <hr id="linia_RDR2" />
+
+      <div class="container">
+          <a href="https://www.youtube.com/user/RockstarGames" title="Youtube" target="_blank"><i class="fab fa-youtube sticker"></i></a>
+
+          <a href="https://twitter.com/rockstargames" title="Twitter" target="_blank"><i class="fab fa-twitter sticker"></i></a>
+        
+          <a href="https://www.facebook.com/pages/category/Video-Game/Rockstargames-498603576885163/" title="Facebook" target="_blank"><i class="fab fa-facebook-f sticker"></i></a>
+        
+          <a href="https://www.instagram.com/rockstargames/?hl=ru" title="Instagram"  target="_blank" /><i class="fab fa-instagram sticker"></i></a>
+           
+          <a href="https://www.twitch.tv/rockstargames" title="Twitch" target="_blank"><i class="fab fa-twitch sticker"></i></a>
+      </div>
+        
+        <!-- Возможно я удалю эти (2) блока с сошиал клабом и рокстаром, т.к 1) Выглядит как калл 2)Что будет при адаптивной версте? Да хрен его знает(Удалил) -->
+
+      <span id="adres">Главный офис Rockstar находится по адресу - </span><address>RockStar, 4 622, Broadway, New York, NY</address>
+  </footer> 
+
+	<script src="JS/index5.js"></script>
+</body>
+</html>

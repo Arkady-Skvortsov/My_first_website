@@ -1,0 +1,2377 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Об игре</title>
+    <!-- For tablets and phone -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Lakki+Reddy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+body {
+  background-color: black;
+  height: 40800px;
+}
+::-webkit-scrollbar {
+  width: 9px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+} /* Для scrollbar */
+header {
+  height: 100px;
+  width: 100%;
+  z-index: 3;
+    left: 0px;
+    top: 0;
+  background-color: black;
+    transition: 900ms ease;
+    position: fixed;
+}
+/* @keyframes gradient-color {
+  0% {
+       border-bottom: 5px solid rgba(225, 0, 0, 0.6);
+  }
+  50% {
+       border-bottom: 5px solid rgba(255, 0, 0, 0.8);
+  }
+  100% {
+       border-bottom: 5px solid rgba(255, 0, 0, 1);
+  }
+} */
+header .menu {
+  height: 50px;
+  width: 50px;
+  border: 2px solid red;
+    margin-left: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+header .menu span {
+  height: 7px;
+  width: 40px;
+  font-size: 25px;
+  margin-left: 5px;
+  background-color: white;
+  margin-top: 7px;
+  position: relative;
+  display: block;
+  transition: 900ms ease;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+header .menu span:hover {
+  background-color: red;
+}
+header .menu .b1.rot_1 {
+  transform: rotate(-45deg);
+  top: 15px;
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -mozila-transform: rotate(-45deg);
+  border-radius: 15px;
+}
+header .menu .b2.rot_2 {
+  display: none;
+}
+header .menu .b3.rot_3 {
+  transform: rotate(45deg);
+  top: 1px;
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -mozila-transform: rotate(45deg);
+  border-radius: 15px;
+}
+header .logotype {
+  height: 90px;
+  width: 400px;
+  position: absolute;
+  cursor: pointer;
+  margin-top: -77.5px;
+    margin-left: 600px;
+    background-image: url('images/RDR2_screen_308.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.punkt {
+  height: 690px;
+  width: 600px;
+  position: fixed;
+  z-index: 1;
+    background-color: black;
+    opacity: .9;
+    margin-top: 91.5px;
+    margin-left: -650px;
+    border-right: 1px solid red;
+    transition: 700ms ease;
+    -o-transition: 700ms ease;
+    -mozila-transition: 700ms ease;
+    -webkit-transition: 700ms ease;
+}
+.punkt.show {
+  margin-left: -8px;
+}
+.punkt .elements {
+  position: relative;
+  height: 60px;
+  width: 600px;
+  list-style-type: none;
+  margin-left: 0;
+  margin-top: 10px;
+}
+.punkt .elements .c {
+  font-size: 50px;
+  position: absolute;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 20px;
+    border-radius: 0;
+    display: none;
+    animation: cross 5s linear infinite;
+    transition: 800ms ease;
+    -o-transition: 800ms ease;
+    -mozila-transition: 800ms ease;
+    -webkit-transition: 800ms ease;
+} 
+@keyframes cross {
+  0% {
+    -mozila-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+      transform: rotate(90deg);
+      color: rgba(255, 1, 8, .6);
+    }
+  50% {
+       color: rgba(255, 1, 8, .8);
+  }
+ 
+  100% {
+      transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -mozila-transform: rotate(180deg);
+      color: red;
+  } /* Animation for the cross, when they display eqvals = block */
+}
+.punkt .elements a {
+  font-size: 45px;
+  font-family: 'Russo One', sans-serif;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-left: 80px;
+  margin-top: 1px;
+    cursor: pointer;
+    position: absolute;
+    transition: 700ms ease;
+    -o-transition: 700ms ease;
+    -mozila-transition: 700ms ease;
+    -webkit-transition: 700ms ease;
+}
+.punkt #author {
+  font-size: 15px;
+  font-family: 'Comfortaa', cursive;
+  margin-left: 20px;
+  list-style-type: none;
+  color: purple;
+  font-weight: bold;
+  margin-top: 90px;
+}
+.punkt #author a {
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Comfortaa', cursive;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+.punkt #author a:hover {
+  text-decoration: underline;
+}
+.body-screen {
+  height: 1020px;
+  width: 100%;
+  margin-left: -8px;
+  position: absolute;
+  cursor: pointer;
+  margin-top: 100px;
+  background-image: url('images/RDR2_screen_50.jpg');
+  background-position: center;
+  background-size: cover;
+}
+.body-screen .about {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  background-color: black;
+  margin-top: 950px;
+  margin-left: 0px;
+  border-bottom: 1px solid red;
+}
+.body-screen .about span {
+    font-size: 50px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 680px;
+}
+.body-screen .about hr {
+  height: 5px;
+  width: 950px;
+  border: 0;
+  margin-left: 280px;
+  background-color: white;
+  position: absolute;
+  margin-top: 150px;
+  font-weight: bold;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+.body-screen .about hr:hover {
+  transform: translateY(5px);
+}
+.body-screen .container_recomend {
+  height: 100px;
+  width: 625px;
+  margin-top: 1125px;
+  margin-left: 465px;
+  position: absolute;
+  display: inline;
+}
+.body-screen .container_recomend a {
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  color: white;
+  word-spacing: .3em;
+  text-decoration: none;
+  font-family: 'Comfortaa', cursive;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+.body-screen .container_recomend a:hover {
+  text-shadow: 0 0 30px red;
+  text-decoration: underline;
+}
+.strelochka_2 {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  border-radius: 5px;
+  z-index: 1;
+  display: none;
+  cursor: pointer;
+  background-color: white;
+  margin-left: 95%;
+  margin-top: 640px;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+.strelochka_2.Show {
+  display: block;
+}
+.strelochka_2 .str {
+  font-size: 55px;
+  font-weight: bold;
+  position: absolute;
+  margin-left: 8px;
+  margin-top: -2px;
+  color: black;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+.strelochka_2 .str:hover {
+  transform: translateY(5px);
+}
+.oglavlenie {
+  height: 300px;
+  width: 100%;
+  display: inline;
+  position: absolute;
+  margin-left: -8px;
+  margin-top: 1400px;
+}
+.oglavlenie p {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  position: absolute;
+  color: white;
+  word-spacing: .4em;
+  margin-left: 22.5px;
+}
+.game_mechanics {
+  height: 22750px;
+  width: 100%;
+  position: absolute;
+  margin-top: 1800px;
+  margin-left: -8px;
+}
+.game_mechanics #name {
+  font-size: 45px;
+  font-family: 'Lakki Reddy', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+    margin-top: 45px;
+    margin-left: 375px;
+}
+.game_mechanics hr {
+  height: 5px;
+  width: 900px;
+  margin-left: 325px;
+  margin-top: 100px;
+  background-color: white;
+  border: 0;
+}
+.game_mechanics .opis {
+  height: 350px;
+  width: 900px;
+  position: absolute;
+  margin-top: 110px;
+  margin-left: 325px;
+  display: inline;
+}
+.game_mechanics .opis #opisanie_glav {
+  font-size: 25px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+}
+.game_mechanics #first_punkt {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-left: 325px;
+  margin-top: 465px;
+}
+.game_mechanics .first_img {
+  max-height: 400px;
+  max-width: 800px;
+  position: absolute;
+  cursor: pointer;
+  margin-left: 400px;
+  margin-top: 550px;
+}
+.game_mechanics .first_img img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .all-things {
+  height: 500px;
+  width: 900px;
+    position: absolute;
+    margin-left: 325px;
+    margin-top: 1000px;
+    display: inline;
+}
+.game_mechanics .all-things .things {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  color: white;
+  font-weight: bold;
+  position: relative;
+  margin-left: 10px;
+  margin-top: 50px;
+}
+.game_mechanics #second_punkt {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-left: 325px;
+    margin-top: 1745px;
+}
+.game_mechanics .second_img {
+  max-height: 400px;
+  max-width: 800px;
+  position: absolute;
+  cursor: pointer;
+  margin-left: 400px;
+  margin-top: 1850px;
+}
+.game_mechanics .second_img img {
+  max-width: 800px;
+  max-height: 400px;
+}
+.game_mechanics .wanted {
+  width: 900px;
+  height: 1400px;
+  position: absolute;
+  margin-left: 325px;
+  margin-top: 2300px;
+  display: inline;
+}
+.game_mechanics .wanted #wanted_text {
+    font-size: 30px;
+    word-spacing: .4px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-top: 10px;
+}
+.game_mechanics .wanted #bounty_h {
+  max-height: 400px;
+  max-width: 800px;
+  position: absolute;
+  cursor: pointer;
+  margin-top: 835px;
+  margin-left: 100px;
+}
+.game_mechanics .wanted #bounty_h img {
+  max-width: 800px;
+  max-height: 400px;
+}
+.game_mechanics .wanted #bounty_hunters {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 1285px;
+}
+.game_mechanics .wanted #post_office {
+  max-height: 400px;
+  max-width: 800px;
+  position: absolute;
+  cursor: pointer;
+  margin-top: 1662.5px;
+  margin-left: 100px;
+}
+.game_mechanics .wanted #post_office img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .wanted #bounty_message {
+    font-size: 30px;
+    font-family: 'Comfortaa', cursive;
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    margin-top: 2150px;
+}
+.game_mechanics #third_punkt {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-left: 325px;
+  margin-top: 4650px;
+}
+.game_mechanics .third_img {
+  max-width: 800px;
+  max-height: 400px;
+  position: absolute;
+  cursor: pointer;
+  margin-left: 425px;
+  margin-top: 4750px;
+}
+.game_mechanics .third_img img {
+  max-width: 800px;
+  max-height: 400px;
+}
+.game_mechanics .You-bounty_hunter {
+  height: 1350px;
+  width: 900px;
+  position: absolute;
+  margin-left: 325px;
+  margin-top: 5200px;
+}
+.game_mechanics .You-bounty_hunter #you-hunter {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  position: absolute;
+  color: white;
+  margin-top: 15px;
+}
+.game_mechanics .You-bounty_hunter #Hunting {
+  max-width: 800px;
+  cursor: pointer;
+  max-height: 400px;
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 160px;
+}
+.game_mechanics .You-bounty_hunter #Hunting img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .You-bounty_hunter #bounty {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Comfortaa', cursive;
+  color: white;
+  position: absolute;
+  margin-top: 620px;
+}
+.game_mechanics .You-bounty_hunter #money_for_work {
+  max-height: 400px;
+  cursor: pointer;
+  max-width: 800px;
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 805px;
+}
+.game_mechanics .You-bounty_hunter #money_for_work img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .You-bounty_hunter #money_from_sheriff {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  margin-top: 1245px;
+}
+.game_mechanics #fourth_punkt {
+  color: white;
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 6600px;
+  margin-left: 325px;
+}
+.game_mechanics #speak_with_npc {
+  max-height: 400px;
+  max-width: 800px;
+  position: absolute;
+  cursor: pointer;
+  margin-top: 6700px;
+  margin-left: 425px;
+}
+.game_mechanics #speak_with_npc img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .speak_system {
+  width: 900px;
+  height: 1400px;
+  position: absolute;
+  margin-left: 325px;
+  margin-top: 7180px;
+}
+.game_mechanics .speak_system #speak {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+}
+.game_mechanics .speak_system #speak_with_sheriff {
+  max-height: 400px;
+  max-width: 800px;
+  cursor: pointer;
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 95px;
+}
+.game_mechanics .speak_system #speak_with_sheriff img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .speak_system #speak_2 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 545px;
+  word-spacing: .4em;
+} 
+.game_mechanics .speak_system #secret_speak {
+  max-height: 400px;
+  max-width: 800px;
+  cursor: pointer;
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 825px;
+}
+.game_mechanics .speak_system #secret_speak img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .speak_system #speak_3 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  word-spacing: .4em;
+  position: absolute;
+  margin-top: 1275px;
+}
+.game_mechanics #fifth_punkt {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  margin-top: 8960px;
+  margin-left: 325px;
+  position: absolute;
+}
+.game_mechanics #You-in_camp {
+  max-width: 800px;
+  max-height: 400px;
+  cursor: pointer;
+  position: absolute;
+  margin-top: 9040px;
+    margin-left: 425px;
+}
+.game_mechanics #You-in_camp img {
+  max-width: 800px;
+  max-height: 400px;
+}
+.game_mechanics .camp_system {
+  height: 2000px;
+  width: 900px;
+  position: absolute;
+  margin-left: 325px;
+  margin-top: 9530px;
+}
+.game_mechanics .camp_system #camp_1 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 10px;
+}
+.game_mechanics .camp_system #camp_image_1 {
+  max-height: 400px;
+  max-width: 800px;
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 175px;
+  cursor: pointer;
+}
+.game_mechanics .camp_system #camp_image_1 img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .camp_system #camp_2 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  position: absolute;
+  color: white;
+  margin-top: 610px;
+}
+.game_mechanics .camp_system #camp_image_2 {
+  max-height: 400px;
+  max-width: 800px;
+  position: absolute;
+  margin-left: 100px;
+  cursor: pointer;
+  margin-top: 815px;
+}
+.game_mechanics .camp_system #camp_image_2 img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .camp_system #camp_3 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Comfortaa', cursive;
+  color: white;
+  position: absolute;
+  margin-top: 1280px;
+}
+.game_mechanics .camp_system #camp_image_3 {
+  max-height: 400px;
+  max-width: 800px;
+  cursor: pointer;
+  margin-left: 100px;
+  margin-top: 1515px;
+}
+.game_mechanics .camp_system #camp_image_3 img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .camp_system #camp_4 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 50px;
+}
+.game_mechanics #six_punkt {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 11690px;
+  margin-left: 325px;
+}
+.game_mechanics #quests {
+  max-height: 400px;
+  max-width: 800px;
+  cursor: pointer;
+  position: absolute;
+  margin-top: 11775px;
+  margin-left: 425px;
+}
+.game_mechanics #quests img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .Quests {
+  height: 2100px;
+  width: 900px;
+  position: absolute;
+  margin-left: 325px;
+  margin-top: 12200px;
+}
+.game_mechanics .Quests #quest_1 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 10px;
+  word-spacing: .4em;
+}
+.game_mechanics .Quests #quest_image_1 {
+  max-height: 400px;
+  max-width: 800px;
+  position: absolute;
+  cursor: pointer;
+  margin-left: 100px;
+  margin-top: 405px;
+}
+.game_mechanics .Quests #quest_image_1 img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .Quests #quest_2 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 840px;
+}
+.game_mechanics .Quests #quest_image_2 {
+  max-height: 400px;
+  max-width: 800px;
+  cursor: pointer;
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 980px;
+}
+.game_mechanics .Quests #quest_image_2 img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .Quests #quest_3 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 1425px;
+}
+.game_mechanics .Quests #quest_image_3 {
+  max-height: 400px;
+  max-width: 800px;
+  position: absolute;
+  cursor: pointer;
+  margin-top: 1550px;
+  margin-left: 100px;
+}
+.game_mechanics .Quests #quest_image_3 img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .Quests #quest_4 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 2010px;
+}
+.game_mechanics #seven_punkt {
+  font-size: 35px;
+  color: white;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 14445px;
+  margin-left: 325px;
+}
+.game_mechanics #Random_events {
+  max-height: 400px;
+  max-width: 800px;
+  position: absolute;
+  cursor: pointer;
+  margin-top: 14530px;
+  margin-left: 425px;
+}
+.game_mechanics #Random_events img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .random_things {
+  height: 2250px;
+  width: 900px;
+  position: absolute;
+  margin-left: 325px;
+  margin-top: 15000px;
+}
+.game_mechanics .random_things #random_1 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 10px;
+}
+.game_mechanics .random_things #random_image_1 {
+  max-height: 400px;
+  max-width: 800px;
+  cursor: pointer;
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 270px;
+}
+.game_mechanics .random_things #random_image_1 img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .random_things #random_2 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 690px;
+}
+.game_mechanics .random_things #random_image_2 {
+  max-width: 800px;
+  max-height: 400px;
+  cursor: pointer;
+  position: absolute;
+  margin-top: 955px;
+  margin-left: 100px;
+}
+.game_mechanics .random_things #random_image_2 img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .random_things #random_3 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 1405px;
+  word-spacing: .5em;
+}
+.game_mechanics .random_things #random_image_3 {
+  max-height: 400px;
+  max-width: 800px;
+  position: absolute;
+  cursor: pointer;
+  margin-left: 100px;
+  margin-top: 1685px;
+}
+.game_mechanics .random_things #random_image_3 img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .random_things #random_4 {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Comfortaa', cursive;
+    color: white;
+    word-spacing: .4em;
+    position: absolute;
+    margin-top: 2140px;
+}
+.game_mechanics #eight_punkt {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-left: 325px;
+  margin-top: 17495px;
+}
+.game_mechanics #weapon_on_horse {
+    max-height: 400px;
+    max-width: 800px;
+    position: absolute;
+    cursor: pointer;
+    margin-top: 17585px;
+    margin-left: 425px;
+}
+.game_mechanics #weapon_on_horse img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .horse_inventar {
+  height: 1480px;
+  width: 900px;
+  position: absolute;
+  margin-left: 325px;
+  margin-top: 18030px;
+}
+.game_mechanics .horse_inventar #horse_1 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 10px;
+}
+.game_mechanics .horse_inventar #horse_image_1 {
+  max-height: 400px;
+  max-width: 800px;
+  position: absolute;
+  cursor: pointer;
+  margin-top: 170px;
+  margin-left: 100px;
+}
+.game_mechanics .horse_inventar #horse_image_1 img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .horse_inventar #horse_2 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 610px;
+}
+.game_mechanics .horse_inventar #horse_image_2 {
+  max-height: 400px;
+  max-width: 800px;
+  position: absolute;
+  margin-left: 100px;
+  cursor: pointer;
+  margin-top: 960px;
+}
+.game_mechanics .horse_inventar #horse_image_2 img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .horse_inventar #horse_3 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 1415px;
+}
+.game_mechanics #nine_punkt {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-left: 325px;
+  margin-top: 19625px;
+}
+.game_mechanics #Main_honor {
+  max-height: 400px;
+  max-width: 800px;
+  position: absolute;
+  margin-left: 425px;
+  margin-top: 19690px;
+  cursor: pointer;
+}
+.game_mechanics #Main_honor img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .Honor_block {
+  height: 2100px;
+  width: 900px;
+  position: absolute;
+  margin-left: 325px;
+  margin-top: 20125px;
+}
+.game_mechanics .Honor_block #honor_1 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 10px;
+}
+.game_mechanics .Honor_block #honor_image_1 {
+  max-height: 400px;
+  max-width: 800px;
+  position: absolute;
+  margin-left: 100px;
+  cursor: pointer;
+  margin-top: 270px;
+}
+.game_mechanics .Honor_block #honor_image_1 img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .Honor_block #honor_2 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 690px;
+}
+.game_mechanics .Honor_block #honor_image_2 {
+  max-height: 400px;
+  max-width: 800px;
+  position: absolute;
+  cursor: pointer;
+  margin-left: 100px;
+  margin-top: 845px;
+}
+.game_mechanics .Honor_block #honor_3 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 1285px;
+}
+.game_mechanics .Honor_block #honor_image_2 img {
+  max-width: 800px;
+  max-height: 400px;
+}
+.game_mechanics .Honor_block #honor_image_3 {
+  max-height: 400px;
+  max-width: 800px;
+  cursor: pointer;
+  position: absolute;
+  margin-left: 100px;
+  margin-top: 1465px;
+}
+.game_mechanics .Honor_block #honor_image_3 img {
+  max-height: 400px;
+  max-width: 800px;
+}
+.game_mechanics .Honor_block #honor_4 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+    margin-top: 1925px;
+}
+.game_mechanics .Img {
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+.game_mechanics .Img:hover {
+  box-shadow: 0 0 20px red;
+}
+.strelochka_3 {
+  height: 50px;
+  width: 900px;
+  position: absolute;
+  cursor: pointer;
+  border-radius: 30px;
+  background-color: black;
+  margin-left: 325px;
+  margin-top: 24100px;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+.strelochka_3:hover {
+  background-color: white;
+  transform: translateY(30px);
+}
+.strelochka_3 .str3 {
+  font-size: 45px;
+  color: white;
+  margin-top: 5px;
+    padding-left: 450px;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+.strelochka_3 .str3:hover {
+  color: black;
+  text-shadow: 0 0 15px black;
+}
+.Game_details {
+  width: 900px;
+  height: 16050px;
+  position: absolute;
+  margin-left: 325px;
+  margin-top: 24260px;
+} 
+.Game_details #details {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 10px;
+  padding-left: 40px;
+}
+.Game_details hr {
+  height: 5px;
+  width: 900px;
+  background-color: white;
+  position: absolute;
+  margin-top: 45px;
+}
+.Game_details #opisanie_detail {
+  font-size: 25px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-top: 145px;
+    margin-left: 20px;
+}
+.Game_details #first_detail {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 465px;
+}
+.Game_details #Shoot_gif {
+  max-height: 400px;
+  max-width: 700px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 555px;
+}
+.Game_details #Shoot_gif img {
+  max-height: 400px;
+  max-width: 700px;
+}
+.Game_details #opisanie_detail_2 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 40px;
+}
+.Game_details #Shoot_gif_2 {
+  max-height: 400px;
+  max-width: 700px;
+  margin-left: 200px;
+  cursor: pointer;
+  margin-top: 320px;
+}
+.Game_details #Shoot_gif_2 img {
+  max-height: 400px;
+  max-width: 700px;
+}
+.Game_details #opisanie_detail_3 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 50px;
+}
+.Game_details #Shoot_gif_3 {
+  max-height: 400px;
+  max-width: 700px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 290px;
+}
+.Game_details #Shoot_gif_3 img {
+  max-height: 400px;
+  max-width: 700px;
+}
+.Game_details #second_detail {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 100px;
+}
+.Game_details #Horse_down {
+  max-height: 400px;
+  max-width: 700px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 190px;
+}
+.Game_details #Horse_down img {
+  max-height: 400px;
+  max-width: 700px;
+}
+.Game_details #horse_fail {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 35px;
+}
+.Game_details #Horse_down_2 {
+  max-height: 400px;
+  max-width: 700px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 310px;
+}
+.Game_details #horse_fail_2 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 45px;
+}
+.Game_details #Horse_down_3 {
+  max-height: 400px;
+  max-width: 700px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 290px;
+}
+.Game_details #third_detail {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 70px;
+}
+.Game_details #Shoot-blood {
+  max-height: 400px;
+  max-width: 700px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 210px;
+}
+.Game_details #Shoot-blood img {
+  max-height: 400px;
+  max-width: 700px;
+}
+.Game_details #shoot_blood_1 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 65px;
+}
+.Game_details #Shoot-blood_1 {
+  max-height: 400px;
+  max-width: 700px;
+  cursor: pointer;
+    margin-left: 200px;
+    margin-top: 400px;
+}
+.Game_details #Shoot-blood_1 img {
+  max-height: 400px;
+  max-width: 700px;
+}
+.Game_details #shoot_blood_2 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 55px;
+}
+.Game_details #Shoot-blood_2 {
+  max-height: 400px;
+  max-width: 700px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 250px;
+}
+.Game_details #fourth_detail {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 65px;
+}
+.Game_details #blood_animal {
+  max-height: 400px;
+  max-width: 700px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 170px;
+}
+.Game_details #animal_kill {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 40px;
+}
+.Game_details #five_detail {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 265px;
+}
+.Game_details #main_hair {
+  max-height: 400px;
+  max-width: 700px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 340px;
+}
+.Game_details #hair_1 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 50px;
+}
+.Game_details #hair_image_1 {
+  max-height: 400px;
+  max-width: 600px;
+  margin-left: 200px;
+  cursor: pointer;
+  margin-top: 225px;
+}
+.Game_details #hair_image_1 img {
+  max-height: 400px;
+  max-width: 600px;
+}
+.Game_details #hair_2 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 50px;
+}
+.Game_details #six_detail {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+    position: absolute;
+    margin-top: 285px;
+}
+.Game_details #Realistic_hero {
+  max-height: 400px;
+  max-width: 600px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 380px;
+}
+.Game_details #Realistic_hero img {
+  max-height: 400px;
+  max-width: 600px;
+}
+.Game_details #mud_1 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 55px;
+}
+.Game_details #mud_image_1 {
+  max-height: 400px;
+  max-width: 600px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 280px;
+}
+.Game_details #mud_image_1 img {
+  max-height: 400px;
+  max-width: 600px;
+}
+.Game_details #mud_2 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 75px;
+}
+.Game_details #seven_detail {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 345px;
+}
+.Game_details #bad_animal {
+  max-height: 400px;
+  max-height: 600px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 445px;
+}
+.Game_details #bad_animal img {
+  max-height: 400px;
+  max-width: 600px;
+}
+.Game_details #skin_1 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 55px;
+}
+.Game_details #skin_image_1 {
+  max-height: 400px;
+  max-width: 600px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 270px;
+}
+.Game_details #skin_image_1 img {
+  max-height: 400px;
+  max-width: 600px;
+}
+.Game_details #skin_2 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 55px;
+}
+.Game_details .Img {
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+.Game_details .Img:hover {
+  box-shadow: 0 0 20px red;
+}
+.Game_details #eight_detail {
+  font-size: 35px;
+  font-weight: bold;
+  font-family: 'Comfortaa', cursive;
+  color: white;
+  position: absolute;
+  margin-top: 315px;
+}
+.Game_details #cold_horse {
+  max-height: 400px;
+  max-width: 600px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 410px;
+}
+.Game_details #cold_horse img {
+  max-height: 400px;
+  max-width: 600px;
+}
+.Game_details #cold_eggs {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  margin-top: 55px;
+}
+.Game_details #cold_image_1 {
+  max-height: 400px;
+  max-width: 600px;
+  cursor: pointer;
+  margin-top: 90px;
+  margin-left: 200px;
+}
+.Game_details #cold_image_1 img {
+  max-height: 400px;
+  max-width: 600px;
+}
+.Game_details #nine_detail {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 95px;
+}
+.Game_details #strela_ {
+  max-height: 400px;
+  max-width: 600px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 215px;
+}
+.Game_details #strela_ img {
+  max-height: 400px;
+  max-width: 600px;
+}
+.Game_details #physics {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: 'Comfortaa', cursive;
+  color: white;
+  position: absolute;
+    margin-top: 55px;
+}
+.Game_details #ten_detail {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 290px;
+}
+.Game_details #gun_upgread {
+  max-height: 400px;
+  max-width: 600px;
+  margin-top: 435px;
+  margin-left: 200px;
+  cursor: pointer;
+}
+.Game_details #gun_upgread img {
+  max-height: 400px;
+  max-width: 600px;
+}
+.Game_details #gun_1 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 65px;
+}
+.Game_details #gun_image_2 {
+  max-height: 400px;
+  max-width: 600px;
+  cursor: pointer;
+  margin-top: 290px;
+  margin-left: 200px;
+}
+.Game_details #gun_image_2 img {
+  max-height: 400px;
+  max-width: 600px;
+}
+.Game_details #gun_2 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 50px;
+}
+.Game_details #eleven_detail {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 345px;
+}
+.Game_details #clean_weapon {
+  max-height: 400px;
+  max-width: 600px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 455px;
+}
+.Game_details #clean_weapon img {
+  max-height: 400px;
+  max-width: 600px;
+}
+.Game_details #c_weapon {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 70px;
+}
+.Game_details #twelve_detail {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 325px;
+}
+.Game_details #hero_write {
+  max-height: 400px;
+  max-width: 600px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 430px;
+}
+.Game_details #journal_1 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 60px;
+}
+.Game_details #journal_image_1 {
+  max-height: 400px;
+  max-width: 600px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 220px;
+}
+.Game_details #journal_image_1 img {
+  max-height: 400px;
+  max-width: 600px;
+}
+.Game_details #hero_write img {
+  max-height: 400px;
+  max-width: 600px;
+}
+.Game_details #journal_2 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 60px;
+}
+.Game_details #thirteen_detail {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 235px;
+}
+.Game_details #weapon_journal {
+  max-height: 400px;
+  max-width: 600px;
+  cursor: pointer;
+  margin-left: 200px;
+  margin-top: 340px;
+}
+.Game_details #weapon_journal img {
+  max-height: 400px;
+  max-width: 600px;
+}
+.Game_details #Weapon_1 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 60px;
+}
+footer {
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+  margin-left: -8px;
+  margin-top: 40500px;
+  border-top: 3px solid red;
+  background-image: url('PNG/RDR2_FOOTER_BACKGROUND.png');
+  background-size: cover;
+  background-position: bottom;
+}
+footer .Red_dead {
+  height: 50px;
+  width: 350px;
+  background-color: black;
+  border: 3px solid red;
+  position: absolute;
+  margin-top: -35px;
+  margin-left: 610px;
+}
+footer .Red_dead span {
+  font-size: 30px;
+  font-family: 'Bree Serif', serif;
+  color: white;
+  font-weight: bold;
+  transform: translateY(2.5px);
+  position: absolute;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+footer #lozyng {
+  font-size: 75px;
+  font-family: 'Bree Serif', serif;
+  font-weight: bold;
+  position: absolute;
+  cursor: pointer;
+  color: red;
+  margin-top: 50px;
+    margin-left: 470px;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+footer #lozyng:hover {
+  text-shadow: 0 0 25px red;
+}
+footer #linia_RDR2 {
+  height: 5px;
+  width: 700px;
+  position: absolute;
+  border-radius: 10px;
+  margin-left: 440px;
+  margin-top: 175px;
+  border: 0;
+  background-color: rgba(217, 30, 24, .7);
+}
+footer .container {
+  height: 80px;
+  width: 600px;
+  display: inline;
+  position: absolute;
+  margin-top: 195px;
+  margin-left: 500px;
+}
+footer .container a .sticker {
+    font-size: 40px;
+    cursor: pointer;
+    margin-left: 60px;
+    margin-top: 20px;
+    color: rgba(255, 5, 1, .7);
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+footer .container a .sticker:hover {
+  color: red;
+}
+footer #adres {
+  font-size: 10px;
+  font-family: 'Comfortaa', cursive;
+  color: white;
+  font-weight: bold;
+  margin-top: 280px;
+  position: absolute;
+  margin-left: 520px;
+}
+footer address {
+  font-size: 12px;
+  font-family: 'Comfortaa', cursive;
+  color: white;
+  font-weight: bold;
+    position: absolute;
+    margin-top: 280px;
+    margin-left: 775px;
+}
+body .main_w {
+  margin-top: -10px;
+  height: 800px;
+  width: 100%;
+  position: fixed;
+  margin-left: -8px;
+  z-index: 4;
+  background-color: black;
+  opacity: .99;
+}
+body .main_w.Close {
+  display: none;
+}
+body .main_w .second_w {
+  max-height: 600px;
+  max-width: 1000px;
+  position: absolute;
+  cursor: pointer;
+  margin-top: 140px;
+  opacity: 1;
+  margin-left: 345px;
+  border: 3px solid white;
+}
+body .main_w .second_w .name_border {
+  height: 50px;
+  width: 889px;
+  background-color: black;
+  position: absolute;
+  margin-top: -50px;
+}
+body .main_w .second_w .name_border .name_img {
+  font-size: 35px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  position: absolute;
+  margin-top: 10px;
+  transform: translateX(345px);
+}
+body .main_w .second_w img {
+  max-height: 500px;
+    max-width: 900px;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+body .main_w .button_close {
+  height: 50px;
+  width: 50px;
+  background-color: black;
+  z-index: 4;
+  cursor: pointer;
+  border-radius: 35px;
+  position: relative;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+    float: right;
+    margin-right: 290px;
+    margin-top: 85px;
+}
+body .main_w .button_close:hover {
+  background-color: white;
+}
+body .main_w .button_close .crs {
+  position: absolute;
+  font-size: 45px;
+  color: white;
+  font-weight: bold;
+  margin-top: 2.5px;
+  margin-left: 9.5px;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+body .main_w .button_close .crs:hover {
+  color: black;
+}
+    </style>
+</head>
+<body>
+	<header>
+	    <div class="menu">
+		    <span class="b1"></span>
+		    <span class="b2"></span>
+		    <span class="b3"></span>
+		</div>
+        
+        <div class="logotype" title="Red dead Redemption II">
+    	
+        </div>
+    </header>
+
+    <!-- Menu -->
+	<ul class="punkt">
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index.html">На главную</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index2.html">Об игре</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index3.html">Сюжет</a></li> 
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index4.html">Открытый мир</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index5.html">Оружее</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index6.html">Саундтрек</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index7.html">Мультиплеер</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="https://ru.socialclub.rockstargames.com/" target="_blank">Social Club</a></li>
+        <li id="author">Автор вдохновлялся этим сайтом - <a href="https://www.rockstargames.com/reddeadredemption2/" id="silka" target="_blank">Red Dead Redemption II</a></li>
+	</ul>
+
+	<!-- body -->
+
+	<div class="body-screen" title="Об игре">
+		<div class="about">
+			<span>Об игре</span>
+			<hr />
+		</div>
+
+		<div class="container_recomend">
+			<a href="#G_mechanic" title="Игровые механники">Игровые механники | </a>
+            <a href="#details" title="Игровые механники">Детали</a>
+		</div>
+	</div>
+
+	<div class="oglavlenie">
+		<p>Rockstar очень сильно постаралась над игрой, так что тут есть на что посмотреть... 
+		Тут мы будем говорить о 2х глобальных вещах, которыми нас порадовали Rockstar'овцы)) 
+	    1) Игровые механники - их много и они изобилуют своей криативностью и разнообразием. 
+	    2) Детали - то, что я тут скажу, относится и к первому пункту, но тут всё сделано на столько реалистичноо, что это нужно увидеть в живую...</p>
+	</div>
+
+	<!-- Стрелочка  --> 
+
+	<div class="strelochka_2">
+		<i class="fas fa-angle-up str"></i>
+	</div>
+
+	<!-- Продолжение -->
+
+	<div class="game_mechanics">
+		<span name="G_mechanic" id="name">Игровые механики</span>
+        <hr />
+        
+        <div class="opis"> 
+            <span id="opisanie_glav">Здесь мы будем говорить о разнообразных игровых миханниках и нововведениях в игре со времен первой Red dead Redemption... В первую очередь хочется сказать, что почти все аспекты геймплея были перенесены в Red dead Redemption II и переделаны... Начнем со способностей главного героя.... </span>
+        </div>
+
+        <span id="first_punkt">1. Здоровье, выносливость и DeadEye</span>
+
+        <div class="first_img Img">
+        	 <img src="images/RDR2_screen_58.jpg" alt="System" title="Система" />
+        </div>
+
+        <div class="all-things">
+        	<p class="things">1) Здоровье в RDR2 очень важный параметр, т.к тут нельзя выбрать сложность, а враги соответственно очень опасны на разных дистанциях.. Уровень здоровья можно увечить, выпив настойку из женьшэня или нанеся определенное количество урона</p>
+
+        	<p class="things">2) Выносливость тоже является не мало важным параметрам, т.к большое количество времени вам придется бегать/скакать... И естественно она повышается за счет того, что вы долго бегаете</p>
+
+        	<p class="things">3) "Мертвый глаз" - способность, позволяющая вам замедлять время и ставить метки сразу на несколько целей... Со временем эта способность улучшается, принося новые эффекты</p>
+        </div>
+
+        <span id="second_punkt">2. Система розыска</span>
+
+        <div class="second_img Img">
+        	<img src="images/RDR2_screen_61.jpg" alt="wanted" title="Розыск" class="Img" />
+        </div>
+
+        <div class="wanted">
+        	<p id="wanted_text">Возможно вы уже сделали вывод по поводу системы розыска в RDR2, по типу: "Пфффффф.... Ну это как гта, только вместо звезд доллары..". Это далеко не так. Первое и заметно отличие в том, что да, в место звезд доллары... Но бывает несколько режимов розыска: 1) Живым или мертвым, 2) Это уже материальная награда и прочие... Самое важное различие это то, что после того, что вы натворили в городе горожане и полиция не забывают об этом(в отличии от GTA, где стоило только удрать и тут же все забывали про вас). Стоит вам вернуться в город, как тут же, если полиции рядом нет, то жители города начинают вас осуждать.. А если рядом полиция, то награда за голову опять возвращается с той суммой, которая была назначена. Если вы думаете, что оторвавшись от погони вы можете спокойно путешествовать по миру, то... увы нет.. Есть люди, которые готовы получить награду за вашу голову.. Они берутся за вас(выслеживая вас в округе). Успакою, если убийство/грабеж/насилие было совершено только в одном штате, то только там они вас и розыскивают. </p>
+          
+          <div id="bounty_h" class="Img">
+        	    <img src="images/RDR2_screen_63.jpg" alt="Bounty Hunters" title="Охотники за головами" />
+          </div>
+
+        	<p id="bounty_hunters">Примерно так выглядит процесс выслеживания, пока вы катаетесь по штату с мыслями: "Ничего страшного и так сойдет" в это время вас ищут охотники за головами(Первая встреча - это обычно 2 - 3 человека)... Они обыскивают то место, где вы находитесь сейчас... Их появление не предсказуемо.. Но когда вы поспали, то всегда они появляются где-то не подалеку и идут по вашему следу(Будьте бдтельными)</p>
+           
+          <div id="post_office" class="Img">
+        	    <img src="images/RDR2_screen_64.jpg" alt="Почта" title="Откуп за голову" />
+          </div>
+
+        	<p id="bounty_message">Но в конце-концов награду можно снять, просто заплатив в ближайшей почте откуп за вашу голову</p>
+        </div>
+
+        <span id="third_punkt">3. Вы - охотник за головами</span>
+
+        <div class="third_img Img">
+        	<img src="images/RDR2_screen_62.jpg" alt="you-hunter" title="Вы - охотник за головами" />
+        </div>
+
+        <div class="You-bounty_hunter">
+        	<p id="you-hunter">Вы можете законно подзаработать у шэрифа, брать заказы на чью-то голову, они бывают разные и в основом варируются от 500$ до 3000$..</p>
+
+          <div id="Hunting" class="Img">
+        	    <img src="images/RDR2_screen_66.jpg" alt="You hunter" title="Задержание" />
+          </div>
+
+        	<p id="bounty">Взяв плакат с преступником, вы направляетесь на метку в мини-карте ..... Доехав до этой местности вы выслеживаете его, а потом либо убиваете, либо задерживаете живым и везете в участок</p>
+          
+          <div id="money_for_work" class="Img">
+        	    <img src="images/RDR2_screen_67.jpg" alt="Money Sherif" title="Деньги шэрифа"/>
+          </div>
+
+        	<p id="money_from_sheriff">И вуаля, получив награду вы выходите из участка шерифа и отправляетесь дальше за приключениями</p>
+        </div>
+
+        <span id="fourth_punkt">4. Система общения</span>
+        
+        <div id="speak_with_npc" class="Img">
+            <img src="images/RDR2_screen_68.jpg" alt="Speak_with_npc" title="Разговор с npc" />
+        </div>
+
+        <div class="speak_system">
+           <p id="speak">В отличии от первой части тут появилась система общения. Да, теперь можно поговорить со всеми npc по желанию: горожане, полиция, О'дискролсы, члены вашей бынды и прочие.. И при контакте с ними вы удивитесь, так как их реакция не предсказуемая... </p>
+           
+           <div id="speak_with_sheriff" class="Img">
+               <img src="images/RDR2_screen_60.jpg" alt="Speak with sheriff" title="Разговор с шэрифом" />
+           </div>
+
+           <p id="speak_2">Можно взаимодействовать 2-мя путями: 1) просто поговорить, а 2) разозлить... Причем случаются такие ситуации, когда(к примеру) можно разозлить шерифа, а он назначит минимальную награду.. Или успокоить его.. Причем они реагируют не пластмассово, как в большинстве игр, а как в реальной жизни</p>
+
+           <div id="secret_speak" class="Img">
+               <img src="images/RDR2_screen_69.jpg" alt="secret_speak" title="Допрос" />
+           </div>
+           
+           <p id="speak_3">Иногда случается так, что при разговоре с npc он может тебе выдать подпольную, нелегальную работу местного продавца в лавке или какой-нибудь денежный тайник.... Хотя информацию можно добыть разными путями - насильственным или мирным...</p>
+        </div>
+
+        <span id="fifth_punkt">5. Вы состоите в банде</span>
+        
+        <div id="You-in_camp" class="Img">
+            <img src="images/RDR2_screen_70.jpg" alt="Camp" title="Лагерь" />
+        </div>
+
+        <div class="camp_system">
+           <p id="camp_1">Так как вы состоите в банде, а значит и состоите в лагере этой банды... Вы можете выполнять рутинные задачи в лагере,. такие как : колоть дрова, таскать мешки, набирать воду...  </p>
+           
+           <div id="camp_image_1" class="Img">
+               <img src="images/RDR2_screen_71.jpg" alt="Do" title="Обязанности" />
+           </div>
+
+           <p id="camp_2">Лагерь - это своеобразная база, которую вы должны улучшать: косметически и технически.. Вы можете скидываться в общаг в лагере и на это покупать улучшения ввиде: повозки с патронами, лекарствами, едой... Купить курятник, загон для лошадей и прочее... </p>
+           
+           <div id="camp_image_2" class="Img">
+               <img src="images/RDR2_screen_72.jpg" alt="Pay" title="Покупка" />
+           </div>
+
+           <p id="camp_3">Так же, во время игры расположения вашего лагеря меняется, а так же и окружение тоже. И в зависимости от этого меняются ваши обязанности и вещи, которые можно купить, к примеру пристань около берега, где находится ваш лагерь.. </p>
+           
+           <div id="camp_image_3" class="Img">
+               <img src="images/RDR2_screen_73.jpg" alt="Max" title="Пожертвование" />
+           </div>
+
+           <p id="camp_4">Так же, при пожертвовании в лагерь денег ваша карма повышается, но это так, на заметку тем, кому нужна высокая карма</p>
+        </div>
+
+        <span id="six_punkt">6. Побочные квесты</span>
+        
+        <div id="quests" class="Img">
+            <img src="images/RDR2_screen_102.jpg" alt="Random Quests" title="Побочные квесты" />
+        </div>
+
+        <div class="Quests">
+            <p id="quest_1">В RDR 2 есть чисто революционное привнесение в серию - когда вы начинаете побочный квест, то вы не знаете, как он закончится. Вот к примеру представитель цирка-передвижника просит вас найти пропавшего львенка, который умер от укуса алигатора, чтобы с помощью его трупа выманить тигра... И вот вас просят после этого поймать зебру, и вы конечно же её ловите... А потом льва, который скрывается в ранчо Эмеральд.. И вот вы идете в надежде его поймать</p>
+            
+            <div id="quest_image_1" class="Img">
+                <img src="images/RDR2_screen_75.jpg" alt="Godshot mission" title="Пример миссии" />
+             </div>
+
+            <p id="quest_2">И вот уже прискакав на место вас встречает лев, которого вы убиваете и забирате его лапу, как трофей. </p>
+            
+            <div id="quest_image_2" class="Img">
+                <img src="images/RDR2_screen_76.jpg" alt="Lion" title="Лев" />
+            </div>
+
+            <p id="quest_3">И вот вы уже скачите к человеку в надежде большой награды, и он вам дает алмаз, ну а в конце концов выясняется, что этот сурагат стоит 5$..</p>
+            
+            <div id="quest_image_3" class="Img">
+                <img src="images/RDR2_screen_77.jpg" alt="Syragat" title="Сурагат" />
+            </div>
+
+            <p id="quest_4">Эх... А ведь таких побочных миссий много, где все либо начинается не ожиданно, развивается или заканчивается не ожиданным поворотом...  В общем, это надо увидеть</p>
+        </div>
+
+        <span id="seven_punkt">7. Случайные встречи</span>
+        
+        <div id="Random_events" class="Img">
+            <img src="images/RDR2_screen_79.jpg" alt="Random events" title="Случайные встречи" />
+        </div>
+        
+        <div class="random_things">
+            <p id="random_1">Так же в RDR2 случаются случайные встречи.... Они бывают разные, но в основном они похожи по двум критериям - реализм и история.... То есть, что может произойти правдоподобного на диком западе в 1899 году? Ну, к примеру человека укусила змея и нужно отсосать яд... Или вот к примеру человек попал в капкан и тд..</p>
+            
+            <div id="random_image_1" class="Img">
+                <img src="images/RDR2_screen_80.jpg" alt="Random event" title="Рандомное событие" />
+            </div>
+
+            <p id="random_2">Но так же события разделяются на условно - хорошие(из-за которых ваша честь повышается) и на плохие(из-за которых ваша честь понижается)... Вот к примеру высосав яд из ноги человека или к примеру отвезя человека к доктору в Сен-Дени - повышает честь, а к примеру спасение заключенного из повозки шерифа - понижение чести</p>
+             
+            <div id="random_image_2" class="Img"> 
+                <img src="images/RDR2_screen_78.jpg" alt="Doctor in Saint-Denis" title="Доктор в Сэн-Дени" />
+            </div>
+
+             <p id="random_3">Так же эти "мини" встречи имеют продолжение. К примеру высосав яд из ноги бедного человека и встретил в следующий раз его около магазина с едой или оружейной лавки, то он вспомнить твой хороший поступок и тогда предложит оплатить твои покупки за свой счет... И все будет бесплатно</p>
+             
+             <div id="random_image_3" class="Img">
+                 <img src="images/RDR2_screen_81.jpg" alt="Store" title="Магазин" />
+             </div>
+
+             <p id="random_4">Так что от случайных встреч вы можете получить удовольствие и материальную выгоду и то, и то одновременно.... Так же бывает продолжение ввиде ещё одной встречи с одним и тем же персонажем... К примеру Мексиканец, который хочет посоревноваться с вами в стрельбе.. Таких встреч очень много</p>
+        </div>
+        
+        <span id="eight_punkt">8. Ваша лошадь - ваш инвентарь</span>
+        
+        <div id="weapon_on_horse" class="Img">  
+            <img src="images/RDR2_screen_83.jpg" alt="Weapon_on_hourse" title="Лошадь-инвентарь" />
+        </div>
+
+        <div class="horse_inventar">
+            <p id="horse_1">Да, Ваша лошадь - ваш инвентарь, только подвижный... На вашей лошади хранится ваша одежда, шкуры животных, оружие, еда и тд... </p>
+            
+            <div id="horse_image_1" class="Img">
+                <img src="images/RDR2_screen_84.jpg" alt="horse" title="лошадка" />
+            </div>
+
+            <p id="horse_2">Потом, нововведение заключается в том, что в отличии от GTA, тут нельзя тоскать с собой в кармане одномременно: 4 револьвера, 2 дробовика, лук, винчестер и снайперскую винтовку.... Все оружие хранится только на лошади(не касается патронов и "малово" оружия - коктейлся молотова, томогавка, динамита, метательного ножа)... Максимум можно носить с собой - 2 револьвера и 2 длинноствольного оружия на плече..</p>
+            
+            <div id="horse_image_2" class="Img">
+                <img src="images/RDR2_screen_82.jpg" alt="Horse" title="Лошадка номер 2" />
+            </div>
+
+            <p id="horse_3">Но тут есть один минус - начиная дело слезая с лошади, вы можите забыть своё оружие и только через секунд 10 вы вспомните о нём</p>
+        </div>
+
+        <span id="nine_punkt">9. Честь</span>
+
+        <div id="Main_honor" class="Img">
+            <img src="images/RDR2_screen_59.jpg" alt="Level of honor" title="Уровень чести" />
+        </div>
+
+        <div class="Honor_block">
+          <p id="honor_1">Вообще уровень чести в новой части Red Dead Redemption влияет на многие аспекты, в отличие от первой части... Можно привести много примеров, взять хотябы то, что при высоком уровне чести в магазинах вам делают скидки на: продукты, патроны, оружие, лекарственные препораты для вас и вашей лошади и прочее</p>
+
+          <div id="honor_image_1" class="Img">
+              <img src="images/RDR2_screen_87.jpg" alt="discounts" title="Скидка" />
+          </div>
+
+          <p id="honor_2">Так же уровень чести влияет на 1 - 2 задания в игре... То есть, приводя пример можно сказать - Если ваша честь будет ниже определенного уровня, то в 6-й главе вам не откроется кое-какая миссия...</p>
+
+          <div id="honor_image_2" class="Img">
+              <img src="images/RDR2_screen_88.jpg" alt="Single player" title="Скрытое задание" />  
+          </div>
+
+          <p id="honor_3">Ещё уровень чести влияет на концовку.. Не буду спойлерить, но если уровень чести плохой, то при 2-х случаях концовка плохая, а если наоборот, то при 2-х случаях - хорошая...</p>
+
+          <div id="honor_image_3" class="Img">
+              <img src="images/RDR2_screen_89.jpg" alt="The end" title="Концовки" /> 
+          </div>
+
+          <p id="honor_4">Так что в RDR2 можно отыгрывать либо пяиньку ковбоя, либо наглово отморозка, который не жалеет никого</p>
+        </div>
+	</div> 
+
+  <div class="strelochka_3">
+      <i class="fas fa-chevron-down str3"></i>
+  </div>
+
+  <div class="Game_details">
+        <span id="details">Реалистичные детали</span>
+        <hr />
+
+        <span id="opisanie_detail">Тут мы будем говорить о деталях в игре... Ну то есть о таких деталях, как: уход за лошадью, струя крови от выстрела, дорожка из бензина после выстрела зажигается, грязь липнет к глав. герою взависимости от его угла падения и тд... Эти вещи заслуживают отдельного внимания, так как Rockstar позаботилась о таких не очень то очевидных вещах.. Выражаем им отдельную благодарность</span>
+
+        <p id="first_detail">1. При стрельбе / перезарядке взводится оружие</p>
+        
+        <div id="Shoot_gif">
+            <img src="giff's/RDR2_shooting.gif" alt="Shooting" title="Стрельба" />
+        </div>
+
+        <p id="opisanie_detail_2">В игре очень реалистичное повидение оружия, речь  идет даже не о звуки и физике стрельбы(хотя они выполнены просто великолепно)... Речь идет о реалистичной перезарядке и о взведении курка при стрельбе... И это касается не только револьверов, как показывается выше... Это касатеся: Дробовиков, двухвстволки, винчестера, винтовки и тд...</p>
+
+        <div id="Shoot_gif_2">
+            <img src="giff's/RDR2_shooting_3.gif" alt="Double shooted" title="Стрельба из револьвера" />
+        </div> 
+
+        <p id="opisanie_detail_3">Эти детали связанны с тем, что в те времена не было автоматического и полоавтоматического оружия... А были только: винчестеры, двухстволки, револьверы и прочие... И по этому перед выстрелом или после перезарядки надо было взводить оружие</p>
+
+        <div id="Shoot_gif_3">
+            <img src="giff's/RDR2_shooting_2.gif" alt="Reloading of shotgun" title="Перезарядка дробовика" />
+        </div>  
+
+        <span id="second_detail">2. Лошадь/герой может реалистично упасть/врезаться</span>
+
+        <div id="Horse_down">
+            <img src="giff's/RDR2_horse_2.gif" alt="Minus horse" title="Минус лошадь" />
+        </div>
+
+        <p id="horse_fail">В игре очень реалистичное повидение лошади. Тут стоит уделить внимание "врезаниям" в различные объекты из разных текстур: дерево, камень и прочие... И то, что в отличие от большинства игр, где есть лошадь: Assasin's creed Origins и прочие, она не останавливается перед: камнем, сколой или забором, а эпично врезается/падает. </p>
+
+        <div id="Horse_down_2">
+            <img src="giff's/RDR2_horse.gif" alt="Horse" title="Лошадь падает" />
+        </div> 
+
+        <p id="horse_fail_2">Тоже самое касается и героя, который также реалистично падает под определенныи углом в зависимости от удара в какую-нибудь часть тела героя или лошади... Но не стоит их воспренимать, как пластелин. Нет, у них просто реалистичная реакция на падения, конечно не до мяса, о все же</p>
+
+        <div id="Horse_down_3">
+            <img src="giff's/RDR2_horse_3.gif" alt="Fucking people" title="Минус ездок" />
+        </div>
+
+        <span id="third_detail">3. При выстреле в тело льется струя крови/отрываются конечности</span>
+
+        <div id="Shoot-blood">
+            <img src="giff's/RDR2_blood_3.gif" alt="blood_1" title="Стрельба по человеку" />
+        </div>
+
+        <p id="shoot_blood_1">В игре очень реалистично выполнена система убийствая и реакция тела на пули и дополнительное оружие: молотов, метательные ножи, томогавк, динамит и тд. При поподании в часть тела выливается струя крови, и в человек придерживает то место, куда ему попали. И да, если вы его не убили, а ранили, то через короткий промежуток времени он может умереть от потери крови</p>
+
+        <div id="Shoot-blood_1">
+            <img src="giff's/RDR2_blood_2.gif" alt="blood stream" title="Струя крови" />
+        </div>
+
+        <p id="shoot_blood_2">Так же можно расчленить тело по частям, стреляя из обреза/дробовика или долго стреляя из револьвера.. Отстреливаются: ноги, руки, голова.... Выглядит одновременно страшно и реалистично</p>
+
+        <div id="Shoot-blood_2">
+            <img src="giff's/RDR2_blood.gif" alt="Shootgun kill" title="Расчленение" />
+        </div>
+
+        <span id="fourth_detail">4. Раненное животное реалистично стонет</span>
+
+        <div id="blood_animal">
+            <img src="giff's/RDR2_animal.gif" alt="Blood_animal" title="Животное стонет" />
+        </div>
+
+        <p id="animal_kill">Если смертельно ранить животное, то оно может упасть и начать стонать... И если честно, то при виде этого холодок по спине пробегает... Так что если вы чувствительны, то сразу же стреляйте животному в голову</p>
+
+        <span id="five_detail">5. Волосянной покров у главного героя</span>
+
+        <div id="main_hair">
+            <img src="giff's/RDR2_hair.gif" alt="hair of Arthur Morgan" title="Волосы Главного героя" />
+        </div>
+
+        <p id="hair_1">Rockstar реализовала рост лицевого, волосяного покрова в игре... Так, на протяжении всей игры у вас ростут: борода, усы, волосы на голове...</p>
+
+        <div id="hair_image_1" class="Img">
+             <img src="images/RDR2_screen_90.jpg" alt="Hair of face" title="Стильная борода" />
+        </div>
+
+        <p id="hair_2">Поэтому в игре существует система бритья и ухода за собой.. Если не бриться, то будет примерно такая борда.. Так же можно воспользоваться тоником для волос, чтобы увеличить их рост на лице</p>
+
+        <span id="six_detail">6. Герой реалистично пачкается</span> 
+
+        <div id="Realistic_hero" class="Img">
+            <img src="images/RDR2_screen_91.jpg" alt="mud" title="Грязь" />
+        </div>
+
+        <p id="mud_1">В игре очень  хорошо реализованно касание о разные объекты.. К примеру грязь, она реалистично прилипает к глав.герою.. Она реалистично весит(парой кусками) на Артуре Моргане...</p>
+
+        <div id="mud_image_1" class="Img">
+            <img src="images/RDR2_screen_92.jpg" alt="Crocodail in mud" title="Человек в грязи" />
+        </div>
+
+        <p id="mud_2">Так же можно затронуть тему того, что грязь реалистично мнется под ногами Артура, npc, телами животных и тд. Так же при ходьбе по грязи, остается след батинка, в который заливается лужа... </p>
+
+        <span id="seven_detail">7. Шкура животного портиться со временем</span>
+
+        <div id="bad_animal" class="Img">
+            <img src="images/RDR2_screen_93.jpg" alt="Animal skin" title="Шкура животного" />
+        </div>
+
+        <span id="skin_1">Шкуры животных и их тела могут испортиться, но это касается обычных животных, а не легендарных... Нужно обязательно следить за состоянием шкуры, особенно на ранней стадии прохождения</span>
+
+        <div id="skin_image_1" class="Img">
+            <img src="images/RDR2_screen_41.jpg" alt="Hunting on the animal" title="Охота" />
+        </div>
+
+        <span id="skin_2">Очень обязательно убить животное с состоянием шкуры в 3 звезды и быстро довести до продавца... Если же вы не упеете довести, то состояние шкуры просто спадет до 2х звезд и ниже, и тогда вы не сможете скрафтить предмет</span>
+
+        <span id="eight_detail">8. Лошадь мерзнет на холоде</span>
+
+        <div id="cold_horse" class="Img">
+            <img src="images/RDR2_screen_95.jpg" alt="Horse on the cold weather" title="Лошадь на холоде" />
+        </div>
+
+        <p id="cold_eggs">Когда лошадь стоит на холоде, то от неё начинает исходить пар, как и от главного героя... Стоит ещё затронуть момент, что не только начинает иходить пар от лошадки, но и её яички начинают трястись и сжиматься на морозе.</p>
+
+        <div id="cold_image_1" class="Img">
+            <img src="images/RDR2_screen_94.jpg" alt="Horse eggs" title="Генеталии коня" />
+        </div>
+
+        <span id="nine_detail">9. Повидение стрелы</span>
+
+        <div id="strela_" class="Img">
+            <img src="images/RDR2_screen_96.jpg" alt="Strela" title="Стрела" />
+        </div>
+
+        <p id="physics">При попадании стрелы в дерево она не останавливается, а продолжает колебаться под действием кинетической инергии... Это выглядит очень реалистично</p>
+
+        <span id="ten_detail">10. Детализированная система улучшения оружия </span>
+
+        <div id="gun_upgread" class="Img">
+            <img src="images/RDR2_screen_85.jpg" alt="Upgread weapon" title="улучшение оружия" />
+        </div>
+
+        <p id="gun_1">В игре присудствует очень реалистичная система улучшения в рамках времен "Дикого запада". Оружие можно почистить, чтобы восстановить его характеристики... Ещё вешать удлененный ствол или удобную ручку на револьвер и тд..</p>
+
+        <div id="gun_image_2" class="Img">
+            <img src="images/RDR2_screen_97.jpg" alt="gun image" title="Гравировка" />
+        </div>
+
+        <p id="gun_2">Так же можно наносить гравировку на металл и гравировку на приклад винтовки(к примеру)... Менять цвет металла и тд... То есть разнообразие кастомизации радует и удивляет.. Но, вы вспомните про вашу гравировку только тогда, когда включите режим от первого лица</p>
+
+        <span id="eleven_detail">11. Артур заботиться об оружие</span>
+
+        <div id="clean_weapon" class="Img">
+            <img src="images/RDR2_screen_98.jpg" alt="Swim with weapon" title="Плавание" />
+        </div>
+
+        <p id="c_weapon">Артур заботиться о своем оружие. Вот конкретный пример - когда у глав. героя в руках оружие и он заходит с ним в воду, то он старается держать его как можно выше над уровнем воды</p>
+
+        <span id="twelve_detail">12. Главный герой ведет дневник</span> 
+
+        <div id="hero_write" class="Img">
+            <img src="images/RDR2_screen_99.jpg" alt="Journal" title="Дневник" />
+        </div>
+
+        <p id="journal_1">Всё, что происходит с Главным героем он записывает в дневник, а иногда даже делает визуальные зарисовки</p>
+
+        <div id="journal_image_1" class="Img">
+            <img src="images/RDR2_screen_100.jpg" alt="Rhodes" title="Роудс" />
+        </div>
+
+        <p id="journal_2">Вот пример с одним из городов, в котором вы можете побывать - Роудс... И да, герой его нарисовал</p>
+
+        <span id="thirteen_detail">13. Журнал с оружием</span>
+
+        <div id="weapon_journal" class="Img">
+            <img src="images/RDR2_screen_101.jpg" alt="journal with the weapons" title="Журнал с оружием" />
+        </div>
+
+        <span id="Weapon_1">В игру перенесен в точностью до мелочей журнал с оружием времен дикого запада.. Журнал 1880-х начала 1910-х годов...</span>
+  </div> 
+
+  <footer>
+      <div class="Red_dead">
+        <span>Red Dead Redemption II</span>
+      </div>
+        
+        <span id="lozyng" title="Лозунг Red Dead Redemption II">outlaws for the live</span>
+        
+        <hr id="linia_RDR2" />
+
+      <div class="container">
+          <a href="https://www.youtube.com/user/RockstarGames" title="Youtube" target="_blank"><i class="fab fa-youtube sticker"></i></a>
+
+          <a href="https://twitter.com/rockstargames" title="Twitter" target="_blank"><i class="fab fa-twitter sticker"></i></a>
+        
+          <a href="https://www.facebook.com/pages/category/Video-Game/Rockstargames-498603576885163/" title="Facebook" target="_blank"><i class="fab fa-facebook-f sticker"></i></a>
+        
+              <a href="https://www.instagram.com/rockstargames/?hl=ru" title="Instagram"  target="_blank" /><i class="fab fa-instagram sticker"></i></a>
+           
+              <a href="https://www.twitch.tv/rockstargames" title="Twitch" target="_blank"><i class="fab fa-twitch sticker"></i></a>
+      </div>
+        
+        <!-- Возможно я удалю эти (2) блока с сошиал клабом и рокстаром, т.к 1) Выглядит как калл 2)Что будет при адаптивной версте? Да хрен его знает(Удалил) -->
+
+      <span id="adres">Главный офис Rockstar находится по адресу - </span><address>RockStar, 4 622, Broadway, New York, NY</address>
+  </footer> 
+
+    <script src="JS/index2.js"></script>
+</body>
+</html>

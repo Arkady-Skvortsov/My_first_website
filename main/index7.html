@@ -1,0 +1,1935 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Мультиплееер</title>
+	<meta charset="utf-8" />
+	<!-- For tablets and phone -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+    <!-- CSS -->
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Lakki+Reddy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+
+body {
+    height: 14850px;
+    background-color: black;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+} /* Для scrollbar */
+
+header {
+    height: 100px;
+    width: 100%;
+    z-index: 3;
+    left: 0px;
+    top: 0;
+    background-color: black;
+    transition: 900ms ease;
+    position: fixed;
+}
+
+/* @keyframes gradient-color {
+    0% {
+       border-bottom: 5px solid rgba(225, 0, 0, 0.6);
+    }
+
+    50% {
+       border-bottom: 5px solid rgba(255, 0, 0, 0.8);
+    }
+
+    100% {
+       border-bottom: 5px solid rgba(255, 0, 0, 1);
+    }
+} */
+
+header .menu {
+    height: 50px;
+    width: 50px;
+    border: 2px solid red;
+    margin-left: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+header .menu span {
+    height: 7px;
+    width: 40px;
+    font-size: 25px;
+    margin-left: 5px;
+    background-color: white;
+    margin-top: 7px;
+    position: relative;
+    display: block;
+    transition: 900ms ease;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+header .menu span:hover {
+    background-color: red;
+}
+
+header .menu .b1.rot_1 {
+    transform: rotate(-45deg);
+    top: 15px;
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -mozila-transform: rotate(-45deg);
+    border-radius: 15px;
+}
+
+header .menu .b2.rot_2 {
+    display: none;
+}
+
+header .menu .b3.rot_3 {
+    transform: rotate(45deg);
+    top: 1px;
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -mozila-transform: rotate(45deg);
+    border-radius: 15px;
+}
+
+header .logotype {
+    height: 90px;
+    width: 400px;
+    position: absolute;
+    cursor: pointer;
+    margin-top: -77.5px;
+    margin-left: 600px;
+    background-image: url('images/RDR2_screen_308.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.punkt {
+    height: 690px;
+    width: 600px;
+    position: fixed;
+    z-index: 3;
+    background-color: black;
+    opacity: .9;
+    margin-top: 91.5px;
+    margin-left: -650px;
+    border-right: 1px solid red;
+    transition: 700ms ease;
+    -o-transition: 700ms ease;
+    -mozila-transition: 700ms ease;
+    -webkit-transition: 700ms ease;
+}
+
+.punkt.show {
+    margin-left: -8px;
+}
+
+.punkt .elements {
+    position: relative;
+    height: 60px;
+    width: 600px;
+    list-style-type: none;
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+.punkt .elements .c {
+    font-size: 50px;
+    position: absolute;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 20px;
+    border-radius: 0;
+    display: none;
+    animation: cross 5s linear infinite;
+    transition: 800ms ease;
+    -o-transition: 800ms ease;
+    -mozila-transition: 800ms ease;
+    -webkit-transition: 800ms ease;
+} 
+
+@keyframes cross {
+    0% {
+      -mozila-transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      transform: rotate(90deg);
+      color: rgba(255, 1, 8, .6);
+    }
+
+    50% {
+       color: rgba(255, 1, 8, .8);
+    }
+ 
+    100% {
+      transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -mozila-transform: rotate(180deg);
+      color: red;
+    } /* Animation for the cross, when they display eqvals = block */
+}
+
+.punkt .elements a {
+    font-size: 45px;
+    font-family: 'Russo One', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin-left: 80px;
+    margin-top: 1px;
+    cursor: pointer;
+    position: absolute;
+    transition: 700ms ease;
+    -o-transition: 700ms ease;
+    -mozila-transition: 700ms ease;
+    -webkit-transition: 700ms ease;
+}
+
+.punkt #author {
+    font-size: 15px;
+    font-family: 'Comfortaa', cursive;
+    margin-left: 20px;
+    list-style-type: none;
+    color: purple;
+    font-weight: bold;
+    margin-top: 90px;
+}
+
+.punkt #author a {
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Comfortaa', cursive;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.punkt #author a:hover {
+    text-decoration: underline;
+}
+
+.m_block {
+    height: 1020px;
+    width: 100%;
+    margin-top: 90px;
+    position: absolute;
+    cursor: pointer;
+    margin-left: -8px;
+    background-image: url('images/RDR2_screen_47.jpg');
+    background-size: cover;
+    background-position: right;
+}
+
+.m_block .about_multiplayer {
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    margin-top: 950px;
+    margin-left: 0;
+    background-color: black;
+    border-bottom: 1px solid red;
+}
+
+.m_block .about_multiplayer span {
+    font-size: 50px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 600px;
+}
+
+.m_block .about_multiplayer hr {
+    height: 5px;
+    width: 950px;
+    border: 0;
+    margin-left: 300px;
+    background-color: white;
+    position: absolute;
+    margin-top: 150px;
+    font-weight: bold;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.m_block .about_multiplayer hr:hover {
+    transform: translateY(5px);
+}
+
+.m_block .mult-block {
+    height: 50px;
+    width: 950px;
+    display: inline;
+    position: absolute;
+    margin-top: 1130px;
+    margin-left: 300px;
+}
+
+.m_block .mult-block a {
+    text-decoration: none;
+    font-size: 23px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    margin-top: 15px;
+    margin-left: 10px;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.m_block .mult-block a:hover {
+    text-shadow: 0 0 30px red;
+    text-decoration: underline;
+}
+
+.mult-b {
+    height: 200px;
+    width: 100%;
+    position: absolute;
+    margin-left: -8px;
+    margin-top: 1400px;
+    display: inline;
+}
+
+.mult-b span {
+    font-size: 25px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-left: 25px;
+    margin-top: 40px;
+}
+
+.About_M {
+    position: absolute;
+    height: 4700px;
+    width: 100%;
+    margin-left: -8px;
+    margin-top: 1750px;
+}
+
+.About_M #op_mult {
+    font-size: 50px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 430px;
+}
+
+.About_M hr {
+    height: 5px;
+    width: 950px;
+    position: absolute;
+    border: 0;
+    background-color: white;
+    margin-top: 100px;
+    margin-left: 310px;
+}
+
+.About_M .Javier_img {
+    height: 550px;
+    width: 950px;
+    position: absolute;
+    margin-left: 310px;
+    margin-top: 140px;
+    cursor: pointer;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.About_M .Javier_img img {
+    height: 550px;
+    width: 950px;
+}
+
+.About_M .Javier_img .txt-bl {
+    height: 280px;
+    width: 950px;
+    position: absolute;
+    margin-left: 0;
+    margin-top: 0px;
+}
+
+.About_M .Javier_img .txt-bl span {
+    font-size: 15px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+    display: inline; 
+}
+
+.About_M .Single_b {
+    height: 4600px;
+    width: 100%;
+    position: absolute;
+    margin-top: 1000px;
+    margin-left: -8px;
+}
+
+.About_M .Single_b #question {
+    font-size: 40px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 255px;
+}
+
+.About_M .Single_b hr {
+    height: 5px;
+    width: 950px;
+    position: absolute;
+    margin-top: 95px;
+    margin-left: 310px;
+    border: 0;
+    background-color: white;
+}
+
+.About_M .Single_b .active_b {
+    height: 400px;
+    width: 700px;
+    position: relative;
+    display: inline-block;
+    margin-top: 200px;
+    margin-left: 70px;
+}
+
+.About_M .Single_b .Left7 {
+    margin-left: 475px;
+}
+
+.About_M .Single_b .active_b img {
+    height: 400px;
+    max-width: 700px;
+    cursor: pointer;
+}
+
+.About_M .Single_b .active_b #tres_h {
+    height: 400px;
+    min-width: 700px;
+}
+
+.About_M .Single_b .active_b .name_event {
+    height: 402px;
+    width: 700px;
+    cursor: pointer;
+    position: absolute;
+    background-color: black;
+    opacity: .7;
+    display: none;
+    margin-top: -404px;
+    margin-left: 0;
+    z-index: 2;
+}
+
+.About_M .Single_b .active_b .name_event.hid_sh {
+    display: block;
+}
+
+.About_M .Single_b .active_b .name_event span {
+    font-size: 40px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-top: 190px;
+    margin-left: 65px;
+}
+
+.About_M .Single_b .active_b .TXT {
+    position: absolute;
+    margin-top: 0;
+    margin-left: 0;
+    height: 240px;
+    width: 700px;
+}
+
+.About_M .Single_b .active_b .TXT span {
+    font-size: 15px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+.Screen_block {
+    height: 1700px;
+    width: 100%;
+    position: absolute;
+    margin-left: -8px;
+    margin-top: 5600px;
+}
+
+.Screen_block #screen {
+    font-size: 45px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-left: 640px;
+    margin-top: 50px;
+}
+
+.Screen_block hr {
+    height: 5px;
+    width: 950px;
+    position: absolute;
+    margin-left: 310px;
+    margin-top: 100px;
+    border: 0;
+    background-color: white;
+}
+
+.Screen_block .Screen_w {
+    width: 1100px;
+    height: 550px;
+    border: 1px solid white;
+    margin-left: 240px;
+    position: relative;
+    margin-top: 160px;
+}
+
+.Screen_block .Screen_w img {
+    min-width: 1100px;
+    height: 500px;
+}
+
+.Screen_block .Screen_w .name_img {
+    width: 1100px;
+    height: 50px;
+    position: absolute;
+    background-color: black;
+    margin-top: -5px;
+    margin-left: 0;
+}
+
+.Screen_block .Screen_w .name_img span {
+    font-size: 40px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 400px;
+}
+
+.Screen_block .Img_catalog {
+    height: 440px;
+    width: 1100px;
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 240px;
+    border: 1px solid white;
+}
+
+.Screen_block .Img_catalog .images {
+    position: relative;
+    display: inline-block;
+    margin-left: 57.5px;
+    margin-top: 30px;
+    height: 100px;
+    width: 200px;
+    cursor: pointer;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.Screen_block .Img_catalog .images:hover {
+    box-shadow: 0 0 15px red;
+}
+
+.Screen_block .Img_catalog .images img {
+    height: 100px;
+    min-width: 200px;
+}
+
+.Screen_block .Img_catalog .L {
+    left: 260px;
+}
+
+.Rezimi {
+    height: 1900px;
+    width: 100%;
+    position: absolute;
+    margin-left: -8px;
+    margin-top: 7000px;
+}
+
+.Rezimi #replay {
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 740px;
+    color: white;
+    font-size: 45px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+}
+
+.Rezimi hr {
+    height: 5px;
+    width: 950px;
+    position: absolute;
+    border: 0;
+    background-color: white;
+    margin-left: 310px;
+    margin-top: 100px;
+}
+
+.Rezimi .REZ_block {
+   height: 1750px;
+   width: 100%;
+   position: absolute;
+   margin-top: 140px;
+   margin-left: -8px;
+}
+
+.Rezimi .REZ_block .rez {
+    height: 450px;
+    width: 750px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 70px;
+    margin-left: 32.5px;
+}
+
+
+.Rezimi .REZ_block .rez img {
+    height: 450px;
+    max-width: 750px;
+}
+
+
+.Rezimi .REZ_block .rez .txt_B {
+    position: absolute;
+    height: 451px;
+    width: 750px;
+    margin-top: -454px;
+    margin-left: 0;
+    background-color: black;
+    opacity: .7;
+    display: none;
+}
+
+.Rezimi .REZ_block .rez .txt_B.sh {
+    display: block;
+}
+
+.Rezimi .REZ_block .rez .txt_B .N {
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 225px;
+    font-size: 35px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+}
+
+.Rezimi .REZ_block .rez .txt_B .N:hover {
+    text-shadow: 0 0 15px white;
+}
+
+.Rezimi .REZ_block .rez .txt_B .txt {
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    display: inline;
+    margin-top: 100px;
+    margin-left: 10px;
+}
+
+.Rezimi .REZ_block .rez .name_rez {
+    font-size: 35px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    margin-top: 450px;
+    margin-left: 200px;
+}
+
+.Abilities {
+    height: 1000px;
+    width: 100%;
+    position: absolute;
+    margin-left: -8px;
+    margin-top: 9050px;
+}
+
+.Abilities #cards {
+    font-size: 45px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-left: 500px;
+    margin-top: 50px;
+}
+
+.Abilities #end_card {
+    height: 5px;
+    width: 950px;
+    position: absolute;
+    margin-left: 310px;
+    margin-top: 100px;
+    border: 0;
+    background-color: white;
+}
+
+.Abilities #choice_card {
+    height: 35px;
+    width: 200px;
+    position: relative;
+    cursor: pointer;
+    margin-top: 225px;
+    float: right;
+    margin-right: 20px;
+    font-size: 15px;
+    border: 1px solid white;
+    font-family: 'Comfortaa', cursive;
+}
+
+.Abilities #choice_card option {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    font-size: 15px;
+    font-family: 'Comfortaa', cursive;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+}
+
+.Abilities #choice_card option:hover {
+    color: black;
+    background-color: white;
+}
+
+.Abilities .category_name {
+    font-size: 30px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    position: relative;
+    color: white;
+    top: 225px;
+    left: 600px;
+}
+
+.Abilities .C {
+    font-size: 40px;
+    color: red;
+    cursor: pointer;
+    top: 220px;
+    left: 1005px;
+    position: absolute;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    display: none;
+}
+
+.Abilities .C.cir {
+    display: block;
+}
+
+.Abilities .C:hover {
+    transform: scale(.8);
+    text-shadow: 0 0 35px red;
+}
+
+.Abilities #end_category {
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    border: 0;
+    background: white;
+    margin-top: 240px;
+    margin-left: -8px;
+}
+
+.Abilities .Dead_eye {
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    margin-left: -8px;
+    margin-top: 300px;
+    display: none;
+}
+
+.Abilities .Dead_eye.d1 {
+    display: block;
+}
+
+.Abilities .Dead_eye .dead_card {
+    height: 340px;
+    width: 200px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 110px;
+    margin-left: 55px;
+    transition: 800ms ease;
+    -o-transition: 800ms ease;
+    -webkit-transition: 800ms ease;
+    -mozila-transition: 800ms ease;
+}
+
+.Abilities .Dead_eye .dead_card:hover {
+    transform: scale(1.1);
+}
+
+.Abilities .Dead_eye .dead_card img {
+    height: 340px;
+    width: 200px;
+    top: 0;
+    left: 0;
+}
+
+.Abilities .Combat {
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    margin-left: -8px;
+    margin-top: 300px;
+    display: none;
+}
+
+.Abilities .Combat.d2 {
+    display: block;
+}
+
+.Abilities .Combat .combat_card {
+    height: 340px;
+    width: 200px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 110px;
+    margin-left: 55px;
+    transition: 800ms ease;
+    -o-transition: 800ms ease;
+    -mozila-transition: 800ms ease;
+    -webkit-transition: 800ms ease;
+}
+
+.Abilities .Combat .combat_card:hover {
+    transform: scale(1.1);
+}
+
+.Abilities .Combat .combat_card img {
+    height: 340px;
+    width: 200px;
+    top: 0;
+    left: 0;
+}
+
+.Abilities .Recovery {
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    margin-left: -8px;
+    margin-top: 300px;
+    display: none;
+}
+
+.Abilities .Recovery.d3 {
+    display: block;
+}
+
+.Abilities .Recovery .rec_block {
+    height: 340px;
+    width: 200px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 110px;
+    margin-left: 55px;
+    transition: 800ms ease;
+    -o-transition: 800ms ease;
+    -webkit-transition: 800ms ease;
+    -mozila-transition: 800ms ease;
+}
+
+.Abilities .Recovery .rec_block:hover {
+    transform: scale(1.1);
+}
+
+.Abilities .Recovery .rec_block img {
+    height: 340px;
+    width: 200px;
+    top: 0;
+    left: 0;
+}
+
+.Abilities .Defense {
+    height: 500px;
+    width: 100%;
+    margin-top: 300px;
+    margin-left: -8px;
+    position: absolute;
+    display: none;
+}
+
+.Abilities .Defense.d4 {
+    display: block;
+}
+
+.Abilities .Defense .def_block {
+    height: 340px;
+    width: 200px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 110px;
+    margin-left: 55px;
+    transition: 800ms ease;
+    -o-transition: 800ms ease;
+    -webkit-transition: 800ms ease;
+    -mozila-transition: 800ms ease;
+}
+
+.Abilities .Defense .def_block:hover {
+    transform: scale(1.1);
+}
+
+.Abilities .Defense .def_block img {
+    height: 340px;
+    width: 200px;
+    top: 0;
+    left: 0;
+}
+
+.Card_inf_block {
+    height: 800px;
+    width: 100%;
+    position: fixed;
+    margin-left: -8px;
+    margin-top: 0;
+    background: black;
+    opacity: .95;
+    z-index: 4;
+}
+
+.Card_inf_block .name_card {
+    font-size: 40px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 435px;
+    cursor: pointer;
+    transition: 800ms ease;
+    -o-transition: 800ms ease;
+    -mozila-transition: 800ms ease;
+    -webkit-transition: 800ms ease;
+}
+
+.Card_inf_block .name_card:hover {
+    text-shadow: 0 0 20px white;
+}
+
+.Card_inf_block .img_block {
+    height: 340px;
+    width: 200px;
+    position: absolute;
+    margin-top: 250px;
+    margin-left: 550px;
+}
+
+.Card_inf_block .img_block img {
+    height: 340px;
+    max-width: 200px;
+    left: 0;
+    top: 0;
+}
+
+.Card_inf_block .card_rank {
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-left: 400px;
+    margin-top: 700px;
+}
+
+.Card_inf_block .crs {
+    font-size: 35px;
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-left: 30px;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.Card_inf_block .crs:hover {
+    transform: rotate(180deg);
+}
+
+.Card_inf_block .information_block {
+    height: 800px;
+    width: 400px;
+    border-left: 2px solid white;
+    position: relative;
+    float: right;
+}
+
+.Card_inf_block .information_block .information_txt {
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 370px;
+    display: inline;
+}
+
+.Last_news {
+    height: 4000px;
+    position: absolute;
+    width: 100%;
+    margin-left: -8px;
+    margin-top: 10100px;
+}
+
+.Last_news #last-n {
+    font-size: 45px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 440px;
+}
+
+.Last_news hr {
+    height: 5px;
+    width: 950px;
+    position: absolute;
+    margin-left: 310px;
+    margin-top: 100px;
+    border: 0;
+    background-color: white;
+}
+
+.Last_news .Welcome_news {
+    height: 450px;
+    width: 950px;
+    position: absolute;
+    margin-left: 310px;
+    margin-top: 160px;
+}
+
+.Last_news .Welcome_news img {
+    height: 450px;
+    min-width: 950px;
+    cursor: pointer;
+}
+
+.Last_news .Welcome_news .T_B {
+    height: 200px;
+    width: 950px;
+    position: absolute;
+    margin-left: 0;
+    margin-top: 0px;
+}
+
+.Last_news .Welcome_news .T_B span {
+    font-size: 15px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+
+.Last_news .New_characters {
+    height: 1800px;
+    width: 100%;
+    position: absolute;
+    margin-left: -8px;
+    margin-top: 800px;
+    /* 2750px */
+}
+
+.Last_news .New_characters #rules {
+    font-size: 40px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 560px;
+}
+
+.Last_news .New_characters hr {
+    height: 5px;
+    width: 650px;
+    position: absolute;
+    margin-left: 455px;
+    margin-top: 95px;
+    border: 0;
+    background-color: white;
+}
+
+.Last_news .New_characters .seria-block {
+    width: 100%;
+    height: 1500px;
+    position: relative;
+    margin-top: 150px;
+    margin-left: -8px;
+}
+
+.Last_news .New_characters .seria-block .character_b {
+    height: 350px;
+    width: 600px;
+    position: relative;
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 140px;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+}
+
+.Last_news .New_characters .seria-block .character_b:hover {
+    box-shadow: 0 0 30px white;
+}
+
+.Last_news .New_characters .seria-block .character_b img {
+    min-height: 350px;
+    max-width: 600px;
+    cursor: pointer;
+}
+
+.Last_news .New_characters .seria-block .Top {
+    top: 2px;
+}
+
+.Last_news .New_characters .seria-block .l5 {
+    left: 375px;
+    top: 250px;
+}
+
+.Last_news .New_characters .seria-block .character_b .t_characters {
+    height: 200px;
+    width: 600px;
+    position: absolute;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+.Last_news .New_characters .seria-block .character_b .t_characters span {
+    font-size: 15px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.Last_news .New_characters .seria-block .END_CONTENT {
+    height: 100px;
+    width: 950px;
+    position: absolute;
+    margin-left: 310px;
+    margin-top: 650px;
+}
+
+.Last_news .New_characters .seria-block .END_CONTENT span {
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 20px; 
+}
+
+.Last_news .Cool_bonuses {
+    height: 900px;
+    width: 100%;
+    position: absolute;
+    margin-top: 2700px;
+    margin-left: -8px;
+}
+
+.Last_news .Cool_bonuses #bonus {
+    font-size: 40px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 440px; 
+}
+
+.Last_news .Cool_bonuses hr {
+    height: 5px;
+    width: 650px;
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 455px;
+    border: 0;
+    background-color: white;
+}
+
+.Last_news .Cool_bonuses .Bonus_container {
+    height: 1200px;
+    width: 100%;
+    position: absolute;
+    margin-top: 160px;
+    margin-left: -8px;
+}
+
+.Last_news .Cool_bonuses .Bonus_container .Thanks_rock {
+    height: 350px;
+    width: 600px;
+    position: relative;
+    display: inline-block;
+    margin-top: 50px;
+    margin-left: 140px;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+}
+
+.Last_news .Cool_bonuses .Bonus_container .Thanks_rock:hover {
+    box-shadow: 0 0 30px white;
+}
+
+.Last_news .Cool_bonuses .Bonus_container .Thanks_rock img {
+    min-height: 350px;
+    max-width: 600px;
+    cursor: pointer;
+}
+
+.Last_news .Cool_bonuses .Bonus_container .Thanks_rock .bonus_text {
+    height: 200px;
+    width: 600px;
+    left: 0;
+    top: 0;
+}
+
+.Last_news .Cool_bonuses .Bonus_container .Thanks_rock .bonus_text span {
+    font-size: 15px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.Last_news .Cool_bonuses .Bonus_container .l6 {
+    left: 375px;
+    top: 210px;
+}
+
+.Last_news .Cool_bonuses .Bonus_container .l6 img {
+    max-height: 350px;
+    min-width: 600px;
+}
+
+.End_text {
+    height: 200px;
+    width: 950px;
+    position: absolute;
+    margin-left: 310px;
+    margin-top: 14250px;
+}
+
+.End_text span {
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-left: 5px;
+    margin-top: 5px; 
+}
+
+body .S_window {
+    margin-top: -10px;
+    height: 800px;
+    width: 100%;
+    position: fixed;
+    margin-left: -8px;
+    z-index: 4;
+    background-color: black;
+    opacity: .99;
+}
+
+body .S_window.Close3 {
+    display: none;
+}
+
+
+body .S_window .N_border {
+    max-height: 600px;
+    max-width: 1000px;
+    position: absolute;
+    cursor: pointer;
+    margin-top: 140px;
+    opacity: 1;
+    margin-left: 345px;
+    border: 3px solid white;
+}
+
+body .S_window .N_border .name_B {
+    height: 50px;
+    width: 889px;
+    background-color: black;
+    position: absolute;
+    margin-top: -50px;
+}
+
+body .S_window .N_border .name_B .Name_of_img {
+    font-size: 35px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+    position: absolute;
+    margin-top: 10px;
+    transform: translateX(285px);
+}
+
+body .S_window .N_border img {
+    max-height: 500px;
+    max-width: 900px;
+}
+
+body .S_window .button_ {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    z-index: 4;
+    cursor: pointer;
+    border-radius: 35px;
+    position: relative;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+    float: right;
+    margin-right: 290px;
+    margin-top: 85px;
+}
+
+body .S_window .button_:hover {
+    background-color: white;
+}
+
+body .S_window .button_ .X {
+    position: absolute;
+    font-size: 45px;
+    color: white;
+    font-weight: bold;
+    margin-top: 2.5px;
+    margin-left: 9.5px;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+body .S_window .button_ .X:hover {
+    color: black;
+}
+
+footer {
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    cursor: pointer;
+    z-index: 2;
+    margin-left: -8px;
+    margin-top: 14600px;
+    border-top: 3px solid red;
+    background-image: url('PNG/RDR2_FOOTER_BACKGROUND.png');
+    background-size: cover;
+    background-position: bottom;
+}
+
+footer .Red_dead {
+    height: 50px;
+    width: 350px;
+    background-color: black;
+    border: 3px solid red;
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 610px;
+}
+
+footer .Red_dead span {
+    font-size: 30px;
+    font-family: 'Bree Serif', serif;
+    color: white;
+    font-weight: bold;
+    transform: translateY(2.5px);
+    position: absolute;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+footer #lozyng {
+    font-size: 75px;
+    font-family: 'Bree Serif', serif;
+    font-weight: bold;
+    position: absolute;
+    cursor: pointer;
+    color: red;
+    margin-top: 50px;
+    margin-left: 470px;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+footer #lozyng:hover {
+    text-shadow: 0 0 25px red;
+}
+
+footer #linia_RDR2 {
+    height: 5px;
+    width: 700px;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: 440px;
+    margin-top: 175px;
+    border: 0;
+    background-color: rgba(217, 30, 24, .7);
+}
+
+footer .container {
+    height: 80px;
+    width: 600px;
+    display: inline;
+    position: absolute;
+    margin-top: 195px;
+    margin-left: 500px;
+}
+
+footer .container a .sticker {
+    font-size: 40px;
+    cursor: pointer;
+    margin-left: 60px;
+    margin-top: 20px;
+    color: rgba(255, 5, 1, .7);
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+footer .container a .sticker:hover {
+    color: red;
+}
+
+footer #adres {
+    font-size: 10px;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    font-weight: bold;
+    margin-top: 280px;
+    position: absolute;
+    margin-left: 520px;
+}
+
+footer address {
+    font-size: 12px;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    margin-top: 280px;
+    margin-left: 775px;
+}
+
+.Strelochka_5 {
+    height: 50px;
+    width: 50px;
+    position: fixed;
+    cursor: pointer;
+    margin-left: 1500px;
+    border-radius: 5px;
+    background-color: white;
+    margin-top: 700px;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+    z-index: 2;
+    display: none;
+} 
+
+.Strelochka_5.Pokesh2 {
+    display: block;
+}
+
+.Strelochka_5 .Str5 {
+    font-size: 55px;
+    font-weight: bold;
+    position: absolute;
+    margin-left: 8px;
+    margin-top: -2px;
+    color: black;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.Strelochka_5 .Str5:hover {
+    transform: translateY(5px);
+}
+    </style>
+</head>
+<body>
+    <header>
+	    <div class="menu">
+		    <span class="b1"></span>
+		    <span class="b2"></span>
+		    <span class="b3"></span>
+		</div>
+        
+        <div class="logotype" title="Red dead Redemption II">
+    	
+        </div>
+    </header>
+
+    <!-- Menu -->
+    <ul class="punkt">
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index.html">На главную</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index2.html">Об игре</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index3.html">Сюжет</a></li> 
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index4.html">Открытый мир</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index5.html">Оружее</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index6.html">Саундтрек</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index7.html">Мультиплеер</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="https://ru.socialclub.rockstargames.com/" target="_blank">Social Club</a></li>
+        <li id="author">Автор вдохновлялся этим сайтом - <a href="https://www.rockstargames.com/reddeadredemption2/" id="silka" target="_blank">Red Dead Redemption II</a></li>
+	</ul>
+
+	<div class="m_block" title="Мультиплеер">
+	  <div class="about_multiplayer">
+         <span>Мультиплеер</span>
+         <hr />
+      </div> 
+      <div class="mult-block"> 
+         <a href="#op_mult">Описание |</a><a href="#screen">Скриншоты |</a><a href="#replay">Режимы |</a><a href="#cards">Карты способностей |</a><a href="#last-n">Последние нововведения</a>  
+      </div>
+	</div>
+
+	<div class="mult-b">
+      <span>Тут речь будет идти о мультиплеере Red dead redemption II.... Речь будет идти об описании мультиплеера, режимах и последних нововведениях в игре... RDR2 ONLINE по большей части скучна, уж будем откровенными, но в ней все же есть пару оспектов, которые могут вас развеселить или подарить вам радостные эмоции... Но таких не то чтобы мало, но хотелось бы больше.. Ладно, начнем по порядку...</span>
+    </div>
+     
+    <div class="Strelochka_5"><i class="fas fa-angle-up Str5"></i></div>
+
+    <div class="About_M">
+    	<span id="op_mult">Описание мультиплеера</span>
+    	<hr />
+
+    	<div class="Javier_img new_img">
+    		<img src="images/RDR2_screen_276.jpg" alt="Перестрелка в Аннесберге">
+    		<div class="txt-bl">
+    			<span>Представте себе такую ситуацию: сюжетная компания Red Dead Redemption II закончилась и вы насладились историей Артура Моргана, попутно потратили около 80 часов на прохождение.... И из побочных миссий у вас осталось только "Найдите 20 ловцов снов" или "Найдите 144 сигаретные карточки" и вам уже становиться скучновато.. И на помощь приходит RDR Online.... С начала RDR ONLINE вас встречают сюжетные миссии длительностью порядка 8 - 10 часов, так ещё с возможностью играть с напарниками(И подбираются они вам автоматически).. И когда это все заканчивается, то у вас есть выбор - идти в открытый мир или пойти в перестрелки с другими игроками.. И сейчас мы остановимся подробнее на первом варианте.... Хочется сказать, что концепции из GTA ONLINE не сильно так то и поменялись, но есть и новвоведения, такие как: карточки за уровень, которые даую в некоторой степени приимущество, или возможность помешать другому игроку, когда он на задании и тд...</span>
+    		</div>
+    	</div>
+
+    	<div class="Single_b">
+    		<span id="question">Чем же заняться в открытом мире RDR ONLINE?</span>
+    		<hr />
+    		<div class="active_b">
+    			<img src="images/RDR2_screen_277.jpg" alt="Сюжетные миссии" />
+    			<div class="name_event">
+    				<span></span>
+    			</div>
+    			<div class="TXT">
+    				<span>С самого начала онлайн режима вас приследуют сюжетные миссии их общая длительность около 10 часов, если не чуть не меньше... Все начинается с того, что один влиятельный человек освобождает вас во время того, как вас везут из колонии... А после этого он отводит вас к женщине, которая дает вам несколько целей, чтобы вы их уничтожили... Тут не плохой сюжет, как можно заметить, порой увликает... Так же вам будут попадаться и большие миссии, но их мало, к сожалению... Это такие, как : ограбление поезда, ограбление банка и штурм форта и ещё парочка, но в остальном это не много однотипные задания</span>
+    			</div>
+    		</div>
+    		<div class="active_b">
+    			<img src="images/RDR2_screen_278.jpg" alt="Охота" />
+    			<div class="name_event">
+    				<span></span>
+    			</div>
+    			<div class="TXT">
+    				<span>Охота перекачевала из сюжетного режима RDR2... Тут она остается давольно важным элементом открытого мира, т.к вам все равно нужно добывать еду(если хотите сэкономить, потому что на первых этапах игры ваше финансовое состояние, как у дяди Пети, после колледжа на сварщика, то есть бомж), а так же шкура, чтобы крафтить себе: улучшения для лагеря и одежду... А так же перья, чтобы заниматься крафтом..</span>
+    			</div>
+    		</div>
+    		<div class="active_b">
+    			<img src="images/RDR2_screen_285.jpg" alt="Рыбалка" />
+    			<div class="name_event">
+    				<span></span>
+    			</div>
+    			<div class="TXT">
+    				<span>Рыбалка, так же, как и охота относится к разряду не обязательных, но полезных занятий со своей выгодой.... Так же вы добываете пищю и это может доставить вам удавольствие, когда вы охотитесь не один, а со своим другом... Потом, время от времени(Это касается и охоты) устраиваются челленджи(По крайней мере один такой уже был).... Вам нужно было поймать как можно больше рыбы на скорость, что доставляет в некоторой степени адреналин</span>
+    			</div>
+    		</div>
+    		<div class="active_b">
+    			<img src="images/RDR2_screen_281.jpg" alt="Ограбление поезда" />
+    			<div class="name_event">
+    				<span></span>
+    			</div>
+    			<div class="TXT">
+    				<span>Вы так же можете заниматься ограблением поездов, что доставит вам много удавольствия, особенно, если грабите его не один... Кроме того, что это способ развлечься, это ещё и способ заработать денег, не очень малая сумма для начала игры - 50$</span>
+    			</div>
+    		</div>
+    		<div class="active_b">
+    			<img src="images/RDR2_screen_282.jpg" alt="Ограбление повозки" />
+    			<div class="name_event">
+    				<span></span>
+    			</div>
+    			<div class="TXT">
+    				<span>Так же вы можете грабить повозки не только у npc, но ещё и у реальныъ игроков, когда они едут на задание(Да, вы можете им помешать)... И при всем при этом, поймать хороший куш</span>
+    			</div>
+    		</div>
+    		<div class="active_b">
+    			<img id="tres_h" src="images/RDR2_screen_286.jpg" alt="Охота за сокровищами" />
+    			<div class="name_event">
+    				<span></span>
+    			</div>
+    			<div class="TXT">
+    				<span>Вы можете искать сокровища в RDR ONLINE, причем эта возможность появляется всегда, когда у вас происходит level up.. И на почте вам выдают карту сокровищь..... И в сундуке может выпасть слиток золота или даже карточка со способностью</span>
+    			</div>
+    		</div>
+    		<div class="active_b Left7">
+    			<img src="images/RDR2_screen_283.jpg" alt="Свободные задания" />
+    			<div class="name_event">
+    				<span></span>
+    			</div>
+    			<div class="TXT">
+    				<span>Так же в свободном режиме есть (к сожалению) скучные задания... Однотипные между собой: иди, принеси, отдай... Ещё печалит ситуацию то, что во время езды в 95% случаев вы можете словить пулю от того, кто решил вам 'просто' помешать... И по мимо этого ещё и копейки плятят</span>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+
+    <div class="Screen_block">
+    	<span id="screen">Скриншоты</span>
+    	<hr />
+
+    	<div class="Screen_w">
+    		<img src="images/RDR2_screen_49.jpg" id="d_img" alt="Протагонист" />
+
+    		<div class="name_img">
+    			<span id="name">Протагонист</span>
+    		</div>
+    	</div>
+    	<div class="Img_catalog">
+    		<div class="images">
+    			<img src="images/RDR2_screen_49.jpg" alt="Протагонист" />
+    		</div>
+    		<div class="images">
+    			<img src="images/RDR2_screen_279.jpg" alt="Рыжий персонаж" />
+    		</div>
+    		<div class="images">
+    			<img src="images/RDR2_screen_280.jpg" alt="Противостояние" />
+    		</div>
+    		<div class="images">
+    			<img src="images/RDR2_screen_287.jpg" alt="Протагонист в лагере" />
+    		</div>
+    		<div class="images">
+    			<img src="images/RDR2_screen_288.jpg" alt="Гонка" />
+    		</div>
+    		<div class="images">
+    			<img src="images/RDR2_screen_289.jpg" alt="Погоня" />
+    		</div>
+    		<div class="images">
+    			<img src="images/RDR2_screen_290.jpg" alt="Противостояние" />
+    		</div>
+    		<div class="images">
+    			<img src="images/RDR2_screen_291.jpg" alt="Gun Rush" />
+    		</div>
+    		<div class="images L">
+    			<img src="images/RDR2_screen_292.jpg" alt="Перестрелка в городе" />
+    		</div>
+    		<div class="images L">
+    			<img src="images/RDR2_screen_293.jpg" alt="Нападение" />
+    		</div>
+    	</div> 
+    </div>
+
+    <div class="Rezimi">
+        <span id="replay">Режимы</span>
+    	<hr />
+
+    	<div class="REZ_block">
+    		<div class="rez drive">
+    			<img src="images/RDR2_screen_294.jpg" alt="Гонки на лошадах" />
+    			<div class="txt_B">
+    				<span class="N">Гонки на лошадях</span>
+    				<span class="txt">Всего в Red Dead Online существует два типа гонок: обычная и свободная гонка. Обычная гонка, как можно догадаться, требует от игроков проехать то или иное количество кругов. Игрок, завершивший все круги первым — победитель. На данный момент доступно пять обычных гонок: Пересечение Барда, Форт Уоллес, Водоем Пайка, плантации Сен-Дени и улицы Сен-Дени. Свободная гонка является куда более интересной вариацией обычной гонки. В данном типе гонок вам необходимо проехать через доступные контрольные огни в любом порядке. Игрок, который первым проехал через все контрольные огни, — победитель. Как и в предыдущем случае, существует пять свободных гонок: Блэкуотер, Роудс, Сен-Дени, Тамблвид и Валентайн.</span>
+    			</div>
+    		    <span class="name_rez">Гонки на лошадях</span>
+    		</div>
+    		<div class="rez name_weapon">
+    			<img src="images/RDR2_screen_295.jpg" alt="Имя твоего оружия" />
+    			<div class="txt_B">
+    				<span class="N">Имя твоего оружия</span>
+    				<span class="txt">Тоже дезматч, но с другим условием. Тут количество очков за убийство зависит от выбранного оружия. Чем сложнее им пользоваться, тем больше баллов. Например, за фраги из карабина дают 1 очко, а за убийство томагавком — 6 очков. Этот режим бывает двух видов: командный (пять отрядов, вроде) и «каждый сам за себя»</span>
+    			</div>
+    			<span class="name_rez">Имя твоего оружия</span>
+    		</div>
+    		<div class="rez captured_territory">
+    			<img src="images/RDR2_screen_297.jpg" alt="Захват территории" />
+    			<div class="txt_B ">
+    				<span class="N">Захват территории</span>
+    				<span class="txt">Пяти командам нужно захватывать территории. За это капают очки</span>
+    			</div>
+    			<span class="name_rez">Захват территории</span>
+    		</div>
+    		<div class="rez Versus">
+    			<img src="images/RDR2_screen_296.jpg" alt="Противоборство" />
+    			<div class="txt_B">
+    				<span class="N">Противоборство</span>
+    				<span class="txt">Все игроки начинают со взрывчаткой и при каждой успешной доставке этого опасного груза на базу противника могут подорвать часть лагеря. Доставьте всю взрывчатку и сметите вражескую базу с лица земли, чтобы одержать победу. На этой неделе вы получите на 30% больше опыта за все карты способностей.</span>
+    			</div>
+    			<span class="name_rez">Противоборство</span>
+    		</div>
+    		<div class="rez In_the_smoke">
+    			<img src="images/RDR2_screen_300.jpg" alt="В дыму" />
+    			<div class="txt_B">
+    				<span class="N">В дыму</span>
+    				<span class="txt">Все игроки начинают с взрывного пакета, и каждая успешная доставка на базу команды противника взорвет часть их лагеря.. Доставьте все посылки на базу противника, чтобы уничтожить её и претендовать на победу</span>
+    			</div>
+    			<span class="name_rez">В дыму</span>
+    		</div>
+    		<div class="rez Safe_gun">
+    			<img src="images/RDR2_screen_298.jpg" alt="Береги оружие" />
+    			<div class="txt_B">
+    				<span class="N">Береги оружие</span>
+    				<span class="txt">В королевской битве игроки выступают в роли индейцев, сражающихся с врагами исключительно с помощью лука и холодного оружия. В отличие от оригинальной версии режима, здесь не нужно искать снаряжение. Вместо этого все внимание уделено сражениям. Единственная цель — остаться последним выжившим игроком. Во время игры нужно очень осторожно передвигаться по карте и оперативно устранять противников. У каждого игрока есть всего одна попытка. </span>
+    			</div>
+    			<span class="name_rez">Береги оружие</span>
+    		</div>
+    	</div>
+    </div>
+
+    <div class="Abilities">
+    	<span id="cards">Карты способностей</span>
+    	<hr id="end_card" />
+
+    	<select name="Cards" id="choice_card" size="1">
+    		<option value="Категория не выбрана">Категория не выбрана</option>
+    		<option value="Карты способностей 'Мертвый глаз'">Мертвый глаз</option>
+    		<option value="Карты способностей 'Бой'">Бой</option>
+    		<option value="Карты способностей 'Регенерация'">Регенерация</option>
+    		<option value="Карты способностей 'Защита'">Защита</option>
+    	</select>
+
+    	<span class="category_name">Категория не выбрана</span>
+    	<i class="far fa-times-circle C"></i>
+    	<hr id="end_category" />
+
+    	<div class="Dead_eye">
+    		<div class="dead_card CARD" onclick="Open_block('Пока Dead eye активен, ваше здоровье регенерируется.. Получение урона выключает Dead eye', 'Способность открывается со 2-го уровня', 'Ability_cards/Dead_eye_1.png', 'Момент выздоровления')"><img src="Ability_cards/Dead_eye_1.png" /></div>
+    		<div class="dead_card CARD" onclick="Open_block('Пока Dead Eye активен, вы и члены вашей команды наносите больше урона. Эффект не складывается, если эта способность активна более чем у одного члена вашей команды.', 'Способность открывается со 2-го уровня', 'Ability_cards/Dead_eye_2.png', 'Фокусированный огонь')"><img src="Ability_cards/Dead_eye_2.png" /></div>
+    		<div class="dead_card CARD" onclick="Open_block('Пока Dead Eye активен, вы можете «рисовать» цели на врагах или животных. Стреляйте из оружия, чтобы стрелять по всем отмеченным целям. Каждый выстрел истощает Мертвый Глаз. Вы не можете пометить других игроков или быть помеченными в стиле оборонительной игры', 'Способность открывается со 2-го уровня', 'Ability_cards/Dead_eye_3.png', 'Покрась в черное')"><img src="Ability_cards/Dead_eye_3.png" /></div>
+    		<div class="dead_card CARD" onclick="Open_block('Пока Dead Eye активен, вы получаете меньше урона, и выстрелы в голову не убивают вас сразу. Получение урона истощает Мертвый Глаз, и вы не можете бежать или ускоряться.', 'Способность открывается с 24-го уровня', 'Ability_cards/Dead_eye_4.png', 'Медленно, но уверенно')"><img src="Ability_cards/Dead_eye_4.png" /></div>
+    		<div class="dead_card CARD" onclick="Open_block('Пока Dead Eye активен, вы и ваши союзники восстанавливаете здоровье. Эффекты не складываются, если эта способность активна более чем у одного члена вашей команды.', 'Способность открывается с 44-го уровня', 'Ability_cards/Dead_eye_5.png', 'Довольно вдохновения')"><img src="Ability_cards/Dead_eye_5.png" /></div>
+    		<div class="dead_card CARD" onclick="Open_block('Пока Dead Eye активен, вражеские игроки не могут захватить вас, и вы не можете заблокировать их. Другие враги менее точны при стрельбе по вам', 'Способность открывается с 50-го уровня', 'Ability_cards/Dead_eye_6.png' ,'Скользский мудак')"><img src="Ability_cards/Dead_eye_6.png" /></div>
+    	</div>
+
+    	<div class="Combat">
+    		<div class="combat_card CARD" onclick="Open_block('Вы наносите урона больше, когда вы на лошади', 'Способность открывается с 10-го уровня', 'Ability_cards/Combat_1.png', 'Человек-лошадь')"><img src="Ability_cards/Combat_1.png" /></div>
+    		<div class="combat_card CARD" onclick="Open_block('Когда вы приближаетесь к смерти, вы начинаете наносить больше урона', 'Способность открывается с 16-го уровня', 'Ability_cards/Combat_2.png', 'Необходимость пораждает')"><img src="Ability_cards/Combat_2.png" /></div>
+    		<div class="combat_card CARD" onclick="Open_block('Ожидание до 15 секунд увеличивает урон', 'Способность открывается с 18-го уровня', 'Ability_cards/Combat_3.png', 'Терпение Лэндонов')"><img src="Ability_cards/Combat_3.png" /></div>
+    		<div class="combat_card CARD" onclick="Open_block('Вы наносите больше урона целям, находящимся ближе к вам, но меньше урона целям, находящимся на большем расстоянии', 'Способность открывается с 38-го уровня', 'Ability_cards/Combat_4.png', 'Короткая игра')"><img src="Ability_cards/Combat_4.png" /></div>
+    		<div class="combat_card CARD" onclick="Open_block('Ваше лассо душит ваших врагов, нанося им урон каждую секунду, когда они в лассо.', 'Способность открывается с 42-го уровня', 'Ability_cards/Combat_5.png', 'Повешенный человек')"><img src="Ability_cards/Combat_5.png" /></div>
+    		<div class="combat_card CARD" onclick="Open_block('Каждый последующий выстрел по одной и той же цели наносит больше урона, чем последний', 'Способность открывается с 48-го уровня', 'Ability_cards/Combat_6.png', 'Череда побед')"><img src="Ability_cards/Combat_6.png" /></div>
+    	</div>
+
+    	<div class="Recovery">
+    		<div class="rec_block CARD" onclick="Open_block('Ваше здоровье начинает восстанавливаться раньше, чем вы получаете урон.', 'Способность открывается с 10-го уровня', 'Ability_cards/Recovery_1.png', 'Возвращайся сильнее')"><img src="Ability_cards/Recovery_1.png"></div>
+    		<div class="rec_block CARD" onclick="Open_block('Увеличивает наносимый урон в зависимости от вашей текущей выносливости. Наносит больше урона при полной выносливости. Кроме того, в спринте используется меньше выносливости', 'Способность открывается с 14-го уровня', 'Ability_cards/Recovery_2.png', 'Пиковое состояние')"><img src="Ability_cards/Recovery_2.png"></div>
+    		<div class="rec_block CARD" onclick="Open_block('Убийство врага выстрелом в голову восстанавливает мертвый глаз.', 'Способность открывается с 28-го уровня', 'Ability_cards/Recovery_3.png', 'Глаз за глаз')"><img src="Ability_cards/Recovery_3.png" alt="Глаз за глаз"></div>
+    		<div class="rec_block CARD" onclick="Open_block('Предметы и способности, восстанавливающие Dead Eye, улучшают свои эффекты. Вы наносите немного меньше урона.', 'Способность открывается с 30-го уровня', 'Ability_cards/Recovery_4.png', 'Дар фокуса')"><img src="Ability_cards/Recovery_4.png"></div>
+    		<div class="rec_block CARD" onclick="Open_block('Вы восстанавливаете здоровье всякий раз, когда наносите урон. В противном случае ваше здоровье восстанавливается с половиной нормальной скорости.', 'Способность открывается с 32-го уровня', 'Ability_cards/Recovery_5.png', 'Странное лекарство')"><img src="Ability_cards/Recovery_5.png"></div>
+    		<div class="rec_block CARD" onclick="Open_block('После убийства врага вы восстановите здоровье в течение следующих 5 секунд.', 'Способность открывается с 36-го уровня', 'Ability_cards/Recovery_6.png', 'Хлоднокровный')"><img src="Ability_cards/Recovery_6.png"></div>
+    	</div>
+
+    	<div class="Defense">
+    		<div class="def_block CARD" onclick="Open_block('Вы получаете меньше урона, находясь в укрытии', 'Способность открывается с 20-го уровня', 'Ability_cards/Defense_1.png', 'Сидеть на корточках')"><img src="Ability_cards/Defense_1.png"></div>
+    		<div class="def_block CARD" onclick="Open_block('Вы получаете меньше урона от пуль во время спринта', 'Способность открывается с 22-го уровня', 'Ability_cards/Defense_2.png', 'Бороться на другой день')"><img src="Ability_cards/Defense_2.png"></div>
+    		<div class="def_block CARD" onclick="Open_block('Ваш Dead Eye и Eagle Eye истощаются медленнее.', 'Способность открывается с 26-го уровня', 'Ability_cards/Defense_3.png', 'Немегающий глаз')"><img src="Ability_cards/Defense_3.png"></div>
+    		<div class="def_block CARD" onclick="Open_block('Когда вы кого-то оживляете, вы оба получаете меньше урона в течение следующих 8 секунд.', 'Способность открывается с 34-го уровня', 'Ability_cards/Defense_4.png', 'Снять боль')"><img src="Ability_cards/Defense_4.png"></div>
+    		<div class="def_block CARD" onclick="Open_block('Вы получаете меньше урона от пуль, будучи безоружными или используя оружие ближнего боя.', 'Способность открывается с 40-го уровня', 'Ability_cards/Defense_5.png', 'Единственное назначение')"><img src="Ability_cards/Defense_5.png"></div>
+    		<div class="def_block CARD" onclick="Open_block('Ваша шляпа заблокирует один выстрел в голову, а затем упадет. во время ношения шляпы вы получаете меньше урона. Не надев шляпу, вы получаете больше урона', 'Способность открывается с 46-го уровня', 'Ability_cards/Defense_6.png', 'Никогда без....')"><img src="Ability_cards/Defense_6.png"></div>
+    	</div>
+    </div>
+
+    <div class="Last_news">
+    	<span id="last-n">Нововведения в RDR ONLINE</span>
+    	<hr />
+
+    	<div class="Welcome_news new_img">
+    		<img src="images/RDR2_screen_47.jpg" alt="Red Dead Online">
+    		<div class="T_B">
+    			<span>В последнее время Rockstar games решила исправиться и выстроить более правельные и амбициозные планы на RDR2 Online... Rockstar games готовит большре обновление для игры, чтобы исправиться перед игроками и сделать свою игру лучше. Дальше будут перечислены будущие нововведения для игры.</span>
+    		</div>
+    	</div>
+
+        <div class="New_characters">
+        	<span id="rules">Роли в RDR ONLINE</span>
+        	<hr />
+
+        	<div class="seria-block">
+        		<div class="character_b new_img">
+        			<img src="images/RDR2_screen_302.jpg" alt="Охотник за головами">
+        			<div class="t_characters">
+        				<span>Если вы грезите о жизни, полной смертельно опасных схваток по обе стороны закона, ваш выбор – роль охотника за головами. Получив лицензию охотника за головами, вы сможете выискивать и задерживать опасных преступников – или же убивать их, в зависимости от того, насколько вас заботит чистота вашей репутации. В некоторых случаях целью может даже стать другой игрок, особенно если за него назначили большую награду. По ходу карьеры вы будете получать доступ к особым предметам (таким как улучшенное лассо для пленения особо свирепых противников), а также к затейливым трюкам с вращением револьвера, продвинутым навыкам выслеживания цели (например, возможности задействовать «Орлиный глаз» на бегу или скача на лошади) и множеству других навыков, предметов и улучшений.</span>
+                    </div>
+        		</div>
+        		<div class="character_b Top new_img">
+                    <img src="images/RDR2_screen_303.jpg" alt="Торговец">
+                    <div class="t_characters">
+                    	<span>Профессия торговца идеально подойдет амбициозным капиталистам. Вам предстоит вести дела из своего лагеря: ваш партнер Криппс хорошо разбирается в мехах, шкурах и звериных тушах, благодаря чему вам будут открываться новые возможности по добыче материалов и производству ценных товаров на продажу. Совершенствуясь в роли торговца, вы будете получать доступ к улучшениям для лагеря: в частности, можно будет приобрести хранилище для оружия и котел, и даже научить собаку предупреждать вас лаем об атаке на лагерь. По мере расширения своего дела вы сможете освоить новые навыки, улучшить свою сумку или дополнить лагерь новыми полезными штуками – скажем, охотничьими повозками, вмещающими больше добычи.</span>
+                    </div>
+                </div>
+        		<div class="character_b l5 new_img">
+        			<img src="images/RDR2_screen_304.jpg" alt="Коллекционер">
+        			<div class="t_characters">
+        				<span>Коллекционер – это тот, кто любит путешествовать по миру в поисках редких и ценных предметов. Приступить к освоению этой роли вы сможете после встречи с таинственной кочующей торговкой. Вам предстоит искать потерянные украшения, редкие наконечники стрел и другие сокровища, которые можно продавать как по отдельности, так и, что гораздо выгоднее, целыми наборами. По ходу деятельности вы будете получать доступ к особым инструментам (таким как улучшенный бинокль, фонарь для лошади или даже металлоискатель), а также осваивать дополнительные навыки, которые помогут вам заполучить величайшие в мире раритеты. Выбранная роль станет важным фактором в жизни вашего персонажа: вы сможете продемонстрировать другим игрокам, как далеко продвинулись в освоении той или иной профессии. Вы сможете развиваться в трех направлениях сразу или же, если хотите, сосредоточиться на каком-то одном ремесле.</span>
+        			</div>
+        		</div>
+
+        		<div class="END_CONTENT">
+        			<span>Впринципе это весь контент, который Rockstar хочет добавить в ближайшее время.. Дальше возможно ещё поступит информация.. Но дальше будет разговор о приятных сюрпризах на 1 - 2 недели.</span>
+        		</div>
+        	</div> 
+        </div>
+
+        <div class="Cool_bonuses">
+    	    <span id="bonus">Приятные бонусы от Rockstar</span>
+    	    <hr />
+
+    	    <div class="Bonus_container">
+    	    	<div class="Thanks_rock">
+    	    		<img src="images/RDR2_screen_305.jpg" alt="Земля возможностей" />
+    	    		<div class="bonus_text">
+    	    			<span>Некоторые люди идут по жизни, соблюдая этический кодекс: «лучше смерть, чем бесчестье», «не берись за оружие без крайней нужды» и все в таком духе. А есть прощелыги, которых не остановят ни законы, ни нормы морали. Каким бы путем вы ни следовали, вас ждут щедрые награды: на протяжении следующих двух недель за выполнение заданий из категории «Земля возможностей» с Джессикой Леклерк и Хорли будет начисляться на 30% больше RDO $ и опыта.</span>
+    	    		</div>
+    	    	</div>
+    	    	<div class="Thanks_rock">
+    	    		<img src="images/RDR2_screen_306.jpg" alt="Новая одежда" />
+    	    		<div class="bonus_text">
+    	    			<span>С сегодняшнего дня по каталогу Wheeler, Rawson and Co. снова можно заказать четыре уже знакомых вам товара из ограниченной серии, в том числе шляпу «Ованджила» из шкуры бобра и элегантные штаны «Кончо». Мужчинам мы рекомендуем примерить куртку «Чарро», а дамам наверняка придется по душе популярное пальто «Клаймен», сшитое из высококачественной шлифованной кожи. Кроме того, временно снижены требования к уровню игрока: все жилеты, доступные по достижении 31-го уровня и выше, сейчас можно получить уже с 30-го, а жилеты, доступные с 11-го по 29-й уровни, можно приобрести уже на 10-м уровне.</span>
+    	    		</div>
+    	    	</div>
+    	    	<div class="Thanks_rock l6">
+    	    		<img src="images/RDR2_screen_307.jpg" alt="Распродажа" />
+    	    		<div class="bonus_text">
+    	    			<span>Независимо от того, предпочитаете ли вы держаться от врагов на удалении или же идете на тесный контакт, советуем заглянуть к оружейнику: в данный момент действует скидка 25% на самовзводный револьвер и винтовку Спрингфилда. А еще скупщики на 50% сбавили цены на топор и топор мясника, и это предложение будет действовать ближайшие две недели. Также на протяжении обозначенного временного периода все улучшения карт способностей будут стоить на 25% меньше, чем обычно.</span>
+    	    		</div>
+    	    	</div>
+    	    </div>
+        </div>
+    </div>
+
+    <div class="End_text">
+    	<span>Теперь остается надеется, что Рокстар отнесется к своей игре более ответственно, по сравнению с тем, что было раньше.. Но выше описанная информация дает нам понять то, что они уже подсуитились и пытаются сделать игру лучше... Как же хочется, чтобы игра расцвела по полной!</span>
+    </div>
+
+
+  <footer>
+    <div class="Red_dead">
+      <span>Red Dead Redemption II</span>
+    </div>
+        
+    <span id="lozyng" title="Лозунг Red Dead Redemption II">outlaws for the live</span>
+        
+    <hr id="linia_RDR2" />
+
+    <div class="container">
+      <a href="https://www.youtube.com/user/RockstarGames" title="Youtube" target="_blank"><i class="fab fa-youtube sticker"></i></a>
+
+      <a href="https://twitter.com/rockstargames" title="Twitter" target="_blank"><i class="fab fa-twitter sticker"></i></a>
+        
+      <a href="https://www.facebook.com/pages/category/Video-Game/Rockstargames-498603576885163/" title="Facebook" target="_blank"><i class="fab fa-facebook-f sticker"></i></a>
+        
+      <a href="https://www.instagram.com/rockstargames/?hl=ru" title="Instagram"  target="_blank" /><i class="fab fa-instagram sticker"></i></a>
+           
+      <a href="https://www.twitch.tv/rockstargames" title="Twitch" target="_blank"><i class="fab fa-twitch sticker"></i></a>
+    </div>
+        
+    <!-- Возможно я удалю эти (2) блока с сошиал клабом и рокстаром, т.к 1) Выглядит как калл 2)Что будет при адаптивной версте? Да хрен его знает(Удалил) -->
+
+    <span id="adres">Главный офис Rockstar находится по адресу - </span><address>RockStar, 4 622, Broadway, New York, NY</address>
+  </footer> 
+
+    <script src="JS/index7.js"></script>
+</body>
+</html>

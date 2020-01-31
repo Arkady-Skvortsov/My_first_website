@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Red dead redemption II</title>
+	<meta charset="utf-8" />
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+	<!-- Phone and tablets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+	<!-- css -->
+    <style type="text/css">
+         @import url('https://fonts.googleapis.com/css?family=Lakki+Reddy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+
+
+body {
+    background-color: black;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+} /* Для scrollbar */
+
+header {
+    height: 100px;
+    width: 100%;
+    z-index: 3;
+    left: 0px;
+    top: 0;
+    background-color: black;
+    transition: 900ms ease;
+    position: fixed;
+}
+
+/* @keyframes gradient-color {
+    0% {
+       border-bottom: 5px solid rgba(225, 0, 0, 0.6);
+    }
+
+    50% {
+       border-bottom: 5px solid rgba(255, 0, 0, 0.8);
+    }
+
+    100% {
+       border-bottom: 5px solid rgba(255, 0, 0, 1);
+    }
+} */
+
+header .menu {
+    height: 50px;
+    width: 50px;
+    border: 2px solid red;
+    margin-left: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+header .menu span {
+    height: 7px;
+    width: 40px;
+    font-size: 25px;
+    margin-left: 5px;
+    background-color: white;
+    margin-top: 7px;
+    position: relative;
+    display: block;
+    transition: 900ms ease;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+header .menu span:hover {
+    background-color: red;
+}
+
+header .menu .b1.rot_1 {
+    transform: rotate(-45deg);
+    top: 15px;
+    -o-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -mozila-transform: rotate(-45deg);
+    border-radius: 15px;
+}
+
+header .menu .b2.rot_2 {
+    display: none;
+}
+
+header .menu .b3.rot_3 {
+    transform: rotate(45deg);
+    top: 1px;
+    -o-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -mozila-transform: rotate(45deg);
+    border-radius: 15px;
+}
+
+header .logotype {
+    height: 90px;
+    width: 400px;
+    position: absolute;
+    cursor: pointer;
+    margin-top: -77.5px;
+    margin-left: 600px;
+    background-image: url('images/RDR2_screen_308.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.Main_screen {
+    height: 1020px;
+    width: 100%;
+    margin-left: -8px;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 97px;
+    background-image: url('images/RDR2_screen_42.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.Main_screen pre {
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    display: inline;
+    margin-top: 990px;
+    margin-left: 0px;
+    background-color: white;
+}
+
+.Main_screen pre .bg {
+    font-size: 35px;
+    height: 75px;
+    width: 350px;
+    transform: translateX(605px);
+    font-family: 'Lakki Reddy', cursive;
+    margin-top: -50px;
+    cursor: pointer;
+    background-color: black;
+}
+
+.Main_screen pre .bg h3 {
+    position: absolute;
+    margin-top: -110px;
+    margin-left: 30px;
+    color: white;
+}
+
+.Main_screen pre .critic {
+    font-size: 30px;
+    position: relative;
+    margin-left: -220px;
+    margin-top: 45px;
+    cursor: pointer;
+    color: black;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.Main_screen pre .critic:hover {
+    text-decoration: none;
+}
+
+.Main_screen pre .review {
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    word-spacing: .5em;
+    padding-left: 20px;
+}
+
+.Main_screen pre .mark {
+    font-size: 25px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+#main_page {
+    font-size: 45px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-top: 1490px;
+    margin-left: 680px;
+}
+
+hr {
+    height: 5px;
+    width: 950px;
+    font-weight: bold;
+    background-color: white;
+    border: 0;
+    position: absolute;
+    margin-left: 280px;
+    margin-top: 1540px;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.main_container {
+    height: 500px;
+    width: 100%;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    position: absolute;
+    margin-left: -8px;
+    margin-top: 1700px;
+}
+
+.main_container .main_image {
+    width: 1100px;
+    height: 500px;
+    margin-left: 0;
+    cursor: pointer;
+    background-size: cover;
+    background-image: url('images/RDR2_screen_10.jpg');
+    background-position: center;
+}
+
+.main_container .main_text {
+    height: 500px;
+    width: 600px;
+    float: right;
+    margin-right: 0;
+    margin-top: -500px;
+}
+
+.main_container .main_text p {
+    font-size: 35px;
+    font-family: 'Comfortaa', cursive;
+    display: block;
+    position: absolute;
+    margin-top: 125px;
+    margin-left: -100px;
+    font-weight: bold;
+    color: white;
+    word-spacing: 0.8em;
+    cursor: pointer;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.main_container .main_text p:hover {
+    color: grey;
+}
+
+.main_block .information {
+    height: 0px;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    cursor: pointer;
+    opacity: .7;
+    background-color: black;
+    display: none;
+    transition: 600ms ease;
+    -o-transition: 600ms ease;
+    -mozila-transition: 600ms ease;
+    -webkit-transition: 600ms ease;
+}
+
+
+.correction_block {
+    margin-top: -500px;
+}
+
+.main_block .information p {
+    font-size: 55px;
+    font-family: 'Comfortaa', cursive;
+    margin-left: 620px;
+    position: absolute;
+    margin-top: 500px;
+    opacity: 1;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 600ms ease;
+    -o-transition: 600ms ease;
+    -mozila-transition: 600ms ease;
+    -webkit-transition: 600ms ease;
+}
+
+.main_block .information p:hover {
+    text-shadow: 0 0 30px white;
+}
+
+.img_block {
+    animation: image 1s ease-in 1;
+}
+
+@keyframes image {
+    0% {
+        width: 85%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.txt_block {
+    animation: txt 1s ease-in 1;
+}
+
+@keyframes txt {
+    0% {
+      margin-top: 290px;
+      opacity: .8;
+    }
+
+    100% {
+      opacity: .5;  
+      margin-top: 380px;
+      display: none;
+    }
+}
+
+.inf_block {
+    animation: inf 1s ease-in 1;
+}
+
+@keyframes inf {
+    0% {
+       display: block;
+       height: 250px;
+    }
+
+    100% {
+       height: 500px;
+    }
+}
+
+.inf_text {
+    animation: inf_t 1s ease-in 1;
+}
+
+@keyframes inf_t {
+    0% {
+      display: block;   
+      margin-top: 400px;
+    }
+
+    100% {
+      margin-top: 215px;
+    }
+}
+
+.single_play {
+    height: 500px;
+    width: 100%;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    position: absolute;
+    margin-left: -8px;
+    margin-top: 2201px;
+}
+
+.single_play .single_image {
+    height: 500px;
+    width: 1150px;
+    cursor: pointer;
+    float: right;
+    margin-right: 0;
+    background-image: url('images/RDR2_screen_46.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.single_play .single_text {
+    height: 500px;
+    width: 700px;
+    position: absolute;
+    margin-left: -30px;
+    margin-top: 0;
+}
+
+.single_play .single_text p {
+    font-size: 35px;
+    font-family: 'Comfortaa', cursive;
+    position: absolute;
+    display: inline;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 125px;
+    padding-left: 150px;
+    word-spacing: .8em;
+    color: white;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+}
+
+.single_play .single_text p:hover {
+    color: grey;
+}
+
+.open_world {
+    height: 500px;
+    width: 100%;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    position: absolute;
+    margin-left: -8px;
+    margin-top: 2701px;
+} 
+
+.open_world .open_image {
+    position: absolute;
+    height: 500px;
+    width: 1150px;
+    cursor: pointer;
+    margin-top: 0;
+    background-image: url('./images/RDR2_screen_48.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.open_world .open_text {
+    height: 500px;
+    position: relative;
+    width: 650px;
+    float: right;
+    margin-right: 90px;
+}
+
+.open_world .open_text p {
+    font-size: 35px;
+    font-family: 'Comfortaa', cursive;
+    position: absolute;
+    margin-top: 115px;
+    margin-left: 85px;
+    font-weight: bold;
+    word-spacing: .8em;
+    display: inline;
+    color: white;
+    cursor: pointer;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.open_world .open_text p:hover {
+    color: grey;
+}
+
+.weapons {
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    margin-left: -8px;
+    margin-top: 3202px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+}
+
+.weapons .weapon_image {
+    height: 500px;
+    width: 1150px;
+    cursor: pointer;
+    float: right;
+    margin-right: 0;
+    background-image: url('./images/RDR2_screen_44.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.weapons .weapons_text {
+    height: 500px;
+    width: 550px;
+    position: absolute;
+    margin-left: 80px;
+}
+
+.weapons .weapons_text p {
+    font-size: 35px;
+    font-family: 'Comfortaa', cursive;
+    position: absolute;
+    display: inline;
+    font-weight: bold;
+    word-spacing: .5em;
+    color: white;
+    margin-top: 85px;
+    padding-left: 100px;
+    cursor: pointer;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.weapons .weapons_text p:hover {
+    color: grey;
+}
+
+.music {
+    height: 500px;
+    width: 100%;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    position: absolute;
+    margin-left: -8px;
+    margin-top: 3703px;
+}
+
+.music_image {
+    height: 500px;
+    width: 1150px;
+    position: absolute;
+    cursor: pointer;
+    background-size: cover;
+    background-image: url('./images/RDR2_screen_52.jpg');
+    background-position: center;
+} 
+
+.music .music_text {
+    height: 500px;
+    width: 650px;
+    float: right;
+    margin-right: 100px;
+}
+
+.music .music_text p {
+    font-size: 35px;
+    font-family: 'Comfortaa', cursive;
+    word-spacing: .5em;
+    font-weight: bold;
+    float: right;
+    cursor: pointer;
+    position: absolute;
+    margin-top: 125px;
+    margin-left: 100px;
+    color: white;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+}
+
+.music .music_text p:hover {
+    color: grey;
+}
+
+.online {
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    margin-left: -8px;
+    margin-top: 4204px;
+}
+
+.online .online_image {
+    float: right;
+    margin-right: 0;
+    height: 500px;
+    width: 1150px;
+    cursor: pointer;
+    background-size: cover;
+    background-image: url('./images/RDR2_screen_47.jpg');
+    background-position: center;
+}
+
+.online .online_text {
+    height: 500px;
+    width: 600px;
+    position: absolute;
+    margin-left: 50px;
+}
+
+.online .online_text p {
+    font-size: 35px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    word-spacing: .5em;
+    margin-left: 100px;
+    margin-top: 55px;
+    cursor: pointer;
+    position: absolute;
+    color: white;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+}
+
+.online .online_text p:hover {
+    color: grey;
+}
+
+footer {
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    cursor: pointer;
+    margin-left: -8px;
+    margin-top: 4820px;
+    border-top: 3px solid red;
+    background-image: url('PNG/RDR2_FOOTER_BACKGROUND.png');
+    background-size: cover;
+    background-position: bottom;
+}
+
+footer .Red_dead {
+    height: 50px;
+    width: 350px;
+    background-color: black;
+    border: 3px solid red;
+    position: absolute;
+    margin-top: -35px;
+    margin-left: 610px;
+}
+
+footer .Red_dead span {
+    font-size: 30px;
+    font-family: 'Bree Serif', serif;
+    color: white;
+    font-weight: bold;
+    transform: translateY(2.5px);
+    position: absolute;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+footer #lozyng {
+    font-size: 75px;
+    font-family: 'Bree Serif', serif;
+    font-weight: bold;
+    position: absolute;
+    cursor: pointer;
+    color: red;
+    margin-top: 50px;
+    margin-left: 470px;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+footer #lozyng:hover {
+    text-shadow: 0 0 25px red;
+}
+
+footer #linia_RDR2 {
+    height: 5px;
+    width: 700px;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: 440px;
+    margin-top: 175px;
+    background-color: rgba(217, 30, 24, .7);
+}
+
+footer .container {
+    height: 80px;
+    width: 600px;
+    display: inline;
+    position: absolute;
+    margin-top: 195px;
+    margin-left: 500px;
+}
+
+footer .container a .sticker {
+    font-size: 40px;
+    cursor: pointer;
+    margin-left: 60px;
+    margin-top: 20px;
+    color: rgba(255, 5, 1, .7);
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+footer .container a .sticker:hover {
+    color: red;
+}
+
+footer #adres {
+    font-size: 10px;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    font-weight: bold;
+    margin-top: 280px;
+    position: absolute;
+    margin-left: 520px;
+}
+
+footer address {
+    font-size: 12px;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    margin-top: 280px;
+    margin-left: 775px;
+}
+
+.punkt {
+    height: 690px;
+    width: 600px;
+    position: fixed;
+    z-index: 1;
+    background-color: black;
+    opacity: .9;
+    margin-top: 91.5px;
+    margin-left: -650px;
+    border-right: 1px solid red;
+    transition: 700ms ease;
+    -o-transition: 700ms ease;
+    -mozila-transition: 700ms ease;
+    -webkit-transition: 700ms ease;
+}
+
+.punkt.show {
+    margin-left: -8px;
+}
+
+.punkt .elements {
+    position: relative;
+    height: 60px;
+    width: 600px;
+    list-style-type: none;
+    margin-left: 0;
+    margin-top: 10px;
+}
+
+.punkt .elements .c {
+    font-size: 50px;
+    position: absolute;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 20px;
+    border-radius: 0;
+    display: none;
+    animation: cross 5s linear infinite;
+    transition: 800ms ease;
+    -o-transition: 800ms ease;
+    -mozila-transition: 800ms ease;
+    -webkit-transition: 800ms ease;
+} 
+
+@keyframes cross {
+    0% {
+      -mozila-transform: rotate(90deg);
+      -webkit-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      transform: rotate(90deg);
+      color: rgba(255, 1, 8, .6);
+    }
+
+    50% {
+       color: rgba(255, 1, 8, .8);
+    }
+ 
+    100% {
+      transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -mozila-transform: rotate(180deg);
+      color: red;
+    } /* Animation for the cross, when they display eqvals = block */
+}
+
+.punkt .elements a {
+    font-size: 45px;
+    font-family: 'Russo One', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin-left: 80px;
+    margin-top: 1px;
+    cursor: pointer;
+    position: absolute;
+    transition: 700ms ease;
+    -o-transition: 700ms ease;
+    -mozila-transition: 700ms ease;
+    -webkit-transition: 700ms ease;
+}
+
+.punkt #author {
+    font-size: 15px;
+    font-family: 'Comfortaa', cursive;
+    margin-left: 20px;
+    list-style-type: none;
+    color: purple;
+    font-weight: bold;
+    margin-top: 90px;
+}
+
+.punkt #author a {
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    font-family: 'Comfortaa', cursive;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.punkt #author a:hover {
+    text-decoration: underline;
+}
+
+.strelochka {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 25px;
+    margin-top: 4722px;
+    margin-left: 750px;
+    background-color: black;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.strelochka:hover {
+    background-color: white;
+    transform: translateY(5px);
+}
+
+.strelochka .strl {
+    font-size: 55px;
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    margin-top: -3px;
+    margin-left: 8px;
+    font-weight: bold;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease; 
+}
+
+.strelochka .strl:hover {
+    color: black;
+    transform: translateY(3px);
+}
+    </style>
+</head>
+<body>
+	<!-- header -->
+	<header>
+		<div class="menu">
+		    <span class="b1"></span>
+		    <span class="b2"></span>
+		    <span class="b3"></span>
+		</div>
+        
+        <div class="logotype" title="Red dead Redemption II"></div>
+	</header>
+
+	<!-- Menu -->
+	<ul class="punkt">
+        <li class="elements"><i class="fas fa-times c"></i><a href="./index.html">На главную</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index2.html">Об игре</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index3.html">Сюжет</a></li> 
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index4.html">Открытый мир</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index5.html">Оружее</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index6.html">Саундтрек</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index7.html">Мультиплеер</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="https://ru.socialclub.rockstargames.com/" target="_blank">Social Club</a></li>
+        <li id="author">Автор вдохновлялся этим сайтом - <a href="https://www.rockstargames.com/reddeadredemption2/" id="silka" target="_blank">Red Dead Redemption II</a></li>
+	</ul>
+
+	<!-- body -->
+	<div class="Main_screen">
+			<pre>
+				<div class="bg">
+				    <h3>Рецензии игры</h3>
+				</div>
+
+				<a href="https://www.igromania.ru/" class="critic" target="_blank" title="Игромания">Игромания:</a><q class="review">Игра, что не будет стареть. Однако для наслаждения ею надо самому немного состариться.</q> <span class="mark">- 10/10</span>
+				<a href="https://kanobu.ru/" class="critic" target="_blank" title="Канобу">Канобу:</a><q class="review">Да, я громко заявляю, что Red Dead Redemption 2 на сегодня — лучшая игра с открытом миром из всех когда-либо выпущенных</q> <span class="mark">- 10/10</span>
+				<a href="https://www.youtube.com/watch?v=gygzZ7Md6J0" class="critic" target="_blank" title="4Game">Алексей Макаренков:</a><q class="review">Игр, с таким уровнем проработки очень мало. Однозначные 10 баллов</q> <span class="mark">- 10/10</span>
+				<a href="https://www.youtube.com/watch?v=dMGYme_HBds&t=311s" class="critic" target="_blank" title="Дрюзай)">TheDRZJ:</a><q class="review">Это во всех отношениях уникальный RDR2. Если таким играм не прощать ошибки, то каким прощать?</q> <span class="mark">- 10/10</span>
+				<a href="https://www.youtube.com/watch?v=aZoeUPlC1Ss" class="critic" target="_blank" title="Stopgame">Stopgame:</a><q class="review">Такой праздник раз в 5 лет случается, ну не упускать же его</q> <span class="mark">- 10/10</span>
+			</pre>
+	</div>
+    
+    <span id="main_page">Главная</span>
+	<hr />
+
+	<div class="main_container main_block">
+		<div class="main_image" title="About Game">
+		
+		</div>
+        
+        <div class="main_text">
+			<p>Игра создавалась 7 лет кропотливым турдом и креативным подходом к разработке Студией RockStar.  
+			В игре очень много разных мелочей и проработанных деталей......</p>
+		</div>
+
+        <div class="information correct_block" onclick="Adress('./index2.html')">
+            <p>О игре</p>
+        </div>
+	</div>
+    <!-- About game + href on page -->
+
+    <div class="single_play main_block">
+    	<div class="single_image" title="Single Player">
+    		
+    	</div> 
+
+    	<div class="single_text">
+    		<p>1899 год, закат эпохи бандитизма и дикого запада.В центре повествования банда Van Der Linde. Главный герой - Артур Морган......</p>
+    	</div>
+
+        <div class="information" onclick="Adress('./index3.html')">
+            <p>Сюжет</p>
+        </div>
+    </div>
+
+    <!--single play -->
+    
+    <div class="open_world main_block">
+    	<div class="open_image" title="Open world">
+    		
+    	</div>
+
+    	<div class="open_text">
+    		<p>В игре очень обширный открытый мир. Можно много чем заняться, к примеру: охотиться на животных
+    		 , ловить рыбу или выполнять испытания.....</p>
+    	</div>
+
+        <div class="information" onclick="Adress('./index4.html')">
+            <p>Открытый мир</p>
+        </div>
+    </div>
+
+    <!-- Open World -->
+
+    <div class="weapons main_block">
+    	<div class="weapon_image" title="Weapons">
+    		
+    	</div>
+
+    	<div class="weapons_text">
+    		<p>Оружее в игре есть и его очень много!! Оружее отличаются друг от друга: темпом стрельбы, категорией и тд. В игре оно очень релистичное.....</p>
+    	</div>
+
+        <div class="information" onclick="Adress('./index5.html')">
+            <p>Оружие</p>
+        </div>
+    </div>
+
+    <!-- Weapons -->
+
+    <div class="music main_block">
+    	<div class="music_image" title="music">
+    		
+    	</div>
+
+    	<div class="music_text">
+    		<p>Музыка в RDR2 играет очень не мало важную роль. Она помогает вам расслабиться или наоборот сигнализирует о брутальности происходящего.....</p>
+    	</div>
+
+        <div class="information" onclick="Adress('./index6.html')">
+            <p>Официальный саундтрек</p>
+        </div>
+    </div> 
+
+    <!-- Music -->
+
+    <div class="online main_block">
+    	<div class="online_image" title="online">
+    		
+    	</div>
+
+    	<div class="online_text">
+    		<p>Онлайн режим в RDR2 довольно хорош, хоть и не предлагает ничего нового. Мультиплеер взял все, что было в сингле и перенес на свой лад. Из-за чего играть с другими игроками в разы интереснее.....</p>
+    	</div>
+
+        <div class="information" onclick="Adress('./index7.html')">
+            <p>Мультиплеер</p>
+        </div>
+    </div>
+
+    <!-- RDR ONLINE -->
+
+    <!-- <div class="preloader">
+            <img src="" title="Bump" alt="Bump of RDR2" />
+    </div> -->
+
+    <div class="strelochka">
+        <i class="fas fa-angle-up strl"></i>
+    </div> 
+    <!-- Strelochka -->
+     
+    <footer>
+    	<div class="Red_dead">
+    		<span>Red Dead Redemption II</span>
+    	</div>
+        
+        <span id="lozyng" title="Лозунг Red Dead Redemption II">outlaws for the live</span>
+        
+        <hr id="linia_RDR2" />
+
+    	<div class="container">
+    			<a href="https://www.youtube.com/user/RockstarGames" title="Youtube" target="_blank"><i class="fab fa-youtube sticker"></i></a>
+
+    			<a href="https://twitter.com/rockstargames" title="Twitter" target="_blank"><i class="fab fa-twitter sticker"></i></a>
+    		
+    			<a href="https://www.facebook.com/pages/category/Video-Game/Rockstargames-498603576885163/" title="Facebook" target="_blank"><i class="fab fa-facebook-f sticker"></i></a>
+    		
+            	<a href="https://www.instagram.com/rockstargames/?hl=ru" title="Instagram"  target="_blank" /><i class="fab fa-instagram sticker"></i></a>
+           
+            	<a href="https://www.twitch.tv/rockstargames" title="Twitch" target="_blank"><i class="fab fa-twitch sticker"></i></a>
+    	</div>
+        
+        <!-- Возможно я удалю эти (2) блока с сошиал клабом и рокстаром, т.к 1) Выглядит как калл 2)Что будет при адаптивной версте? Да хрен его знает(Удалил)... Конечно удалил -->
+
+    	<span id="adres">Главный офис Rockstar находится по адресу - </span><address>RockStar, 4 622, Broadway, New York, NY</address>
+    </footer> 
+
+	<!-- footer-->     
+
+    <script src="JS/index.js"></script>
+</body>
+</html>

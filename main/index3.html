@@ -1,0 +1,3113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Сюжет</title>
+	<meta charset="utf-8" />
+    <!-- For tablets and phone -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" />
+    <!-- CSS -->
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css?family=Lakki+Reddy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+
+body {
+  background-color: black;
+  height: 19250px;
+}
+
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+} /* Для scrollbar */
+
+header {
+  height: 100px;
+  width: 100%;
+  z-index: 3;
+    left: 0px;
+    top: 0;
+  background-color: black;
+    transition: 900ms ease;
+    position: fixed;
+}
+
+/* @keyframes gradient-color {
+  0% {
+       border-bottom: 5px solid rgba(225, 0, 0, 0.6);
+  }
+
+  50% {
+       border-bottom: 5px solid rgba(255, 0, 0, 0.8);
+  }
+
+  100% {
+       border-bottom: 5px solid rgba(255, 0, 0, 1);
+  }
+} */
+
+header .menu {
+  height: 50px;
+  width: 50px;
+  border: 2px solid red;
+    margin-left: 50px;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+header .menu span {
+  height: 7px;
+  width: 40px;
+  font-size: 25px;
+  margin-left: 5px;
+  background-color: white;
+  margin-top: 7px;
+  position: relative;
+  display: block;
+  transition: 900ms ease;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+header .menu span:hover {
+  background-color: red;
+}
+
+header .menu .b1.rot_1 {
+  transform: rotate(-45deg);
+  top: 15px;
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -mozila-transform: rotate(-45deg);
+  border-radius: 15px;
+}
+
+header .menu .b2.rot_2 {
+  display: none;
+}
+
+header .menu .b3.rot_3 {
+  transform: rotate(45deg);
+  top: 1px;
+  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -mozila-transform: rotate(45deg);
+  border-radius: 15px;
+}
+
+header .logotype {
+  height: 90px;
+  width: 400px;
+  position: absolute;
+  cursor: pointer;
+  margin-top: -77.5px;
+    margin-left: 600px;
+    background-image: url('images/RDR2_screen_308.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.punkt {
+  height: 690px;
+  width: 600px;
+  position: fixed;
+  z-index: 3;
+    background-color: black;
+    opacity: .9;
+    margin-top: 91.5px;
+    margin-left: -650px;
+    border-right: 1px solid red;
+    transition: 700ms ease;
+    -o-transition: 700ms ease;
+    -mozila-transition: 700ms ease;
+    -webkit-transition: 700ms ease;
+}
+
+.punkt.show {
+  margin-left: -8px;
+}
+
+.punkt .elements {
+  position: relative;
+  height: 60px;
+  width: 600px;
+  list-style-type: none;
+  margin-left: 0;
+  margin-top: 10px;
+}
+
+.punkt .elements .c {
+  font-size: 50px;
+  position: absolute;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-left: 20px;
+    border-radius: 0;
+    display: none;
+    animation: cross 5s linear infinite;
+    transition: 800ms ease;
+    -o-transition: 800ms ease;
+    -mozila-transition: 800ms ease;
+    -webkit-transition: 800ms ease;
+} 
+
+@keyframes cross {
+  0% {
+    -mozila-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+      transform: rotate(90deg);
+      color: rgba(255, 1, 8, .6);
+    }
+
+  50% {
+       color: rgba(255, 1, 8, .8);
+  }
+ 
+  100% {
+      transform: rotate(180deg);
+      -o-transform: rotate(180deg);
+      -webkit-transform: rotate(180deg);
+      -mozila-transform: rotate(180deg);
+      color: red;
+  } /* Animation for the cross, when they display eqvals = block */
+}
+
+.punkt .elements a {
+  font-size: 45px;
+  font-family: 'Russo One', sans-serif;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  margin-left: 80px;
+  margin-top: 1px;
+    cursor: pointer;
+    position: absolute;
+    transition: 700ms ease;
+    -o-transition: 700ms ease;
+    -mozila-transition: 700ms ease;
+    -webkit-transition: 700ms ease;
+}
+
+
+.punkt #author {
+  font-size: 15px;
+  font-family: 'Comfortaa', cursive;
+  margin-left: 20px;
+  list-style-type: none;
+  color: purple;
+  font-weight: bold;
+  margin-top: 90px;
+}
+
+.punkt #author a {
+  text-decoration: none;
+  font-size: 15px;
+  color: white;
+  font-weight: bold;
+  font-family: 'Comfortaa', cursive;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+.punkt #author a:hover {
+  text-decoration: underline;
+}
+
+.single_block {
+  height: 1020px;
+  width: 100%;
+  position: absolute;
+  margin-left: -8px;
+  margin-top: 100px;
+  background-size: cover;
+  background-image: url('images/RDR2_screen_57.jpg');
+  background-position: center;
+}
+
+.single_block .main-b {
+  height: 300px;
+  width: 100%;
+  background-color: black;
+  border-bottom: 1px solid red;
+  margin-top: 950px;
+}
+
+.single_block .main-b span {
+  font-size: 50px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 480px;
+}
+
+.single_block .main-b hr {
+  height: 5px;
+  width: 900px;
+  margin-top: 150px;
+  border: 0;
+  margin-left: 360px;
+  background-color: white;
+  position: absolute;
+  font-weight: bold;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+.single_block .main-b hr:hover {
+  transform: translateY(5px);
+}
+
+.single_block .main-b a {
+    font-size: 35px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    top: 170px;
+    left: 100px;
+    text-decoration: none;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.single_block .main-b a:hover {
+  text-decoration: underline;
+  text-shadow: 0 0 25px red;
+}
+
+.single_block .menu_quests {
+  height: 250px;
+  width: 330px;
+  background-color: black;
+  position: relative;
+  z-index: 1;
+  margin-top: -97px;
+  margin-right: 318px;
+  float: right;
+  display: none;
+}
+
+.single_block .menu_quests.animated {
+  display: block;
+}
+
+.single_block .menu_quests li {
+  font-weight: bold;
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+    margin-top: 45px; 
+    margin-left: 0;
+    list-style-type: none;
+}
+
+.single_block .menu_quests li a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+.single_block .menu_quests li a:hover {
+  text-shadow: 0 0 20px white;
+}
+
+.poasnenie_block {
+  height: 200px;
+  width: 100%;
+  position: absolute;
+  margin-left: -8px;
+  margin-top: 1400px;
+  display: inline;
+}
+
+.poasnenie_block p {
+  font-size: 25px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 35px;
+}
+
+.good_characters {
+  width: 100%;
+  height: 5100px;
+  position: absolute;
+  margin-top: 1750px;
+  margin-left: -8px;
+}
+
+.good_characters #g_ch {
+  font-size: 50px;
+  font-family: 'Lakki Reddy', cursive;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 550px;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.good_characters #g_ch:hover {
+  text-shadow: 0 0 25px white;
+}
+
+.good_characters hr {
+  height: 5px;
+  width: 800px;
+  position: absolute;
+  background-color: white;
+  border: 0;
+  margin-top: 120px;
+  margin-left: 395px;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+.good_characters hr:hover {
+  transform: translateY(5px);
+}
+
+.good_characters .icon {
+  height: 500px;
+  width: 400px;
+    cursor: pointer;
+  display: inline-block;
+  position: relative;
+  margin-top: 210px;
+  margin-left: 100px;
+}
+
+.good_characters .icon .wrapper2 {
+  height: 500px;
+  width: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.good_characters .icon .wrapper2 .im {
+  height: 450px;
+  width: 400px;
+  top: 0;
+  left: 0;
+}
+
+.good_characters .icon .wrapper2 .Arthur {
+  background-image: url('images/RDR2_screen_1.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.good_characters .icon .wrapper2 .John {
+  background-image: url('images/RDR2_screen_15.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.good_characters .icon .wrapper2 .Dutch {
+  background-image: url('images/RDR2_screen_19.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+
+.good_characters .icon .wrapper2 .Sady {
+  background-image: url('images/RDR2_screen_16.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.good_characters .icon .wrapper2 .Molly {
+  background-image: url('images/RDR2_screen_17.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.good_characters .icon .wrapper2 .Hosea {
+  background-image: url('images/RDR2_screen_18.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.good_characters .icon .wrapper2 .Svanson {
+  background-position: center;
+  background-image: url('images/RDR2_screen_21.jpg');
+  background-size: cover;
+}
+
+.good_characters .icon .wrapper2 .Mary {
+  background-position: center;
+  background-size: cover;
+  background-image: url('images/RDR2_screen_23.jpg');
+}
+
+.good_characters .icon .wrapper2 .Charles {
+  background-position: center;
+  background-size: cover;
+  background-image: url('images/RDR2_screen_28.jpg');
+}
+
+.good_characters .icon .wrapper2 .Grimshaw {
+  background-position: center;
+  background-size: cover;
+  background-image: url('images/RDR2_screen_30.jpg');
+}
+
+.good_characters .icon .wrapper2 .Tilly {
+  background-position: center;
+  background-size: cover;
+  background-image: url('images/RDR2_screen_31.jpg');
+}
+
+.good_characters .icon .wrapper2 .Pearson {
+  background-size: cover;
+  background-position: center;
+  background-image: url('images/RDR2_screen_32.jpg');
+}
+
+.good_characters .icon .wrapper2 .Abigail {
+  background-position: center;
+  background-size: cover;
+    background-image: url('images/RDR2_screen_37.jpg');
+}
+
+.good_characters .icon .wrapper2 .Karen {
+  background-size: cover;
+  background-position: center;
+  background-image: url('images/RDR2_screen_35.jpg');
+}
+
+.good_characters .icon .wrapper2 .Josiah {
+  background-size: cover;
+  background-image: url('images/RDR2_screen_103.jpg');
+  background-position: center;
+}
+
+
+.good_characters .icon .wrapper2 .Lenni {
+  background-size: cover;
+  background-image: url('images/RDR2_screen_36.jpg');
+  background-position: center;
+}
+
+.good_characters .icon .wrapper2 .Jack {
+  background-size: cover;
+  background-position: center;
+  background-image: url('images/RDR2_screen_38.jpg');
+}
+
+.good_characters .icon .wrapper2 .Sean {
+  background-size: cover;
+  background-position: center;
+  background-image: url('images/RDR2_screen_40.jpg');
+}
+
+.good_characters .icon .wrapper2 .Uncle {
+  background-size: cover;
+  background-position: center;
+  background-image: url('images/RDR2_screen_34.jpg');
+}
+
+.good_characters .icon .wrapper2 .Leopold {
+  background-size: cover;
+  background-position: center;
+  background-image: url('images/RDR2_screen_39.jpg');
+}
+
+.good_characters .icon .wrapper2 .text_pole {
+  width: 400px;
+  height: 50px;
+    top: 450px;
+  background-color: black;
+  display: inline;
+}
+
+.good_characters .icon .wrapper2 .text_pole .txt {
+  font-size: 30px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 95px;
+}
+
+.good_characters .icon .wrapper2 .text_pole .Dutch_txt {
+  margin-left: 50px;
+}
+
+.good_characters .icon .wrapper2 .text_pole .Leopold_txt {
+  margin-left: 50px;
+}
+
+.good_characters .icon .wrapper2 .text_pole .Svanon_txt {
+  margin-left: 60px;
+}
+
+.good_characters .icon .wrapper2 .text_pole .Sean_txt {
+  margin-left: 170px;
+}
+
+.good_characters .icon .wrapper2 .text_pole .Uncle_txt {
+  margin-left: 170px;
+}
+
+.good_characters .icon .wrapper2 .K {
+  background-image: url('images/RDR2_screen_134.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.good_characters .icon .card-item2 {
+  height: 500px;
+  width: 400px;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}
+
+.good_characters .icon .card-item2 p {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Comfortaa', cursive;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 10px;
+  word-spacing: .2em;
+}
+
+.good_characters .icon:hover .wrapper2 {
+  transform: rotateY(180deg);
+} 
+
+.good_characters .icon:hover .card-item2 {
+  transform: rotateY(360deg);
+}
+
+.bad_characters {
+  height: 2200px;
+  width: 100%;
+  margin-top: 7000px;
+  margin-left: -8px;
+  position: absolute;
+}
+
+.bad_characters #b_ch {
+  font-size: 50px;
+  font-family: 'Lakki Reddy', cursive;
+  font-weight: bold;
+  color: red;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-left: 550px;
+  position: absolute;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+.bad_characters #b_ch:hover {
+  text-shadow: 0 0 25px red;
+}
+
+.bad_characters hr {
+  height: 5px;
+  width: 800px;
+  position: absolute;
+  margin-top: 120px;
+  margin-left: 359px;
+  border: 0;
+  background-color: red;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.bad_characters hr:hover {
+  transform: translateY(5px);
+}
+
+.bad_characters .icon2 {
+    height: 500px;
+    width: 400px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 210px;
+  margin-left: 100px;
+}
+
+.bad_characters .icon2 .wrapper {
+  height: 500px;
+  width: 400px;
+  left: 0;
+  top: 0;
+  position: relative;
+  transition: 1s ease;
+  -o-transition: 1s ease;
+  -mozila-transition: 1s ease;
+  -webkit-transition: 1s ease;
+}
+
+.bad_characters .icon2 .wrapper .mi2 {
+  height: 450px;
+  width: 400px;
+  top: 0;
+  left: 0;
+}
+
+.bad_characters .icon2 .wrapper .Micah {
+  background-size: cover;
+  background-image: url('images/RDR2_screen_104.jpg');
+  background-position: center;
+}
+
+.bad_characters .icon2 .wrapper .Havier {
+  background-position: center;
+  background-size: cover;
+  background-image: url('images/RDR2_screen_105.jpg');
+}
+
+.bad_characters .icon2 .wrapper .Bill {
+  background-size: cover;
+  background-position: center;
+  background-image: url('images/RDR2_screen_22.jpg');
+}
+
+.bad_characters .icon2 .wrapper .Ross {
+  background-image: url('images/RDR2_screen_24.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.bad_characters .icon2 .wrapper .Milton {
+  background-image: url('images/RDR2_screen_25.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.bad_characters .icon2 .wrapper .Joe {
+  background-position: center;
+  background-image: url('images/RDR2_screen_27.jpg');
+  background-size: cover;
+}
+
+.bad_characters .icon2 .wrapper .Cleet {
+  background-position: center;
+  background-size: cover;
+  background-image: url('images/RDR2_screen_26.jpg');
+}
+
+.bad_characters .icon2 .wrapper .Cornwall {
+  background-image: url('images/RDR2_screen_106.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.bad_characters .icon2 .wrapper .Colm {
+  background-image: url('images/RDR2_screen_166.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.bad_characters .cornwall {
+  margin-left: 100px;
+}
+
+
+.bad_characters .icon2 .wrapper .text_pole_2 {
+  height: 50px;
+  width: 400px;
+  top: 450px;
+  background-color: black;
+  display: inline;
+}
+
+.bad_characters .icon2 .wrapper .text_pole_2 .txt_2 {
+  font-size: 30px;
+  position: absolute;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: red;
+  margin-top: 10px;
+  margin-left: 120px;
+}
+
+.bad_characters .icon2 .wrapper .text_pole_2 .j {
+   margin-left: 170px;
+}
+
+.bad_characters .icon2 .wrapper .text_pole_2 .c {
+   margin-left: 170px;
+}
+
+.bad_characters .icon2 .wrapper .text_pole_2 .Corn {
+  margin-left: 35px;
+}
+
+.bad_characters .icon2 .wrapper .text_pole_2 .colm {
+  margin-left: 35px;
+}
+
+.bad_characters .icon2 .card-item {
+  height: 500px;
+  width: 400px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background-color: white;
+  transition: 800ms ease;
+  -o-transition: 800ms ease;
+  -mozila-transition: 800ms ease;
+  -webkit-transition: 800ms ease;
+  display: inline;
+  backface-visibility: hidden; /* Скрывает тыльную сторону. И все это нужно для карточки */
+  transform: rotateY(180deg);
+}
+
+.bad_characters .icon2 .card-item p {
+  font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 10px;
+  word-spacing: .2em;
+}
+
+.bad_characters .icon2:hover .card-item {
+  transform: rotateY(360deg);
+}
+
+.bad_characters .icon2:hover .wrapper {
+  transform: rotateY(180deg);
+}
+
+.camp_characters {
+  height: 6150px;
+  width: 100%;
+  position: absolute;
+  margin-top: 9450px;
+  margin-left: -8px;
+} /* 15700px */
+
+.camp_characters #p_characters {
+    font-size: 50px;
+    font-family: 'Lakki Reddy', cursive;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 350px;
+}
+
+.camp_characters hr {
+  height: 5px;
+  width: 900px;
+  background-color: white;
+  position: absolute;
+  margin-top: 67px;
+  margin-left: 310px;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+.camp_characters hr:hover {
+  transform: translateY(5px);
+}
+
+.camp_characters .opisanie_p {
+  height: 250px;
+  width: 100%;
+  position: absolute;
+  margin-top: 180px;
+  margin-left: -8px;
+  display: inline;
+}
+
+.camp_characters .opisanie_p p {
+  font-size: 25px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-left: 55px;
+  margin-top: 15px;
+}
+
+.camp_characters #second_chapter {
+  font-size: 40px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 620px;
+  margin-left: 647px;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+.camp_characters #second_chapter:hover {
+  text-shadow: 0 0 30px white;
+}
+
+.camp_characters #second {
+  height: 5px;
+  width: 600px;
+  position: absolute;
+  background-color: white;
+  margin-left: 500px;
+  margin-top: 665px;
+}
+
+.camp_characters .Javier {
+  height: 300px;
+  width: 1500px;
+  position: absolute;
+  margin-left: 50px;
+    margin-top: 730px;
+}
+
+.camp_characters .Javier .J {
+  height: 300px;
+    width: 600px;
+  cursor: pointer;
+  position: absolute;
+  margin-left: -1px;
+    background-image: url('images/RDR2_screen_107.jpg');
+    background-size: cover;
+    background-position: center;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.camp_characters .Javier .J:hover {
+  transform: scale(.9);
+}
+
+.camp_characters .Javier .J .m_q {
+  height: 300px;
+  width: 600px;
+  position: absolute;
+  background-color: black;
+  opacity: .7;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.camp_characters .Javier .J .m_q .t {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 135px;
+  margin-left: 180px;
+  opacity: 1;
+}
+
+.camp_characters .Javier .information-b {
+  height: 300px;
+  width: 800px;
+  position: relative;
+  float: right;
+  margin-right: 5px;
+  display: inline;
+}
+
+.camp_characters .Javier .information-b span {
+  font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 45px;
+    margin-left: 30px;
+    color: white;
+}
+
+.camp_characters .charles {
+  height: 300px;
+  width: 1500px;
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 1035px;
+}
+
+.camp_characters .charles .Ch {
+  position: relative;
+  height: 300px;
+  width: 600px;
+  cursor: pointer;
+  float: right;
+  margin-right: 0;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  background-image: url('images/RDR2_screen_108.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.camp_characters .charles .Ch:hover {
+    transform: scale(.9);
+}
+
+.camp_characters .charles .Ch .m_q2 {
+  position: relative;
+  height: 300px;
+  width: 600px;
+  top: 0;
+  left: 0;
+  opacity: .7;
+  background-color: black;
+  display: none;
+}
+
+.camp_characters .charles .Ch .m_q2 .t2 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+    color: white;
+    font-weight: bold;
+    opacity: 1;
+    position: absolute;
+  margin-top: 135px;
+  margin-left: 245px;
+}
+
+.camp_characters .charles .information-b2 {
+  height: 300px;
+  width: 800px;
+  position: relative;
+  float: left;
+  margin-left: 5px;
+}
+
+.camp_characters .charles .information-b2 span {
+  font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 45px;
+    margin-left: 30px;
+    color: white;
+}
+
+.camp_characters .lenny {
+  height: 300px;
+  width: 1500px;
+  margin-top: 1370px;
+  margin-left: 50px;
+  position: absolute;
+}
+
+.camp_characters .lenny .L {
+  height: 300px;
+  width: 600px;
+  position: absolute;
+  cursor: pointer;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  background-size: cover;
+  background-image: url('images/RDR2_screen_109.jpg');
+  background-position: center;
+}
+
+.camp_characters .lenny .L:hover {
+  transform: scale(.9);
+}
+
+.camp_characters .lenny .L .m_q3 {
+  position: absolute;
+  height: 300px;
+  width: 600px;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: .7;
+  display: none;
+}
+
+.camp_characters .lenny .L .m_q3 .t3 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+    color: white;
+    font-weight: bold;
+    opacity: 1;
+    position: absolute;
+  margin-top: 135px;
+  margin-left: 245px;
+}
+
+.camp_characters .lenny .information-b3 {
+  height: 300px;
+  width: 800px;
+  position: relative;
+  float: right;
+  margin-right: 5px;
+  display: inline;
+}
+
+.camp_characters .lenny .information-b3 span {
+    font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 110px;
+    margin-left: 30px;
+    color: white;
+}
+
+.camp_characters #third_chapter {
+  font-size: 40px;
+  font-family: 'Lakki Reddy', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-left: 647px;
+  margin-top: 1990px;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+}
+
+.camp_characters #third_chapter:hover {
+  text-shadow: 0 0 30px white;
+}
+
+.camp_characters #third {
+  height: 5px;
+  width: 600px;
+  background-color: white;
+  position: absolute;
+  margin-top: 2042px;
+  margin-left: 470px;
+}
+
+.camp_characters .sean {
+  width: 1500px;
+  height: 300px;
+  position: absolute;
+  margin-top: 2107px;
+  margin-left: 50px;
+}
+
+.camp_characters .sean .S {
+  height: 300px;
+  width: 600px;
+  position: absolute;
+  margin-left: 0;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  cursor: pointer;
+  background-image: url('images/RDR2_screen_110.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.camp_characters .sean .S:hover {
+  transform: scale(.9);
+}
+
+.camp_characters .sean .S .m_q4 {
+    position: absolute;
+    height: 300px;
+    width: 600px;
+    background-color: black;
+    opacity: .7;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+.camp_characters .sean .S .m_q4 .t4 {
+    font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+  margin-top: 135px;
+  margin-left: 245px;
+}
+
+.camp_characters .sean .information-b4 {
+  height: 300px;
+  width: 800px;
+  position: relative;
+  float: right;
+  margin-right: 5px;
+  display: inline;
+}
+
+.camp_characters .sean .information-b4 span {
+  font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 45px;
+    margin-left: 30px;
+    color: white;
+}
+
+.camp_characters .bill {
+  height: 300px;
+  width: 1500px;
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 2400px;
+}
+
+.camp_characters .bill .B {
+  height: 300px;
+  width: 600px;
+  position: relative;
+  float: right;
+  margin-right: 5px;
+  cursor: pointer;
+  background-image: url('images/RDR2_screen_111.jpg');
+  background-size: cover;
+  background-position: center;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+.camp_characters .bill .B:hover {
+  transform: scale(.9);
+}
+
+.camp_characters .bill .B .m_q5 {
+  height: 300px;
+  width: 600px;
+  background-color: black;
+  opacity: .7;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.camp_characters .bill .B .m_q5 .t5 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+    color: white;
+    font-weight: bold;
+    opacity: 1;
+    position: absolute;
+  margin-top: 135px;
+  margin-left: 180px;
+}
+
+.camp_characters .bill .information-b5 {
+  height: 300px;
+  width: 800px;
+  position: absolute;
+  margin-left: 0;
+  margin-top: 0;
+  display: inline;
+}
+
+.camp_characters .bill .information-b5 span {
+    font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 65px;
+    margin-left: 30px;
+    color: white;
+}
+
+.camp_characters .javier {
+  height: 300px;
+  width: 1500px;
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 2730px;
+}
+
+.camp_characters .javier .JAV {
+    height: 300px;
+    width: 600px;
+    position: absolute;
+    margin-left: 0;
+    cursor: pointer;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+    background-image: url('images/RDR2_screen_112.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+.camp_characters .javier .JAV:hover {
+  transform: scale(.9);
+}
+
+.camp_characters .javier .JAV .m_q6 {
+  height: 300px;
+  width: 600px;
+  position: absolute;
+  background-color: black;
+  opacity: .7;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.camp_characters .javier .JAV .m_q6 .t6 {
+    font-size: 30px;
+    position: absolute;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    margin-top: 135px;
+    z-index: 1; 
+    font-weight: bold;
+    margin-left: 185px;
+}
+
+.camp_characters .javier .information-b6 {
+  height: 300px;
+  width: 800px;
+  position: relative;
+  float: right;
+  margin-right: 5px;
+  background-color: black;
+  display: inline;
+}
+
+.camp_characters .javier .information-b6 span {
+  font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 95px;
+  margin-left: 30px;
+}
+
+.camp_characters .kieran {
+  height: 300px;
+  width: 1500px;
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 3070px;
+}
+
+.camp_characters .kieran .k {
+  width: 600px;
+    height: 300px;
+    position: relative;
+    float: right;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+    background-image: url('images/RDR2_screen_113.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.camp_characters .kieran .k:hover {
+  transform: scale(.9);
+}
+
+.camp_characters .kieran .k .m_q7 {
+  height: 300px;
+  width: 600px;
+  background-color: black;
+  opacity: .7;
+    position: absolute;
+    left: 0;
+    display: none;
+}
+
+.camp_characters .kieran .k .m_q7 .t7 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 135px;
+  color: white;
+  margin-left: 180px;
+}
+
+.camp_characters .kieran .information-b7 {
+  height: 300px;
+  width: 800px;
+  position: relative;
+  float: right;
+  margin-right: 5px;
+  display: inline;
+}
+
+.camp_characters .kieran .information-b7 span {
+  font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 120px;
+  margin-left: -90px;
+}
+
+.camp_characters .tilly {
+  height: 300px;
+  width: 1500px;
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 3420px;
+}
+
+.camp_characters .tilly .til {
+  position: absolute;
+  margin-left: 0;
+  height: 300px;
+  width: 600px;
+  cursor: pointer;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  background-image: url('images/RDR2_screen_114.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.camp_characters .tilly .til:hover {
+  transform: scale(.9);
+}
+
+.camp_characters .tilly .til .m_q8 {
+  height: 300px;
+  width: 600px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: .7;
+  display: none;
+}
+
+.camp_characters .tilly .til .m_q8 .t8 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 135px;
+  color: white;
+  margin-left: 180px;
+}
+
+.camp_characters .tilly .information-b8 {
+  height: 300px;
+  width: 800px;
+  position: relative;
+  float: right;
+  margin-right: 5px;
+}
+
+.camp_characters .tilly .information-b8 span {
+  font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 125px;
+  margin-left: 30px;
+}
+
+.camp_characters .micah {
+  height: 300px;
+  width: 1500px;
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 3780px;
+}
+
+.camp_characters .micah .mic {
+  height: 300px;
+  width: 600px;
+  position: relative;
+  float: right;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  background-size: cover;
+  background-image: url('images/RDR2_screen_115.jpg');
+  background-position: center;
+}
+
+.camp_characters .micah .mic:hover {
+  transform: scale(.9);
+}
+
+.camp_characters .micah .mic .m_q9 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 300px;
+  width: 600px;
+  background-color: black;
+  opacity: .7;
+  display: none;
+}
+
+.camp_characters .micah .mic .m_q9 .t9 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  position: absolute;
+  margin-top: 135px;
+  color: white;
+  margin-left: 220px;
+}
+
+.camp_characters .micah .information-b9 {
+  height: 300px;
+  width: 800px;
+  position: absolute;
+  margin-left: 5px;
+}
+
+.camp_characters .micah .information-b9 span {
+  font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 120px;
+  margin-left: 30px;
+}
+
+.camp_characters #fourth_chapter {
+  font-size: 40px;
+  position: absolute;
+  font-family: 'Lakki Reddy', cursive;
+  font-weight: bold;
+  margin-left: 647px;
+  margin-top: 4390px;
+  color: white;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  cursor: pointer;
+}
+
+.camp_characters #fourth_chapter:hover {
+  text-shadow: 0 0 30px white;
+}
+
+.camp_characters #fourth {
+  height: 5px;
+  width: 600px;
+  background-color: white;
+  position: absolute;
+  margin-left: 500px;
+  margin-top: 4440px;
+}
+
+.camp_characters .ch {
+  height: 300px;
+  width: 1500px;
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 4495px;
+}
+
+.camp_characters .ch .char {
+  position: absolute;
+  margin-left: 0;
+  height: 300px;
+  width: 600px;
+  cursor: pointer;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  background-image: url('images/RDR2_screen_116.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.camp_characters .ch .char:hover {
+  transform: scale(.9);
+}
+
+.camp_characters .ch .char .m_q10 {
+  height: 300px;
+  width: 600px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: black;
+  opacity: .7;
+  display: none;
+}
+
+.camp_characters .ch .char .m_q10 .t10 {
+    font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+  margin-top: 135px;
+  margin-left: 245px;
+}
+
+.camp_characters .ch .information-b10 {
+  height: 300px;
+  width: 800px;
+  position: relative;
+  float: right;
+  margin-right: 5px;
+  display: inline;
+}
+
+.camp_characters .ch .information-b10 span {
+    font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 100px;
+  margin-left: 30px;
+}
+
+.camp_characters .uncl {
+  height: 300px;
+  width: 1500px;
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 4835px;
+}
+
+.camp_characters .uncl .unc {
+  height: 300px;
+  width: 600px;
+  position: relative;
+  float: right;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  background-image: url('images/RDR2_screen_117.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.camp_characters .uncl .unc:hover {
+  transform: scale(.9);
+}
+
+.camp_characters .uncl .unc .m_q11 {
+  position: absolute;
+  height: 300px;
+  width: 600px;
+  background-color: black;
+  top: 0;
+  left: 0;
+  opacity: .7;
+  display: none;
+}
+
+.camp_characters .uncl .unc .m_q11 .t11 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+  margin-top: 135px;
+  margin-left: 235px;
+}
+
+.camp_characters .uncl .information-b11 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 300px;
+  width: 800px;
+  margin-left: 5px;
+}
+
+.camp_characters .uncl .information-b11 span {
+  font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 120px;
+  margin-left: 30px;
+}
+
+.camp_characters .MICAH {
+  height: 300px;
+  width: 1500px;
+  position: absolute;
+  margin-top: 5175px;
+  margin-left: 50px;
+}
+
+.camp_characters .MICAH .mich {
+  position: absolute;
+  margin-left: 0;
+  height: 300px;
+  width: 600px;
+  cursor: pointer;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  background-image: url('images/RDR2_screen_118.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.camp_characters .MICAH .mich:hover {
+  transform: scale(.9);
+}
+
+.camp_characters .MICAH .mich .m_q12 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 300px;
+  width: 600px;
+  background-color: black;
+  opacity: .7;
+  display: none;
+}
+
+.camp_characters .MICAH .mich .m_q12 .t12 {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+    color: white;
+    font-weight: bold;
+    position: absolute;
+  margin-top: 135px;
+  margin-left: 235px;
+}
+
+.camp_characters .MICAH .information-b12 {
+  height: 300px;
+  width: 800px;
+  position: relative;
+  float: right;
+  margin-right: 5px;
+  top: 0;
+  left: 0;
+} 
+
+.camp_characters .MICAH .information-b12 span {
+   font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 120px;
+  margin-left: 30px;
+}
+
+.camp_characters .pear {
+  height: 300px;
+  width: 1500px;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 5495px;
+}
+
+.camp_characters .pear .per {
+  position: relative;
+  height: 300px;
+  width: 600px;
+  float: right;
+  margin-right: 5px;
+  cursor: pointer;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+    background-image: url('images/RDR2_screen_119.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.camp_characters .pear .per:hover {
+  transform: scale(.9);
+}
+
+.camp_characters .pear .per .m_q13 {
+  height: 300px;
+  width: 600px;
+    position: absolute;
+    background-color: black;
+    opacity: .7;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.camp_characters .pear .per .m_q13 .t13 {
+  color: white;
+  position: absolute;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 135px;
+  margin-left: 235px;
+}
+
+.camp_characters .pear .information-b13 {
+  height: 300px;
+  width: 800px;
+  position: absolute;
+  margin-left: 5px;
+}
+
+.camp_characters .pear .information-b13 span {
+  font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 110px;
+  margin-left: 30px;
+} 
+
+.camp_characters .lenn {
+  height: 300px;
+  width: 1500px;
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 5795px;
+}
+
+.camp_characters .lenn .Len {
+  height: 300px;
+  width: 600px;
+  cursor: pointer;
+  position: absolute;
+  margin-left: 0;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  background-image: url('images/RDR2_screen_120.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.camp_characters .lenn .Len:hover {
+  transform: scale(.9);
+}
+
+.camp_characters .lenn .Len .m_q14 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 300px;
+  width: 600px;
+  background-color: black;
+  opacity: .7;
+  display: none;
+}
+
+.camp_characters .lenn .Len .m_q14 .t14 {
+  color: white;
+  position: absolute;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 135px;
+  margin-left: 255px;
+}
+
+.camp_characters .lenn .information-b14 {
+  position: relative;
+  height: 300px;
+  width: 800px;
+  float: right;
+  margin-right: 5px;
+}
+
+.camp_characters .lenn .information-b14 span {
+  font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 125px;
+  margin-left: 30px;
+}
+
+.chapters-camps {
+  height: 3100px;
+  width: 100%;
+    position: absolute;
+    margin-left: -8px;
+    margin-top: 15700px;
+}
+
+.chapters-camps #Chapters {
+  font-size: 40px;
+  font-family: 'Lakki Reddy', cursive;
+  font-weight: bold;
+  position: absolute;
+  cursor: pointer;
+  margin-top: 80px;
+  margin-left: 725px;
+  color: white;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+.chapters-camps #Chapters:hover {
+  text-shadow: 0 0 25px white;
+}
+
+.chapters-camps hr {
+  height: 5px;
+  width: 900px;
+  position: absolute;
+  margin-top: 130px;
+  margin-left: 350px;
+  background-color: white;
+}
+
+.chapters-camps .card-wrapper {
+    height: 1500px;
+    width: 100%;
+    position: absolute;
+    margin-left: -8px;
+    margin-top: 235px;
+}
+
+.chapters-camps .card-wrapper .Ch-card {
+  height: 500px;
+  width: 400px;
+  position: relative;
+  cursor: pointer;
+  margin-top: 210px;
+  margin-left: 100px;
+  display: inline-block;
+}
+
+.chapters-camps .card-wrapper .Ch-card .back-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 500px;
+    width: 400px;
+    background-color: white;
+    display: inline;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.chapters-camps .card-wrapper .Ch-card .back-text span {
+  font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+    margin-left: 10px;
+    margin-top: 30px;
+    position: absolute;
+    word-spacing: .2em;
+}
+
+.chapters-camps .card-wrapper .Ch-card .face-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 500px;
+  width: 400px;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.chapters-camps .card-wrapper .Ch-card:hover .back-text {
+  transform: rotateY(360deg);
+}
+
+.chapters-camps .card-wrapper .Ch-card:hover .face-block {
+  transform: rotateY(180deg);
+}
+
+.chapters-camps .card-wrapper .Ch-card .face-block .card_img {
+  height: 450px;
+  width: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.chapters-camps .card-wrapper .Ch-card .face-block .card_txt {
+  height: 50px;
+  width: 400px;
+  position: absolute;
+  left: 0;
+  margin-top: 450px;
+  background-color: black;
+  display: inline;
+}
+
+.chapters-camps .card-wrapper .Ch-card .face-block .card_txt span {
+  font-size: 22px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
+  margin-left: 30px;
+}
+
+.chapters-camps .card-wrapper .Ch-card .face-block .First {
+  background-image: url('images/RDR2_screen_128.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.chapters-camps .card-wrapper .Ch-card .face-block .Second {
+  background-image: url('images/RDR2_screen_129.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.chapters-camps .card-wrapper .Ch-card .face-block .Third {
+  background-image: url('images/RDR2_screen_130.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.chapters-camps .card-wrapper .Ch-card .face-block .Fourth {
+  background-image: url('images/RDR2_screen_131.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.chapters-camps .card-wrapper .Ch-card .face-block .Fifth {
+  background-image: url('images/RDR2_screen_132.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.chapters-camps .card-wrapper .Ch-card .face-block .Six {
+  background-size: cover;
+  background-image: url('images/RDR2_screen_133.jpg');
+  background-position: center;
+}
+
+
+.chapters-camps .camp-text {
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  margin-top: 1750px;
+  margin-left: -8px;
+  display: inline;
+
+}
+
+.chapters-camps .camp-text span {
+  font-size: 25px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 50px;
+}
+
+.chapters-camps .camp-collection {
+  display: inline-block;
+}
+
+
+.chapters-camps .main_screen {
+  height: 600px;
+  width: 1300px;
+  position: absolute;
+  margin-left: 135px;
+  margin-top: 2100px;
+  border: 1px solid white;
+}
+
+.chapters-camps .main_screen .C {
+    height: 550px;
+    width: 1300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.chapters-camps .main_screen .C img {
+  max-height: 550px;
+  min-width: 1300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.chapters-camps .main_screen .text-block {
+  height: 50px;
+  width: 1300px;
+  position: relative;
+  margin-top: 550px;
+  background-color: black;
+}
+
+.chapters-camps .main_screen .text-block #t {
+  font-size: 30px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 545px;
+}
+
+.chapters-camps .camp_collection {
+  height: 110px;
+  width: 1300px;
+  position: absolute;
+  margin-left: 135px;
+  margin-top: 2700px;
+  border: 1px solid white;
+}
+
+.chapters-camps .camp_collection img {
+  height: 100px;
+    width: 200px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-left: 12px;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+.chapters-camps .camp_collection img:hover {
+  box-shadow: 0 0 30px red;
+}
+
+.chapters-camps .end {
+  height: 200px;
+    width: 100%;
+    margin-top: 2930px;
+    margin-left: 0;
+    position: absolute;
+    display: inline;
+}
+
+.chapters-camps .end span {
+  font-size: 20px;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+  color: white;
+  margin-left: 40px;
+  margin-top: 0px;
+  position: absolute;
+}
+
+
+.anim {
+  box-shadow: 0 0 20px red;
+}
+
+.strelochka_3 {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  cursor: pointer;
+  margin-left: 1500px;
+  border-radius: 5px;
+  background-color: white;
+  margin-top: 700px;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+  z-index: 2;
+  display: none;
+}
+
+.strelochka_3.Show3 {
+  display: block;
+}
+
+.strelochka_3 .str3 {
+  font-size: 55px;
+  font-weight: bold;
+  position: absolute;
+  margin-left: 8px;
+  margin-top: -2px;
+  color: black;
+  transition: 900ms ease;
+  -o-transition: 900ms ease;
+  -mozila-transition: 900ms ease;
+  -webkit-transition: 900ms ease;
+}
+
+.strelochka_3 .str3:hover {
+  transform: translateY(5px);
+}
+
+footer {
+  height: 300px;
+  width: 100%;
+  position: absolute;
+  cursor: pointer;
+  z-index: 3;
+  margin-left: -8px;
+  margin-top: 18955px;
+  border-top: 3px solid red;
+  background-image: url('PNG/RDR2_FOOTER_BACKGROUND.png');
+  background-size: cover;
+  background-position: bottom;
+}
+
+footer .Red_dead {
+  height: 50px;
+  width: 350px;
+  background-color: black;
+  border: 3px solid red;
+  position: absolute;
+  margin-top: -35px;
+  margin-left: 610px;
+}
+
+footer .Red_dead span {
+  font-size: 30px;
+  font-family: 'Bree Serif', serif;
+  color: white;
+  font-weight: bold;
+  transform: translateY(2.5px);
+  position: absolute;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+footer #lozyng {
+  font-size: 75px;
+  font-family: 'Bree Serif', serif;
+  font-weight: bold;
+  position: absolute;
+  cursor: pointer;
+  color: red;
+  margin-top: 50px;
+    margin-left: 470px;
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+footer #lozyng:hover {
+  text-shadow: 0 0 25px red;
+}
+
+footer #linia_RDR2 {
+  height: 5px;
+  width: 700px;
+  position: absolute;
+  border-radius: 10px;
+  margin-left: 440px;
+  margin-top: 175px;
+  border: 0;
+  background-color: rgba(217, 30, 24, .7);
+}
+
+footer .container {
+  height: 80px;
+  width: 600px;
+  display: inline;
+  position: absolute;
+  margin-top: 195px;
+  margin-left: 500px;
+}
+
+footer .container a .sticker {
+    font-size: 40px;
+    cursor: pointer;
+    margin-left: 60px;
+    margin-top: 20px;
+    color: rgba(255, 5, 1, .7);
+    transition: 900ms ease;
+    -o-transition: 900ms ease;
+    -mozila-transition: 900ms ease;
+    -webkit-transition: 900ms ease;
+}
+
+footer .container a .sticker:hover {
+  color: red;
+}
+
+footer #adres {
+  font-size: 10px;
+  font-family: 'Comfortaa', cursive;
+  color: white;
+  font-weight: bold;
+  margin-top: 280px;
+  position: absolute;
+  margin-left: 520px;
+}
+
+footer address {
+  font-size: 12px;
+  font-family: 'Comfortaa', cursive;
+  color: white;
+  font-weight: bold;
+    position: absolute;
+    margin-top: 280px;
+    margin-left: 775px;
+}
+    </style>
+</head>
+<body>
+    <header>
+	    <div class="menu">
+		    <span class="b1"></span>
+		    <span class="b2"></span>
+		    <span class="b3"></span>
+		</div>
+        
+        <div class="logotype" title="Red dead Redemption II">
+    	
+        </div>
+    </header>
+
+    <!-- Menu -->
+	<ul class="punkt">
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index.html">На главную</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index2.html">Об игре</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index3.html">Сюжет</a></li> 
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index4.html">Открытый мир</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index5.html">Оружее</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index6.html">Саундтрек</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="./index7.html">Мультиплеер</a></li>
+		<li class="elements"><i class="fas fa-times c"></i><a href="https://ru.socialclub.rockstargames.com/" target="_blank">Social Club</a></li>
+        <li id="author">Автор вдохновлялся этим сайтом - <a href="https://www.rockstargames.com/reddeadredemption2/" id="silka" target="_blank">Red Dead Redemption II</a></li>
+	</ul>
+  <!-- Strela -->
+
+  <div class="strelochka_3">
+     <i class="fas fa-angle-up str3"></i>
+  </div>
+
+	<!-- body -->
+
+	<div class="single_block" title="Сюжет">
+		<div class="main-b">
+			<span>Сюжет и многое другое</span>
+			<hr />
+		        <a href="#g_ch">Хорошие персонажи |</a><a href="#b_ch">Плохие персонажи |</a><a href="#" id="Quests">Квесты персонажей |</a><a href="#Chapters">Главы</a>
+		</div>
+    <ul class="menu_quests">
+        <li><a href="#second_chapter">Вторая глава</a></li>
+        <li><a href="#third_chapter">Третья глава</a></li>
+        <li><a href="#fourth_chapter">Четвертая глава</a></li>
+    </ul> 
+	</div>
+
+	<div class="poasnenie_block">
+		<p>Тут мы будем говорить о: сюжете, персонажах и главах сюжетной линии... Начнем с того, что действия игры разворачиваются до первой части Red Dead Redemption и во времена дикого запада(Точнее его заката, когда цивилизация приходила на фронтир), а именно в 1899 году.. После не удачного ограбления в BlackWater банда Van Der Linde решает скрыться в горах штата Амбарино, где теряют уже одного своего напарника и стараются выжить... Вы играете за Артура Моргона, который примкнул к банде Van Der Linde будучи ещё сиротой в детстве.. </p>
+	</div>
+
+  <div class="good_characters">
+      <span id="g_ch">Хорошие персонажи</span>
+      <hr />
+
+      <div class="icon aud">
+        <div class="wrapper2">
+         <div class="im Arthur" title="Артур Морган">
+
+         </div>
+         <div class="text_pole">
+             <span class="txt">Артур Морган</span>
+         </div>
+        </div>
+        <div class="card-item2">
+            <p>Артур Морган родился примерно в 1863 году от Беатрис и Лайла Морганов. Мелкий преступник и сорванец, его отец был арестован за воровство в 1874 году, когда Артуру было 11 лет.В возрасте около 13 лет Артур был взят на попечение Датчем Ван дер Линде за несколько лет до первой встречи последнего с Хозией Мэттьюсом. Рассматривая его как приемного отца, Артур проникся видением Датча жизни, свободной от цивилизации и верховенства закона, став одним из основателей банды «Ван дер Линде» спустя годы.</p>
+        </div>
+      </div>
+      <div class="icon aud">
+        <div class="wrapper2">
+         <div class="im John" title="Джон Марстон">
+
+         </div>
+         <div class="text_pole">
+             <span class="txt">Джон Марстон</span>
+         </div>
+        </div>
+        <div class="card-item2">
+            <p>Джон Марстон родился в 1873. Его отец был неграмотным шотландским иммигрантом, сам Джон родился на лодке, плывущей в Нью-Йорк, в то время как его мать была проституткой, которая скончалась во время родов. Отец Джона когда-то ослеп на оба глаза во время драки в баре к югу от Чикаго. Его отец любил говорить о Шотландии и ненавидел англичан за то, что они сделали с его двоюродными дедушками и бабушками, которых он никогда не видел.В 1881 году отец Джона умер.Ему удалось попасть в банду Ван дер Линде.</p>
+        </div>
+      </div>
+      <div class="icon aud">
+        <div class="wrapper2">
+         <div class="im Dutch" title="Датч Вандерлинде">
+           
+         </div>
+         <div class="text_pole">
+             <span class="txt Dutch_txt">Датч Вандерлинде</span>
+         </div>
+        </div>
+        <div class="card-item2">
+            <p>Датч родился в 1855 году от неизвестного голландского эммигранта, и англичанки по имени Грета. О детстве Датча мало что известно.Его отец боролся за северян в гражданской войне в США и погиб в битве (скорее всего это была битва при Геттисберге). Из-за смерти его отца, Датч возможно стал еще больше ненавидит южан. Также Датч упоминает, что он покинул свой дом, когда ему было 15 лет, потому что он редко ладил со своей матерью, которая умерла в какой-то момент до 1899 года и была похоронена в Блэкуотере</p>
+        </div>
+      </div>
+      <div class="icon aud">
+        <div class="wrapper2">
+         <div class="im Sady" title="Сэди Адлер">
+            
+         </div> 
+         <div class="text_pole">
+             <span class="txt">Сэди Адлер</span>
+         </div>
+        </div>
+        <div class="card-item2">
+            <p>Сэди жила в горах Гризли, вместе со своим мужем Джейком. Всё было хорошо в жизни Сэди Адлер до тех пор, пока на их ранчо не напала банда О'Дрисколлов</p>
+        </div>
+      </div>
+      <div class="icon aud">
+        <div class="wrapper2">
+         <div class="im Molly" title="Молли О'ши">
+           
+         </div>
+         <div class="text_pole">
+             <span class="txt">Молли О'ши</span>
+         </div>
+        </div>
+        <div class="card-item2">
+            <p>Молли родилась в Ирландии в богатой семье. Вскоре она переехала в США в поисках любви и приключений. В один момент она встретила Датча незадолго до 1899 года. Она стала его любовницей и членом его банды.</p>
+        </div>
+      </div>
+      <div class="icon aud">
+        <div class="wrapper2">
+         <div class="im Hosea" title="Хозия Мэтьюз">
+           
+         </div>
+         <div class="text_pole">
+             <span class="txt">Хозея Мэтьюз</span>
+         </div>
+        </div>
+        <div class="card-item2">
+            <p>Хозия родился примерно в 1844 году. В молодости Хозия был актёром, мечтал стать комиком. Однако вскоре стал грабителем.Согласно его словам, он встретился с Датчем приблизительно в 1878 году, когда оба пытались ограбить друг друга. После этого, оба стали лучшими друзьями и, в конечном итоге, они создали свою банду.</p>
+        </div>
+      </div>
+      <div class="icon aud">
+        <div class="wrapper2">
+         <div class="im Svanson" title="Рэверенд Свансон">
+             
+         </div>
+         <div class="text_pole">
+             <span class="txt Svanson_txt">Рэверенд Свансон</span>
+         </div>
+        </div>
+        <div class="card-item2">
+            <p>Реверенд Суонсон — бывший священник, не устоявший перед искушением. Теперь Суонсон очень далёк от тех норм, которым сам когда-то учил других. Однажды он спас Датчу жизнь, и только поэтому банда позволила ему остаться с ними.</p>
+        </div>
+      </div>
+      <div class="icon aud">
+        <div class="wrapper2">
+         <div class="im Mary" title="Мэри Бэтт">
+            
+         </div>
+         <div class="text_pole">
+             <span class="txt">Мэри Бэтт</span>
+         </div>
+        </div>
+        <div class="card-item2">
+            <p>Мягкая и добродушная девушка, что делает её идеальной преступницей. К тому времени как люди осознают, что их провели, Мэри-Бет обычно уже направляется домой с полными карманами.</p>
+        </div>
+      </div>
+      <div class="icon aud">
+        <div class="wrapper2">
+         <div class="im Charles" title="Чарльз Смит">
+           
+         </div>
+         <div class="text_pole">
+             <span class="txt">Чарльз Смит</span>
+         </div>
+        </div>
+        <div class="card-item2">
+            <p>Чарльз — коренной американец и член банды член банды «Ван дер Линде». Относительно недавно присоединившийся к банде, Чарльз тихий и сдержанный, но чрезвычайно компетентный во всем, за что берётся. Его практически невозможно превзойти в бою. Пристойный, честный человек, который тем не менее является хладнокровным убийцей.</p>
+        </div> 
+      </div>
+      <div class="icon aud">
+        <div class="wrapper2">
+         <div class="im Grimshaw" title="Мисс Гримшо">
+           
+         </div>
+         <div class="text_pole">
+             <span class="txt">Мисс Гримшо</span>
+         </div>
+        </div>
+        <div class="card-item2">
+            <p>К 1899 году Сьюзен стала значительным членом банды «Ван дер Линде», выступая в качестве арбитра группировки и не позволяя ей развалиться из-за боевых действий.</p>
+        </div>
+      </div>
+      <div class="icon aud">
+        <div class="wrapper2">
+         <div class="im Tilly" title="Тилли Джексон">
+           
+         </div>
+         <div class="text_pole">
+             <span class="txt">Тилли Джексон</span>
+         </div>
+        </div>
+        <div class="card-item2">
+            <p>Тилли преступница с двенадцати лет, странствовавшая вместе с другой бандой, межде чем смогла присоединиться к шайке Голландца. Разумная, стойкая и надежная, она может больше, чем кажется на первый взгляд, и, что самое главное, не боится говорить то, что думает.</p>
+        </div>
+      </div>
+      <div class="icon aud">
+        <div class="wrapper2">
+         <div class="im Pearson" title="Мистер Пирсон">
+           
+         </div>
+         <div class="text_pole">
+             <span class="txt">Мистер Пирсон</span>
+         </div>
+        </div>
+        <div class="card-item2">
+            <p>К 1899 году Пирсон, ветеран ВМС США, стал мясником и кулинаром Датча ван дер Линде и его банды. В какой-то момент Пирсон служил моряком на корабле ВМФ, который в течение пятидесяти дней оказывался в море и был поражен чумой. Ему удалось пережить нападение банды.</p>
+        </div> 
+      </div>
+      <div class="icon aud">
+        <div class="wrapper2">
+         <div class="im Abigail" title="Эбигеил Марстон">
+           
+         </div>
+         <div class="text_pole">
+             <span class="txt">Эбигеил Марстон</span>
+         </div>
+        </div>
+        <div class="card-item2">
+            <p>Эбигейл Марстон приблизительно родилась в 1877 году с девичьей фамилией Робертс. Эбигейл была сиротой. Однажды, Эбигейл встретила Дядю, который представил Эбигейл банде «Ван дер Линде» в качестве проститутки. Она часто спала со всеми членами банды. В конечном итоге она влюбилась в нового члена банды Джона, после которого она забеременела Джеком, когда ей было всего 18 лет, а позже в период от 1908 до 1911 забеременела безымянной дочерью которые впоследствии умерла от неизвестного типа лихорадки.</p>
+        </div>
+      </div>
+      <div class="icon aud">
+        <div class="wrapper2">
+         <div class="im Karen" title="Карэн Джонес">
+           
+         </div>
+         <div class="text_pole">
+             <span class="txt">Карэн Джонес</span>
+         </div>
+        </div>
+        <div class="card-item2">
+            <p>Карен - превосходная мошенница и артист, способный привлечь к себе взгляды. Она можете перепить почти любого мужчину, сидящего за столом. Полная и весёлая, она получает удовольствие от жизни вне закона и ни за что не уйдёт с этого пути.</p>
+        </div>
+      </div>
+      <div class="icon aud">
+        <div class="wrapper2">
+         <div class="im Josiah" title="Джошуа Трелони">
+           
+         </div>
+         <div class="text_pole">
+             <span class="txt">Джошуа Трелони</span>
+         </div>
+        </div>
+        <div class="card-item2">
+            <p>Тщедушный фокусник, мошенник и шарлатан. С Трелони довольно трудно иметь совместные дела, но он всегда приносит хорошие результаты. Персонаж Джошуа Трелони любопытен тем, что получил имя только в Red Dead Redemption 2.</p>
+        </div>
+      </div>
+      <div class="icon aud">
+        <div class="wrapper2">
+         <div class="im Lenni" title="Ленни Саммерс">
+           
+         </div>
+         <div class="text_pole">
+             <span class="txt">Ленни Саммерс</span>
+         </div>
+        </div>
+        <div class="card-item2">
+            <p>Ленни Саммерс родился примерно в 1880 году. С молодости Ленни находится в бегах, когда в 15-летнем возрасте он отомстил убийце своего отца, который вероятно был работорговцем. Умный, образованный, компетентный и амбициозный Ленни всегда готов выполнить свою работу.</p>
+        </div>
+      </div>
+      <div class="icon aud">
+        <div class="wrapper2">
+         <div class="im Jack" title="Джэк Марстон">
+           
+         </div>
+         <div class="text_pole">
+             <span class="txt">Джек Марстон</span>
+         </div>
+        </div>
+        <div class="card-item2">
+            <p>Джек был сыном, одного из членов банды Джона Марстона, и бывшей проститутки Эбигейл Марстон. Джек в отличии от своего отца, любил читать книги, из-за этого, довольно быстро «взрослел». Часто проводил времени со своей матерью, из за более апатичного отношения Джона.</p>
+        </div>
+      </div>
+      <div class="icon aud">
+        <div class="wrapper2">
+         <div class="im Sean" title="Шон">
+           
+         </div>
+         <div class="text_pole">
+             <span class="txt Sean_txt">Шон</span>
+         </div>
+        </div>
+        <div class="card-item2">
+            <p>Примерно незадолго до 1899 года, молодой Шон приехал в Америку, присоединившись к банде «Ван дер Линде» в некоторый момент до ограбления парома в Блэкуотере. Амбициозный и энергичный, он возможно, не самый хороший боец в банде, но он определенно является хорошим стрелком в рамках приоритетах банды.</p>
+        </div>
+      </div>
+      <div class="icon uncle aud">
+        <div class="wrapper2">
+          <div class="im Uncle" title="Дядя">
+            
+          </div>
+          <div class="text_pole">
+              <span class="txt Uncle_txt">Дядя</span>
+          </div>
+        </div>
+        <div class="card-item2">
+            <p>Дядя родился примерно в 1849 году в штате Огайо. Дяде было 9 лет когда его родители скончались, вынудив его переехать в запад. Он был женат не менее 2 раза, до тех пор пока не пересекся с бандой Ван дер Линде.Один из старейших членов банды. Дядя был блудником и пьяницей, который всегда был появлялся рядом, когда кто-то наливал виски.</p>
+        </div>
+      </div>
+      <div class="icon aud">
+          <div class="wrapper2">
+              <div class="im K" title="Киран Даффи">
+                
+              </div>
+              <div class="text_pole">
+                  <span class="txt">Киран Даффи</span>
+              </div>
+          </div>
+          <div class="card-item2">
+              <p>В какой то момент, до 1899 года, Киран присоединился к группировке О'Дриссколов.</p>
+          </div>
+      </div>
+      <div class="icon aud">
+        <div class="wrapper2">
+         <div class="im Leopold" title="Леопольд Штрауз">
+           
+         </div>
+         <div class="text_pole">
+             <span class="txt Leopold_txt">Леопольд Штрауз</span>
+         </div>
+        </div>
+        <div class="card-item2">
+            <p>До 1899 года Штраус жил в Австрии до переезда в Соединённые Штаты. К тому времени он стал связан с бандой Ван дер Линде. В банде Леопольд является казначеем, занимаясь ростовщическим бизнесом. Его основные задания это возвращение долгов у должников</p>
+        </div>
+      </div>
+  </div>
+  <div class="bad_characters">
+      <span id="b_ch">Плохие персонажи</span>
+      <hr />
+
+      <div class="icon2 aud">
+        <div class="wrapper">
+          <div class="mi2 Micah" title="Мика Белл">
+            
+          </div>
+          <div class="text_pole_2">
+              <span class="txt_2">Мика Белл</span>
+          </div>
+        </div>
+          <div class="card-item">
+              <p>Мика — новоиспеченный член банды «Ван дер Линде», являющийся опытным уголовником до присоединения к банде. Он выполняет в банде функцию киллера и совершенно непредсказуем, предпочитая жить ради действия. Отлично владеет навыком стрельбы из огнестрельного оружия.
+              К началу Red Dead Redemption 2, Мика пробыл в банде примерно полгода. Мстительный человек, он всегда кажется, подозрительно одобряет решения Датча.</p>
+          </div> 
+      </div>
+      <div class="icon2 aud">
+        <div class="wrapper">
+          <div class="mi2 Havier" title="Хавьер Эскуэла">
+            
+          </div>
+          <div class="text_pole_2">
+              <span class="txt_2">Хавьер Эскуэла</span>
+          </div>
+        </div>
+        <div class="card-item">
+            <p>Хавьер родился в Нуэво-Параисо, Мексика. Отец Хавьера был пьяницей, который работал на земле своего дяди. В конце концов Хавьер стал известным охотником за головами и революционером, борющимся против того, что он считал коррумпированной системой. Хавьер убил влиятельного бывшего военного в Пунта Оргулло из-за женщины, в которую был влюблен. Опасаясь, что его близкие пострадают, если он останется в Мексике, Хавьер бежал в Америку. Он не знал английского и в конце концов ослабел и умирал с голоду.</p>
+        </div>  
+      </div>
+      <div class="icon2 aud">
+        <div class="wrapper">
+          <div class="mi2 Bill" title="Билл Уильямсон">
+            
+          </div>
+          <div class="text_pole_2">
+              <span class="txt_2">Билл Уильямсон</span>
+          </div>
+        </div>
+        <div class="card-item">
+            <p>Билл Уилльямсон родился в 1866 году. В какой-то момент Билл присоединился к военным, прежде чем стать членом голландской банды. Во время пребывания в банде Билл, наряду с Датчем и Хавьером, возможно имел сексуальные отношения с Эбигейл. В 1899 году после череды событий происходит роспуск банды «Ван дер Линде» и Уилльямсон, сумашедший и разочарованный от жизни, создал свою собственную банду, которая проживала в Форт-Мерсере какое-то время</p>
+        </div>
+      </div>
+      <div class="icon2 aud">
+        <div class="wrapper">
+          <div class="mi2 Ross" title="Агент Росс">
+            
+          </div>
+          <div class="text_pole_2">
+              <span class="txt_2">Агент Росс</span>
+          </div>
+        </div>
+        <div class="card-item">
+            <p>Родился в 1861 году, Росс является директором раннего федерального правоохранительного органа, Бюро расследований, которое теперь известно как Федеральное бюро расследований (ФБР). В 1899 году был заместителем агента Милтона, а после его смерти возглавил Бюро расследований. До событий в игре, Росс держал семью Марстона под арестом, чтобы заставить его разыскать своего бывшего друга Билла Уилльямсона.</p>
+        </div>
+      </div>
+      <div class="icon2 aud">
+        <div class="wrapper">
+          <div class="mi2 Milton" title="Агент Милтон">
+            
+          </div>
+          <div class="text_pole_2">
+              <span class="txt_2">Агент Милтон</span>
+          </div>
+        </div>
+        <div class="card-item">
+            <p>Является предвадителем Детективного Агенства Пинкертонов и одним из антагонистов</p>
+        </div>
+      </div>
+      <div class="icon2 aud">
+        <div class="wrapper">
+          <div class="mi2 Joe" title="Джо">
+            
+          </div>
+          <span class="text_pole_2">
+               <span class="txt_2 j">Джо</span>
+          </span>
+        </div>
+        <div class="card-item">
+            <p>Мало что известно о жизни Джо, кроме того, что в какой-то момент до основных событий игры, Мика Белл познакомился с Клитом и Джо, тем самым став партнёрами.</p>
+        </div>
+      </div>
+      <div class="icon2 cornwall aud">
+        <div class="wrapper">
+            <div class="mi2 Cornwall" title="Ливетикус Корнуолл">
+              
+            </div>
+            <div class="text_pole_2">
+                <span class="txt_2 Corn">Ливетикус Корнуолл</span>
+            </div>
+        </div>
+        <div class="card-item">
+            <p>Левитикус Корнуолл является богатым человеком, владеющий многими предприятиями, грабеж. на которые нацелена банда Van Der Linde,причем его наибольшая власть накоплена в Сен-Дени. Он также является финансовым спонсором Национального детективного агентства Пинкертона.</p>
+        </div>
+      </div>
+      <div class="icon2">
+        <div class="wrapper">
+            <div class="mi2 Colm" title="Кольм О'дрисколл">
+              
+            </div>
+            <div class="text_pole_2">
+                <span class="txt_2 colm">Кольм О'дрисколл</span>
+            </div>
+        </div>
+        <div class="card-item">
+            <p>Колм О'Дрисколл был давно позорным преступником, действовавшим по всему Старому Западу. В прежние времена у него было слабое партнерство с голландцем ван дер Линде, печально известным преступником. Эти два продолжали бы основывать банды, названные в честь них: О'Дрисколл Бойз и банда Ван дер Линде соответственно.Их нелегкое перемирие в конечном итоге превратилось в ожесточенную вражду, когда голландец убили брата Колма. В отместку Колм убил женщину по имени Аннабель, которая была любовницей голландца.</p>
+        </div>
+      </div>
+      <div class="icon2 cleet aud">
+        <div class="wrapper">
+          <div class="mi2 Cleet" title="Клит">
+            
+          </div>
+          <div class="text_pole_2">
+              <span class="txt_2 c">Клит</span>
+          </div>
+        </div>
+        <div class="card-item">
+            <p>Мало что известно о жизни Клита, кроме того, что в какой-то момент до событий игры, Мика Белл познакомился с Клитом и Джо, тем самым став партнёрами.</p>
+        </div>
+      </div>
+  </div>
+
+  <div class="camp_characters">
+      <span id="p_characters">Персонажи в лагере и квесты</span>
+      <hr />
+
+      <div class="opisanie_p">
+         <p>Тут будет идти речь о всех дополнительных заданиях связанных с членами банды... Таких много, но не надо думать, что это в духе - иди, подай, принеси... Да, такие есть, но тут мы будем говорить о совместных делах героя и членов банды</p>
+      </div>
+
+      <span id="second_chapter">Вторая глава</span>
+      <hr id="second" />
+
+      <div class="Javier blck b-right">
+          <div class="J b-r" title="Javier Esquala">
+             <div class="m_q">
+                <span class="t">Хавьер Эскуэла</span>
+             </div>
+          </div>
+          <div class="information-b b-text">
+              <span>Об этом доме вам расскажет Хавьер, когда банда переедет на полуостров Клеменса. Лучше возьмите его с собой на дело, здесь придется много стрелять. Главный тайник находится в амбаре под нагруженной деревянной тачкой. Если пойдете сюда по квесту, то точно его не пропустите, ваш спутник попросит её отодвинуть.Также имеет смысл залезть на второй этаж амбара и обчистить сундук. Внутри вас ждут деньги и большой мешочек с драгоценностями. В домах вокруг можно найти помповый дробовик и много чего еще по мелочи.</span>
+          </div>
+      </div>
+        
+      <div class="charles blck">
+          <div class="Ch" title="Charles">
+              <div class="m_q2">
+                  <span class="t2">Чарльз</span>
+              </div>
+          </div>
+          <div class="information-b2">
+              <span>В штаб-квартире банды может появиться маркер, информирующий вас о возможности отправиться на охоту с Чарльзом. Поговорите с ним, и вы узнаете, что он хочет охотиться на бизонов.Герои скоро найдут мертвого буйвола, и новой задачей будет найти людей, которые убивают буйволов для развлечения. Следуйте за Чарльзом, пока вы найдете больше мертвых животных по пути.Исследуйте заброшенный лагерь по пути. Пункт назначения — маленький браконьерский лагерь.</span>
+          </div>
+      </div>
+
+      <div class="lenny blck b-right">
+          <div class="L b-r" title="Lenny">
+              <div class="m_q3">
+                  <span class="t3">Ленни</span>
+              </div>
+          </div>
+          <div class="information-b3 b-text">
+              <span>У Ленни будет активность, которой можно будет воспользоваться... Можно поиграть с ним в "Филе Пять Пальцев", что очень весело, но до момента, когда мы не пораните руку</span>
+          </div>
+      </div>
+
+      <span id="third_chapter">Третья глава</span>
+      <hr id="third" />
+
+      <div class="sean blck">
+          <div class="S" title="Sean">
+              <div class="m_q4">
+                  <span class="t4">Шон</span>
+              </div>
+          </div>
+          <div class="information-b4">
+              <span>В хижину Лонни вам предложит наведаться Шон во время стоянки банды в Нагорье Подкова. Это небольшой дом к северо-западу от Лаграса и к югу от ранчо Эмеральд. Прибыв на место, пристрелите всех грабителей кроме одного. Припугните его как следует, чтобы он сдал вам расположение тайника.Это место будет отличаться в зависимости от того, кто остался в живых. Забрать можно только ту часть добычи, про которую вам рассказали. Не забудьте открыть ящик в комнате под кроватью, внутри лежит самовзводный револьвер.</span>
+          </div>
+      </div>
+
+      <div class="bill blck b-right">
+          <div class="B b-r" title="Bill">
+              <div class="m_q5"> 
+                  <span class="t5">Билл Уильямсон</span>
+              </div>
+          </div>
+          <div class="information-b5 b-text">
+              <span>Доберитесь до места, отмеченного игрой. Мужчины начинают спорить. После этого вы должны начать преследовать повозку. Используйте Мертвый глаз, чтобы уничтожить водителя и охранников. Остановите карету, подождите, пока динамит будет размещен, и взорвите его. Причем нажав взрыватель с безопасного расстояния. Нужно все обчистить и затем покинуть это место.</span>
+          </div>
+      </div>
+
+      <div class="javier blck">
+          <div class="JAV" title="Javier">
+              <div class="m_q6">
+                  <span class="t6">Хавьер Эскуэла</span>
+              </div>
+          </div>
+          <div class="information-b6">
+              <span>Хавьер приглосит вас порыбачить вместе с ним в центре леса, и у вас будет шанс поймать крупную рыбу, но речь не идет о легендарной рыбе</span>
+          </div>
+      </div>
+
+      <div class="kieran blck b-right">
+          <div class="k b-r" title="Kieran">
+              <div class="m_q7">
+                  <span class="t7">Киран Даффи</span>
+              </div>
+          </div>
+          <div class="information-b7 b-text">
+              <span>Как и Хавьер, Киран тоже приглосит вас на рыбалку, но тут дело идет не просто о большой рыбе, а уже о легендарной.. Да, у вас будет шанс её поймать, но вам нужна особая приманка</span>
+          </div>
+      </div>
+
+      <div class="tilly blck">
+          <div class="til" title="Tilly">
+              <div class="m_q8">
+                  <span class="t8">Тилли Джексон</span>
+              </div>
+          </div>
+          <div class="information-b8">
+              <span>Вы можете играть в Домино с ней в лагере, когда она сидит за столиками (обычно ночью)</span>
+          </div>
+      </div>
+
+      <div class="micah blck b-right">
+          <div class="mic b-r" title="Micah">
+              <div class="m_q9">
+                  <span class="t9">Мика Белл</span>
+              </div>
+          </div>
+          <div class="information-b9 b-text">
+              <span>Мика будет сидеть за столом(днем) и вы можете сыграть с ним в "Филе пять пальцев", а ещё во время игры он делает интересные комментарии</span>
+          </div>
+      </div>
+
+      <span id="fourth_chapter">Четвертая глава</span>
+      <hr id="fourth" />
+
+      <div class="ch blck">
+          <div class="char" title="Charles">
+              <div class="m_q10">
+                  <span class="t10">Чарльз</span>
+              </div>
+          </div>
+          <div class="information-b10">
+              <span>Чарльз - ограбление банка: доступно только в том случае, если у вас есть Special или Ultimate Edition. Это эксклюзивная бонусная миссия, недоступная в стандартной версии RDR2. Вам предстоит ограбить банк в Роудсе с Чарльзом и дядюшкой... Будет 4 сейфа и вас ждет большой куш</span>
+          </div>
+      </div>
+
+      <div class="uncl blck b-right">
+          <div class="unc b-r" title="Uncle">
+              <div class="m_q11">
+                  <span class="t11">Дядюшка</span>
+              </div>
+          </div>
+          <div class="information-b11 b-text">
+              <span>Дядюшка предложит вам украсть коров с фермы, потом выпости их, и продать.... Вам дадут не большое вознаграждение</span>
+          </div>
+      </div>
+
+      <div class="MICAH blck">
+          <div class="mich" title="Micah">
+              <div class="m_q12">
+                  <span class="t12">Мика Белл</span>
+              </div>
+          </div>
+          <div class="information-b12">
+              <span>Мистр Белл приглашает вас ограбить дилижанс... Оказывается, что он уже давно не появляется в лагере и перемещается в одиночку по штатам, выискивая приключения на свою голову</span>
+          </div>
+      </div>
+
+      <div class="pear blck b-right">
+          <div class="per b-r" title="Pearson">
+              <div class="m_q13">
+                  <span class="t13">Пирсон</span>
+              </div>
+          </div>
+          <div class="information-b13 b-text">
+              <span>Мистер Пирсон предлагает вам вместе поохотиться на аллигаторов в штате Лемойн... Будет очень интересно проходить эту миссию, т.к слушать комментарии Пирсона - это удовольствие</span>
+          </div>
+      </div>
+
+      <div class="lenn blck">
+          <div class="Len" title="Lenny">
+              <div class="m_q14">
+                  <span class="t14">Ленни</span>
+              </div>
+          </div>
+          <div class="information-b14">
+              <span>Так же как и Мика, Ленни предложит вам ограбить дилижанс, вот только вы будете ждать повозку, а не подрезать</span>
+          </div>
+      </div>
+  </div> 
+
+  <div class="chapters-camps"> 
+      <span id="Chapters">Главы</span>
+      <hr />
+      
+      <div class="card-wrapper">
+        <div class="Ch-card">
+            <div class="face-block">
+                 <div class="card_img First" title="Первая глава">
+                    
+                 </div>
+                 <div class="card_txt">
+                    <span>Первая глава - "Колтер"</span>
+                 </div>
+             </div>
+             <div class="back-text">
+                 <span>После неудачного ограбления банда Датча ван дер Линда (Dutch van der Linde) в спешке покинула Блэкуотер (Blackwater) и, дабы скрыться от погони, окопалась в заброшенном шахтерском поселке на горе Гризли. Припасов (практически) нет, даже отдаленно теплым это место тоже не назовешь, поэтому бандиты выживали как могли.</span> 
+             </div>
+          </div>
+          <div class="Ch-card">
+              <div class="face-block">
+                  <div class="card_img Second" title="Вторая глава">
+                      
+                  </div>
+                  <div class="card_txt">
+                      <span>Вторая глава - "Нагорье Подкова"</span>
+                  </div>
+              </div>
+              <div class="back-text">
+                  <span>Как только погода дала передышку, банда ван дер Линда перебралась из морозных и заснеженных гор Гризли на восток, близ городка скотоводов под названием Валентайн. Датч пытается разработать новый план, Хозия ищет возможности для грабежа, а Карен с девчонками не знает, чем себя занять. Может, Морган поможет…</span>
+              </div>
+          </div>
+          <div class="Ch-card">
+              <div class="face-block">
+                  <div class="card_img Third" title="Третья глава">
+                    
+                  </div>
+                  <div class="card_txt">
+                      <span>Третья глава - "Полуостров Клеменса"</span>
+                  </div>
+              </div>
+              <div class="back-text">
+                  <span>Банда ван дер Линда решила покинуть окрестности Валентайна после стычки с людьми Левита Корнуолла, который устал от того, что его поезда и дилижансы постоянно грабят. Опасаясь, что путь на запад перекрыт пинкертонами, Датч решает спрятаться на юго-востоке, неподалеку от захолустного городка Роудс (Rhodes).Свое довоенное очарование Роудс давно растерял, и в настоящее время выделяется лишь за счет непримиримого противостояния двух местных семейств — Греев (Grays) и Брейтуэйтов (Braithwaites).</span>
+              </div>
+          </div>
+          <div class="Ch-card">
+              <div class="face-block">
+                  <div class="card_img Fourth" title="Четвертая глава">
+                      
+                  </div>
+                  <div class="card_txt">
+                      <span>Четвертая глава - "Сен-Дени"</span>
+                  </div>
+              </div>
+              <div class="back-text">
+                  <span>Практически поголовно перебив два главенствующих семейства Роудса, банда ван дер Линда решила отправиться к городу Сен-Дени, где некий Анджело Бронте держит похищенного сына Джона и Эбигейл. Новая база располагается в заброшенном особняке на территории болот к юго-западу от промышленного мегаполиса.Одновременно с поисками мальчика Датч занят составлением планов побега своей разношерстной шайки от пинкертонов, предводитель которых — агент Милтон — в следующий раз пообещал наведаться к «Голландцу» с целой армией законников.</span>
+              </div> 
+          </div>
+          <div class="Ch-card">
+              <div class="face-block">
+                  <div class="card_img Fifth" title="Пятая глава">
+                      
+                  </div>
+                  <div class="card_txt">
+                      <span>Пятая глава - "Гуарма"</span>
+                  </div>
+              </div>
+              <div class="back-text">
+                  <span>Ограбление банка в Сен-Дени прошло хуже некуда: мало того, что банде не удалось сорвать необходимый для побега из Америки куш, так еще некоторые товарищи Артура были убиты или схвачены законниками. Небольшая группа уцелевших во главе с Датчем сумела пробраться на корабль, который направлялся на Кубу (Cuba).К сожалению для экипажа и пассажиров, судно угодило в шторм, и в результате кораблекрушения Моргана вынесло на берег острова Гуарма (Guarma), что к востоку от изначального пункта назначения героев.</span> 
+              </div>
+          </div>
+          <div class="Ch-card">
+              <div class="face-block">
+                  <div class="card_img Six" title="Шестая глава">
+                      
+                  </div>
+                  <div class="card_txt">
+                      <span>Шестая глава - "Бивер-Холлоу"</span>
+                  </div>
+              </div>
+              <div class="back-text">
+                  <span>Не успели бандиты из шайки ван дер Линда после возвращения с Гуармы обосноваться в Лаке, как их в очередной раз нагнали пинкертоны. Героям пришлось перебраться в неспокойный регион к северу от Сен-Дени — Бивер-Холлоу. Совсем недавно там зверствовали дикари Мерфи, а сейчас царит неопределенность.Загнанные в угол, бандиты ждут своей участи: Датч одержим идеями верности и мести (Кольму О’Дрисколлу, Левиту Корнуоллу); Артур серьезно болен и нуждается в отдыхе, но не может себе его позволить; Джон томится в тюрьме за попытку ограбления банка Сен-Дени.</span>
+              </div>
+          </div>
+      </div>
+      <div class="camp-text">
+          <span>По ходу игры вы побываете во многих штатах перемещаясь вместе с лагерем.... Вы поситите такие места, как: New Hanover, Lemoyne и тд... А последний лагерь будет в лесах Нью-Гановера, хотя что я вам тут рассказываю? Посмотрите сейчас эти места сами.... </span>
+      </div>
+      <div class="main_screen">
+          <div class="C">
+             <img src="images/RDR2_screen_128.jpg" alt="First Camp" id="current" />
+          </div>
+          <div class="text-block">
+              <span id="t">Первый лагерь</span>
+          </div>
+      </div>
+      <div class="camp_collection">
+              <img src="images/RDR2_screen_128.jpg" class="I" alt="Fist camp" title="Первый лагерь" />
+              <img src="images/RDR2_screen_129.jpg" class="I" alt="Second camp" title="Второй лагерь" />
+              <img src="images/RDR2_screen_130.jpg" class="I" alt="Third camp" title="Третий лагерь" />
+              <img src="images/RDR2_screen_131.jpg" class="I" alt="Fourth camp" title="Четвертый лагерь" />
+              <img src="images/RDR2_screen_132.jpg" class="I" alt="Guarma" title="Гуарма" />
+              <img src="images/RDR2_screen_133.jpg" class="I" alt="Fifth camp" title="Последний лагерь" />
+      </div>
+
+      <div class="end">
+          <span>В RDR2 очень хороший сюжет и следить за развитием событий очень хочется, особенно, когда наступают неожиданные повороты и все в таком духе.... Так что это надо играть самому во все это безобразие))) ... И да, в игре 106 миссий(по сюжету), не считая побочных от незнакомцев.....</span>
+      </div>
+    </div>
+
+    <footer>
+      <div class="Red_dead">
+        <span>Red Dead Redemption II</span>
+      </div>
+        
+      <span id="lozyng" title="Лозунг Red Dead Redemption II">outlaws for the live</span>
+        
+      <hr id="linia_RDR2" />
+
+      <div class="container">
+          <a href="https://www.youtube.com/user/RockstarGames" title="Youtube" target="_blank"><i class="fab fa-youtube sticker"></i></a>
+
+          <a href="https://twitter.com/rockstargames" title="Twitter" target="_blank"><i class="fab fa-twitter sticker"></i></a>
+        
+          <a href="https://www.facebook.com/pages/category/Video-Game/Rockstargames-498603576885163/" title="Facebook" target="_blank"><i class="fab fa-facebook-f sticker"></i></a>
+        
+          <a href="https://www.instagram.com/rockstargames/?hl=ru" title="Instagram"  target="_blank" /><i class="fab fa-instagram sticker"></i></a>
+           
+          <a href="https://www.twitch.tv/rockstargames" title="Twitch" target="_blank"><i class="fab fa-twitch sticker"></i></a>
+      </div>
+        
+        <!-- Возможно я удалю эти (2) блока с сошиал клабом и рокстаром, т.к 1) Выглядит как калл 2)Что будет при адаптивной версте? Да хрен его знает(Удалил) -->
+
+      <span id="adres">Главный офис Rockstar находится по адресу - </span><address>RockStar, 4 622, Broadway, New York, NY</address>
+  </footer> 
+    <script src="JS/index3.js"></script>
+</body>
+</html>
